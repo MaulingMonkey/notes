@@ -118,7 +118,10 @@ Add-AppxPackage ubuntu-1604.appx
 | --------------------- | ------------- | ----- |
 | (Default)             | REG_SZ        | (value not set)
 | BasePath              | REG_SZ        | `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState`
-| DefaultEnvironment    | REG_MULTI_SZ  | <code>HOSTTYPE=x86_64<br>LANG=en_US.UTF-8<br>PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games<br>TERM=xterm-256color</code>
+| DefaultEnvironment    | REG_MULTI_SZ  | `HOSTTYPE=x86_64`
+|                       |               | `LANG=en_US.UTF-8`
+|                       |               | `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games`
+|                       |               | `TERM=xterm-256color`
 | DefaultUid            | REG_DWORD     | `1000`
 | DistributionName      | REG_SZ        | `Ubuntu`
 | Flags                 | REG_DWORD     | `0xF`
