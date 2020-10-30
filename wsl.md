@@ -49,8 +49,14 @@ dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 :: Install Ubuntu
 curl -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 Add-AppxPackage ubuntu-1604.appx
+:: ...launch appx?...
+
+:: Run stuff
+bash --login -c "echo \"why hello there\""
+wsl --distribution Ubuntu -- /usr/bin/env bash --login -c "echo \"why hello there\""
 ```
 
+NOTE:  `wsl` might bypass a lot of shell/env setup by default?  I swear I needed all that `--login` magic and nonsense at one point for basic `${PATH}` setup to work right... or maybe that was necessary to avoid having WSL change my CWD?  I can no longer get it to mistreat me as I remember it historically doing...
 
 # Data Magic
 
