@@ -1,3 +1,11 @@
+# Links
+
+* [Android Studio](https://developer.android.com/studio)
+* [docs.gl](http://docs.gl/)
+* [Android API Reference](https://developer.android.com/reference)
+    * [Package Index](https://developer.android.com/reference/packages)
+    * [Android NDK API Reference](https://developer.android.com/ndk/reference)
+
 # Useful Commands
 
 ## Host commands
