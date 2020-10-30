@@ -16,17 +16,17 @@
 
 | Command | What |
 | ------- | ---- |
-| `adb shell am`                                                    | ...help text for Activity Manager
-| `adb shell pm`                                                    | ...help text for Package Manager
-| `adb shell pm list packages`                                      | List all installed packages (pipe through `findstr com.maulingmonkey` ?)
-| `adb shell pm uninstall com.maulingmonkey.rust_android_sample`    | Fully uninstall package after uninstalling through apps borks the package
-| `adb shell pm path com.maulingmonkey.rust_android_sample`         | Check installed path to see if it changed / actually installed
-| `adb shell ls -l  pm path com.maulingmonkey.rust_android_sample`  | Check installed path to see if it changed / actually installed
-| `adb shell ls -l /data/app/com.maulingmonkey.rust_.../base.apk`   | Check size/time
-| `adb shell getprop`                                               | See device settings list
-| `adb shell getprop ro.product.cpu.abilist`                        | Check device architecture
-| `adb shell getprop ro.build.version.sdk`                          | Check device SDK version
-| `adb shell setprop ...`                                           | Set device settings
+| `adb shell am`                                        | ...help text for Activity Manager
+| `adb shell pm`                                        | ...help text for Package Manager
+| `adb shell pm list packages`                          | List all installed packages (pipe through `findstr com.maulingmonkey` ?)
+| `adb shell pm uninstall com.mm.rust`                  | Fully uninstall package after uninstalling through apps borks the package
+| `adb shell pm path com.mm.rust`                       | Check installed path to see if it changed / actually installed
+| `adb shell ls -l  pm path com.mm.rust`                | Check installed path to see if it changed / actually installed
+| `adb shell ls -l /data/app/com.mm.rust.../base.apk`   | Check size/time
+| `adb shell getprop`                                   | See device settings list
+| `adb shell getprop ro.product.cpu.abilist`            | Check device architecture
+| `adb shell getprop ro.build.version.sdk`              | Check device SDK version
+| `adb shell setprop ...`                               | Set device settings
 
 ```cmd
 :: Screenshot
