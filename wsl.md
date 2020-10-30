@@ -35,18 +35,18 @@ Nice clean `C`ish API.  (Un)register tarballs.
 
 # Command Line Magic
 
-```sh
-# get your own SID
+```cmd
+:: get your own SID
 wmic useraccount where name='%USERNAME%' get sid
 
-# Check/install WSL 1 (note: dism requires elevation, wmic doesn't)
+:: Check/install WSL 1 (note: dism requires elevation, wmic doesn't)
 wmic path Win32_OptionalFeature where name="Microsoft-Windows-Subsystem-Linux" get InstallState
 dism /online /enable-feature /featureName:Microsoft-Windows-Subsystem-Linux
 
-# Upgrade to WSL 2?
+:: Upgrade to WSL 2?
 dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
-# Install Ubuntu
+:: Install Ubuntu
 curl -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 Add-AppxPackage ubuntu-1604.appx
 ```
