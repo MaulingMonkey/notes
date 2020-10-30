@@ -45,10 +45,10 @@ adb shell rm           /sdcard/screen.png
 
 # Devices
 
-| Device    | [ro.product.cpu.abilist](https://developer.android.com/ndk/guides/abis) | [Android Ver.](https://developer.android.com/studio/releases/platforms) | [ro.build.version.sdk](https://developer.android.com/studio/releases/platforms) |
-| --------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [SM-T510](https://www.samsung.com/ca/tablets/galaxy-tab-a-2019-101/SM-T510NZDAXAC/)   | `armeabi-v7a,armeabi` | 9.0           | 28
-| [SM-N900](https://www.sammobile.com/samsung/galaxy-note-3/specs/SM-N900/)             | ???                   | 5.0           | 21
+| Device    | [ro.product.cpu.abilist](https://developer.android.com/ndk/guides/abis) | [Android Ver.](https://developer.android.com/studio/releases/platforms) | [ro.build.version.sdk](https://developer.android.com/studio/releases/platforms) | Description |
+| --------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------- |
+| [SM-T510](https://www.samsung.com/ca/tablets/galaxy-tab-a-2019-101/SM-T510NZDAXAC/)   | `armeabi-v7a,armeabi` | 9.0           | 28 | Samsung Galaxy Tab A
+| [SM-N900](https://www.sammobile.com/samsung/galaxy-note-3/specs/SM-N900/)             | ???                   | 5.0           | 21 | Samsung Galaxy Note 3
 
 # Workarounds and Android/Samsung/??? Bugs
 
