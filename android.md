@@ -72,7 +72,7 @@ If that didn't change either, the package almost certainly failed to reinstall.
 ## My APK is too large (>100MB!)
 
 For the google store, you need to use <a href="https://developer.android.com/google/play/expansion-files">APK Expansion Files</a>.
-For the amazon store, larger APKs are supported.
+For the amazon store, larger APKs (1GB?) are supported, and APK Expansion Files are not.
 
 ## I can't read my `.obb` expansion files
 
