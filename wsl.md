@@ -5,6 +5,7 @@ docs.microsoft.com:  [Manually download Windows Subsystem for Linux distro packa
 docs.microsoft.com:  [Enable or Disable Windows Features Using DISM](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/enable-or-disable-windows-features-using-dism)<br>
 docs.microsoft.com:  [Example: Getting WMI Data from the Local Computer](https://docs.microsoft.com/en-us/windows/win32/wmisdk/example--getting-wmi-data-from-the-local-computer)<br>
 docs.microsoft.com:  [Querying the Status of Optional Features](https://docs.microsoft.com/en-us/windows/win32/wmisdk/querying-the-status-of-optional-features)<br>
+docs.microsoft.com:  [Win32_OptionalFeature](https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-optionalfeature) (Windows Management Instrumentation)<br>
 github.com/microsoft/WSL#2635:  [No ... way to create an AppX bundle for a Linux distribution from scratch (custom distributions)](https://github.com/microsoft/WSL/issues/2635)<br>
 Stack Overflow:  [What's “EXISTS WIN://SYSAPPID” condition in “C:\Program Files\WindowsApps” ACL?](https://stackoverflow.com/questions/63455546/whats-exists-win-sysappid-condition-in-c-program-files-windowsapps-acl)<br>
 /r/bashonubuntuonwindows/:  [Using WSL-DistroLauncher - example distro .tar.gz files?](https://www.reddit.com/r/bashonubuntuonwindows/comments/87p7d8/using_wsldistrolauncher_example_distro_targz_files/)<br>
