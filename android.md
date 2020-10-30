@@ -69,7 +69,7 @@ For the amazon store, larger APKs are supported.
 ## I can't read my `.obb` expansion files
 
 Earlier versions of the Downloader Library failed to request the proper storage permissions at runtime, although
-[apkx_sample](https://github.com/google/play-apk-expansion/blob/master/apkx_sample/src/com/example/google/play/apkx/SampleDownloaderActivity.java#L446-L514)
+[apkx_sample](https://github.com/google/play-apk-expansion/blob/9ecf54e5ce7c5a74a2eeedcec4d940ea52b16f0e/apkx_sample/src/com/example/google/play/apkx/SampleDownloaderActivity.java#L446-L514)
 looks like it might be requesting everything now?  I can't find the old bug report either... the worst part is
 that *sometimes* access would work, sometimes not!
 
