@@ -15,7 +15,7 @@ renenyffenegger.ch:  [Windows Subsystem for Linux (WSL)](https://renenyffenegger
 
 # APIs
 
-### Win32: [wslapi](https://docs.microsoft.com/en-us/windows/win32/api/wslapi/)
+### wslapi ([win32](https://docs.microsoft.com/en-us/windows/win32/api/wslapi/), [rust](https://docs.rs/wslapi/))
 
 docs say `api-ms-win-wsl-api-l1-1-0.dll`<br>
 `wslapi.dll` is a thing too: `dumpbin /exports "%SystemRoot%\System32\wslapi.dll"`:
