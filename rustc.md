@@ -102,3 +102,9 @@ error: Could not compile `rustexe`.
 
 To learn more, run the command again with --verbose.
 ```
+
+# Building rustc
+
+https://github.com/rust-lang/rust#building-on-windows
+https://rust-lang.github.io/rustc-guide/how-to-build-and-run.html
+https://www.msys2.org/
