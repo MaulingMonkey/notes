@@ -89,3 +89,9 @@ that *sometimes* access would work, sometimes not!
 `glLinkProgram` can crash so hard the debugger detatches with some invalid shaders on some phones.
 I recall a pixel shader involving array parameters - strictly speaking not legal GLES2, but something that worked on many phones - might've caused this in one case.
 Resort to printf style debugging to locate the problem.
+
+# UI Nonsense
+
+* Theme.NoDisplay
+* https://commonsware.com/blog/2015/11/02/psa-android-6p0-theme.nodisplay-regression.html
+* call `finish()`
