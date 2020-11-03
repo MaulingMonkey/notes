@@ -1,4 +1,11 @@
- # Nightly-on-Stable Shenannigans
+# Docs
+
+* [Project Layout](https://doc.rust-lang.org/cargo/guide/project-layout.html), [The Manifest Format](https://doc.rust-lang.org/cargo/reference/manifest.html), [Category Slugs](https://crates.io/category_slugs)
+* std docs: [stable](https://doc.rust-lang.org/stable/std/), [nightly](https://doc.rust-lang.org/nightly/std/)
+* [docs.rs](https://docs.rs/) - documentation for crates
+* [lib.rs](https://lib.rs/) - search for crates
+
+# Nightly-on-Stable Shenannigans
  
 * [cargo::core::Features::enable_nightly_features](https://docs.rs/cargo/0.48.0/cargo/core/features/fn.enable_nightly_features.html)
 * https://doc.rust-lang.org/book/appendix-07-nightly-rust.html
