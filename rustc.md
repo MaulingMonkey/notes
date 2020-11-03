@@ -33,3 +33,22 @@ flamegraph          profiles\crate-12345
 cargo install --git https://github.com/rust-lang/measureme --tag 0.7.0 crox
 crox                profiles\crate-12345
 ```
+
+# Profiles
+
+* Custom named profiles:                https://doc.rust-lang.org/nightly/cargo/reference/unstable.html#custom-named-profiles
+* Documentation of default profiles:    https://doc.rust-lang.org/cargo/reference/manifest.html#the-profile-sections
+
+```
+cargo build             # profile.dev
+cargo build --release   # profile.release
+cargo test --no-run     # profile.test
+cargo bench --no-run    # profile.bench
+
+cargo rustc [--profile=dev]             # profile.dev
+cargo rustc --release [--profile=dev]   # profile.release
+cargo rustc --profile=test              # profile.test
+cargo rustc --release --profile=bench   # profile.bench
+```
+
+Prefer the former commands as the latter only work for one local crate at a time, whereas the former can span the entire workspace.
