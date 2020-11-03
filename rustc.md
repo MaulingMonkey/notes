@@ -52,3 +52,53 @@ cargo rustc --release --profile=bench   # profile.bench
 ```
 
 Prefer the former commands as the latter only work for one local crate at a time, whereas the former can span the entire workspace.
+
+# link.exe nonsense
+
+https://discordapp.com/channels/186813135263367169/186813135263367169/560552502542598170
+@Mushu#0305 so it looks like if `VCINSTALLDIR` is set, it'll use link.exe from PATH (e.g. probably:)
+```
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\Hostx86\x86\link.exe
+```
+which will target 32-bit by default, otherwise it'll use a different linker depending on `--target`, e.g. one of:
+```
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64\link.exe
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX64\x86\link.exe
+```
+
+https://discordapp.com/channels/186813135263367169/186813135263367169/560545881519030272
+Vanilla cmd.exe:
+```
+C:\rust>cargo build --target=i686-pc-windows-msvc
+Compiling rustexe v0.1.0 (C:\rust\rustexe)
+Compiling rustlib v0.1.0 (C:\rust\rustlib)
+Finished dev [unoptimized + debuginfo] target(s) in 0.73s
+
+C:\rust>cargo build --target=x86_64-pc-windows-msvc
+Compiling rustlib v0.1.0 (C:\rust\rustlib)
+Compiling rustexe v0.1.0 (C:\rust\rustexe)
+Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+```
+
+"Developer Command Prompt for VS 2017":
+```
+C:\rust>cargo build --target=i686-pc-windows-msvc
+Compiling rustexe v0.1.0 (C:\rust\rustexe)
+Compiling rustlib v0.1.0 (C:\rust\rustlib)
+Finished dev [unoptimized + debuginfo] target(s) in 0.75s
+
+C:\rust>cargo build --target=x86_64-pc-windows-msvc
+Compiling rustlib v0.1.0 (C:\rust\rustlib)
+Compiling rustexe v0.1.0 (C:\rust\rustexe)
+error: linking with `link.exe` failed: exit code: 1112
+|
+= note: [...extremely detailed link.exe command line snipped...]
+= note: msvcrt.lib(chkstk.obj) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'
+
+
+error: aborting due to previous error
+
+error: Could not compile `rustexe`.
+
+To learn more, run the command again with --verbose.
+```
