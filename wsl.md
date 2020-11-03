@@ -14,6 +14,22 @@ salsa.debian.org/rhaist-guest/WSL:  [WSL Distro Launcher Reference Implementatio
 salsa.debian.org/rhaist-guest/WSL/[create-targz.sh](https://salsa.debian.org/rhaist-guest/WSL/blob/master/create-targz.sh)<br>
 renenyffenegger.ch:  [Windows Subsystem for Linux (WSL)](https://renenyffenegger.ch/notes/Windows/Subsystem-for-Linux/index)<br>
 
+# Versions
+
+```
+C:\local>wsl -d Ubuntu-16.04 cat /proc/version
+Linux version 4.4.0-19041-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #488-Microsoft Mon Sep 01 13:43:00 PST 2020
+
+C:\local>wsl -d Ubuntu-18.04 cat /proc/version
+Linux version 4.4.0-19041-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #488-Microsoft Mon Sep 01 13:43:00 PST 2020
+
+C:\local>wsl -d Ubuntu-20.04 cat /proc/version
+Linux version 4.4.0-19041-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #488-Microsoft Mon Sep 01 13:43:00 PST 2020
+
+C:\local>wsl -d Ubuntu cat /proc/version
+Linux version 4.19.128-microsoft-standard (oe-user@oe-host) (gcc version 8.2.0 (GCC)) #1 SMP Tue Jun 23 12:58:10 UTC 2020
+```
+
 # APIs
 
 ### wslapi ([win32](https://docs.microsoft.com/en-us/windows/win32/api/wslapi/), [rust](https://docs.rs/wslapi/))
