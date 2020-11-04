@@ -5,6 +5,7 @@
 * [docs.rs](https://docs.rs/) - documentation for crates
 * [lib.rs](https://lib.rs/) - search for crates
 * [A Few Github Action “Recipes” for Rust](https://shift.click/blog/github-actions-rust/)
+* [Build Scripts](https://doc.rust-lang.org/cargo/reference/build-scripts.html)
 
 # Nightly-on-Stable Shenannigans
  
