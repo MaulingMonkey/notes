@@ -166,3 +166,44 @@ In a MSYS2 MinGW 64-bit Terminal:
 $ ./x.py test --stage 1 src/test/debuginfo
 ```
 Caveat:  This seems to be building MSVC.  This isn't what we want.
+
+## December 2019 Rust Survey Notes
+
+Where did things get tricky?
+
+### Lifetimes
+* Grokking generic lifetime bounds like `T: impl Fn() + 'a`
+* Fully grokking the rules of lifetime elision
+
+### Concurrency
+* Send vs Sync distinctions are a bit subtle
+
+### Iterators
+* Figuring out the interplay between IntoIterator, Iter, `.iter()`, etc. took quite a bit
+* Utility methods like `.cloned()` / `.copied()` not introduced super quickly
+
+### Unsafe
+* It is extremely easy to underestimate how easy it is to write unsound code with `unsafe`.  I've tried to make note of some patterns here:
+  https://github.com/MaulingMonkey/crev-proofs#review-concerns
+* Necronomicon is a great resource, but could use a page dedicated to "here's all the ways you're likely to shoot yourself in the foot with unsafe if you're a C++ developer"
+
+### Cargo
+* API surface area is inconsistent.  E.g. to build all 4 profiles you need to use `cargo build`, `cargo build --release`, `cargo test --no-run`, `cargo bench --no-run` - no pattern whatsoever.
+* WASM requires `wasm-pack` or `cargo web build` which take different flags yet again vs the regular cargo commands.
+* Differences between `cargo build` vs `cargo rustc` vs `rustc`
+
+### Macros
+* Always have to hunt down the different token types, which is a bit challenging
+* Limitations on synthesizing new identifiers a bit hard to grasp (e.g. `concat_idents!` seems useless?)
+* Parsing/syn crates for proc macros could use more tutorialization
+
+### Pattern Matching
+* I still haven't figured out quite how to strip refs in pattern matching (e.g. what's the pattern matching equivalent to `.copied()`?)
+
+### Collections
+* HashMap entry APIs are a bit awkward to get used to, might be worth adding more concrete examples to the docs.
+
+### Misc.
+* Grokking the rules of auto-deref and when I need to manually deref (I'm 99% of the way there now but still trip up.)
+* Conversion methods prefixes are incoherent as heck (into_, to_, as_, I can't keep which ones I need straight!  At least `Foo::from(...)` is consistentish...
+* Could maybe use a page describing when you'd use From vs AsRef vs Borrow vs Deref, or where they're used in the std lib...
