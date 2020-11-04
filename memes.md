@@ -14,4 +14,4 @@ instead of fixing them.  Distract your coworkers with lengthy discussions about 
 real structural problems in code reviews.  Encourage a culture of crunch and fight management instead of working with
 them to create realistic schedules and deadlines.  Reinvent the wheel instead of reusing tested libraries.
 
-[Ab uno disce omnes](https://en.wikipedia.org/wiki/List_of_Latin_phrases_(A)).  Long live X-CVE.
+[Ab uno disce omnes](https://en.wikipedia.org/wiki/List_of_Latin_phrases_(A)).  Long live X-[CVE](https://cve.mitre.org/).
