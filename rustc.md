@@ -148,3 +148,21 @@ path = "C:\\Users\\...\\.rustup\\toolchains\\nightly-x86_64-pc-windows-msvc\\lib
 [profile.release]
 panic = "abort"
 ```
+
+## CDB/debugger unit tests
+
+https://github.com/rust-lang/rust/blob/master/src/test/debuginfo/pretty-uninitialized-vec.rs
+https://github.com/rust-lang/rust/tree/master/src/test/debuginfo
+https://github.com/rust-lang/rust/commit/3e6c83de1dc0a72df3663617d394a9e79641618d
+
+https://rust-lang.github.io/rustc-guide/compiletest.html
+https://github.com/rust-lang/rust/blob/master/src/tools/compiletest/src/common.rs
+
+https://ci.appveyor.com/project/rust-lang/rust
+https://ci.appveyor.com/project/rust-lang/rust/build/job/uv8y0bco2a7g9ah1
+
+In a MSYS2 MinGW 64-bit Terminal:
+```
+$ ./x.py test --stage 1 src/test/debuginfo
+```
+Caveat:  This seems to be building MSVC.  This isn't what we want.
