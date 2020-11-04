@@ -4,6 +4,7 @@
 * std docs: [stable](https://doc.rust-lang.org/stable/std/), [nightly](https://doc.rust-lang.org/nightly/std/)
 * [docs.rs](https://docs.rs/) - documentation for crates
 * [lib.rs](https://lib.rs/) - search for crates
+* [A Few Github Action “Recipes” for Rust](https://shift.click/blog/github-actions-rust/)
 
 # Nightly-on-Stable Shenannigans
  
