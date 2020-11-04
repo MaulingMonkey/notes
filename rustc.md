@@ -120,3 +120,30 @@ https://www.msys2.org/
 # Fuzzing
 
 https://github.com/PistonDevelopers/image-png/blob/master/png-afl/src/main.rs
+
+# Xargo output nonsense
+
+```rust
+// src/lib.rs
+// empty
+```
+```toml
+# Cagro.toml
+[package]
+authors = ["The Rust Project Developers"]
+name = "sysroot"
+version = "0.0.0"
+[dependencies.std]
+features = []
+path = "C:\\Users\\...\\.rustup\\toolchains\\nightly-x86_64-pc-windows-msvc\\lib\\rustlib\\src\\rust\\library\\std"
+[patch.crates-io.rustc-std-workspace-alloc]
+path = "C:\\Users\\...\\.rustup\\toolchains\\nightly-x86_64-pc-windows-msvc\\lib\\rustlib\\src\\rust\\library\\rustc-std-workspace-alloc"
+
+[patch.crates-io.rustc-std-workspace-core]
+path = "C:\\Users\\...\\.rustup\\toolchains\\nightly-x86_64-pc-windows-msvc\\lib\\rustlib\\src\\rust\\library\\rustc-std-workspace-core"
+
+[patch.crates-io.rustc-std-workspace-std]
+path = "C:\\Users\\...\\.rustup\\toolchains\\nightly-x86_64-pc-windows-msvc\\lib\\rustlib\\src\\rust\\library\\rustc-std-workspace-std"
+[profile.release]
+panic = "abort"
+```
