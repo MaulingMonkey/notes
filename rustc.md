@@ -122,7 +122,26 @@ https://www.msys2.org/
 
 https://github.com/PistonDevelopers/image-png/blob/master/png-afl/src/main.rs
 
-# Xargo output nonsense
+# Xargo
+
+## Consoles
+
+> Even after taking into account the ten days needed to customize Rust for the Xbox, PS4, and Nintendo Switch consoles, [...]
+
+https://prev.rust-lang.org/pdfs/Rust-Chucklefish-Whitepaper.pdf<br>
+This tracks with my rough expectations of how difficult porting rust to consoles is<br>
+If they've already got clang toolchains it's relatively straightforward<br>
+see xargo/cargo xbuild/build-std<br>
+https://github.com/japaric/xargo<br>
+https://github.com/rust-osdev/cargo-xbuild<br>
+https://doc.rust-lang.org/nightly/cargo/reference/unstable.html#build-std
+
+## Knobs
+
+* XARGO_RUST_SRC
+* Use vcvars64.bat
+
+## Output
 
 ```rust
 // src/lib.rs
