@@ -8,6 +8,11 @@
   [wevtutil](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil)
 * [Instrumenting Your Code with ETW](https://docs.microsoft.com/en-us/windows-hardware/test/weg/instrumenting-your-code-with-etw)
 
+```cmd
+:: provider names -> guids
+logman query providers
+```
+
 # Xperf
 
 * [Random ASCII Category Archives: xperf](https://randomascii.wordpress.com/category/xperf/)
