@@ -18,6 +18,7 @@ Microsoft-Windows-NdisImPlatformEventProvider {11C5D8AD-756A-42C2-8087-EB1B4A72A
 ...
 ```
 
+http://noahdavids.org/self_published/native_windows_packet_capture.html
 ```cmd
 C:\local\etw>netsh trace start capture=yes traceFile=C:\local\etw\trace
 ...
