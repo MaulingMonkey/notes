@@ -51,6 +51,7 @@ WMI_Tracing_Client_Operations            {8E6B6962-AB54-4335-8229-3255B919DD0E}
 
 # WMI
 
+* Rust: [wmi](https://lib.rs/crates/wmi)
 * [Querying with WQL](https://docs.microsoft.com/en-us/windows/win32/wmisdk/querying-with-wql)
 * [Receiving Event Notifications](https://docs.microsoft.com/en-us/windows/win32/wmisdk/receiving-event-notifications)
 
