@@ -10,7 +10,30 @@
 
 ```cmd
 :: provider names -> guids
-logman query providers
+C:\local\etw>logman query providers
+...
+Microsoft-Windows-NDIS                   {CDEAD503-17F5-4A3E-B7AE-DF8CC2902EB9}
+Microsoft-Windows-NDIS-PacketCapture     {2ED6006E-4729-4609-B423-3EE7BCD678EF}
+Microsoft-Windows-NdisImPlatformEventProvider {11C5D8AD-756A-42C2-8087-EB1B4A72A846}
+...
+```
+
+```cmd
+C:\local\etw>netsh trace start capture=yes traceFile=C:\local\etw\trace
+...
+C:\local\etw>netsh trace stop
+Merging traces ... done
+Generating data collection ... done
+The trace file and additional troubleshooting information have been compiled as "C:\local\etw\trace.cab".
+File location = C:\local\etw\trace
+Tracing session was successfully stopped.
+...
+
+C:\local\etw>expand trace.cab -F:report.etl .
+...
+
+report.etl = trace
+trace.cab = compressed trace / archive format?
 ```
 
 # Xperf
