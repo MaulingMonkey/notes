@@ -2,8 +2,10 @@
 
 * [github.com/microsoft/rust_win_etw](https://github.com/microsoft/rust_win_etw) ([/r/rust](https://www.reddit.com/r/rust/comments/go3g1n/new_crate_rust_support_for_event_tracing_for/) post)
 * [github.com/flowerinthenight/rustttrace](https://github.com/flowerinthenight/rusttrace)
-* [logman](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753820(v=ws.11)?redirectedfrom=MSDN)
-* [xperf](https://docs.microsoft.com/en-us/windows-hardware/test/wpt/xperf-command-line-reference)
+* CLI tools:
+  [logman](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753820(v=ws.11)?redirectedfrom=MSDN)
+  [xperf](https://docs.microsoft.com/en-us/windows-hardware/test/wpt/xperf-command-line-reference)
+  [wevtutil](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil)
 * [Instrumenting Your Code with ETW](https://docs.microsoft.com/en-us/windows-hardware/test/weg/instrumenting-your-code-with-etw)
 
 # Xperf
