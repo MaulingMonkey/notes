@@ -49,6 +49,11 @@ WMI_Tracing                              {1FF6B227-2CA7-40F9-9A66-980EADAA602E}
 WMI_Tracing_Client_Operations            {8E6B6962-AB54-4335-8229-3255B919DD0E}
 ```
 
+# WMI
+
+* [Querying with WQL](https://docs.microsoft.com/en-us/windows/win32/wmisdk/querying-with-wql)
+* [Receiving Event Notifications](https://docs.microsoft.com/en-us/windows/win32/wmisdk/receiving-event-notifications)
+
 # Xperf
 
 * [Random ASCII Category Archives: xperf](https://randomascii.wordpress.com/category/xperf/)
