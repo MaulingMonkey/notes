@@ -37,6 +37,18 @@ report.etl = trace
 trace.cab = compressed trace / archive format?
 ```
 
+[WMI class: Win32_ProcessStartTrace](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/krnlprov/win32-processstarttrace)
+```
+C:\local\etw>logman query providers | findstr WMI
+Microsoft-Windows-EventLog-WMIProvider   {35AC6CE8-6104-411D-976C-877F183D2D32}
+Microsoft-Windows-QoS-WMI-Diag           {725BA9B3-C1F3-4518-AF1B-C8D669191E15}
+Microsoft-Windows-TPM-WMI                {7D5387B0-CBE0-11DA-A94D-0800200C9A66}
+Microsoft-Windows-WMI                    {1EDEEE53-0AFE-4609-B846-D8C0B2075B1F}
+Microsoft-Windows-WMI-Activity           {1418EF04-B0B4-4623-BF7E-D74AB47BBDAA}
+WMI_Tracing                              {1FF6B227-2CA7-40F9-9A66-980EADAA602E}
+WMI_Tracing_Client_Operations            {8E6B6962-AB54-4335-8229-3255B919DD0E}
+```
+
 # Xperf
 
 * [Random ASCII Category Archives: xperf](https://randomascii.wordpress.com/category/xperf/)
