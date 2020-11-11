@@ -7,6 +7,7 @@ For making custom extensions with commands:
 
 * [Adding italics support to your favourite VSCode theme](https://dev.to/salted-bytes/adding-italics-support-to-your-favourite-vscode-theme-2ec9) (dev.to)
 * [Color Themes](https://code.visualstudio.com/docs/getstarted/themes) (code.visualstudio.com)
+* [Semantic Highlight Guide](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide) (code.visualstudio.com)
 
 ```js
 // .vscode/settings.json
