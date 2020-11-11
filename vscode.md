@@ -22,8 +22,8 @@ For making custom extensions with commands:
 }
 ```
 
-`Ctrl`+`Shift`+`P`: `Developer:  Inspect Editor Tokens and Scopes`
-`Ctrl`+`Shift`+`P`: `Developer:  Generate Color Scheme From Current Settings`
+* `Ctrl`+`Shift`+`P`: `Developer:  Inspect Editor Tokens and Scopes`
+* `Ctrl`+`Shift`+`P`: `Developer:  Generate Color Scheme From Current Settings`
 
 # Extensions
 
