@@ -136,3 +136,8 @@ https://devblogs.microsoft.com/oldnewthing/20151021-00/?p=91311
 https://devblogs.microsoft.com/oldnewthing/20151022-00/?p=91301
 :book::monkey:
 ```
+
+# Known COM Values
+
+* `00000000-0000-0000-c000-000000000046` IUnknown
+* `00000003-0000-0000-c000-000000000046` IMarshal?
