@@ -51,6 +51,7 @@ WMI_Tracing_Client_Operations            {8E6B6962-AB54-4335-8229-3255B919DD0E}
 
 ```
 Get-CimClass
+Get-CimInstance
 ```
 
 # WMI
