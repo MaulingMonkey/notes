@@ -19,6 +19,7 @@ References:
 - [RoGetAgileReference](https://docs.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-rogetagilereference)
 - [CoCreateFreeThreadedMarshaler](https://docs.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)
 - [IGlobalInterfaceTable](https://docs.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) + [Creating the Global Interface Table](https://docs.microsoft.com/en-us/windows/win32/com/creating-the-global-interface-table)
+- [IAgileObject](https://docs.microsoft.com/en-us/windows/win32/api/objidlbase/nn-objidlbase-iagileobject)
 - [Marshaling Details](https://docs.microsoft.com/en-us/windows/win32/com/marshaling-details)
 - [CoRegisterMessageFilter](https://docs.microsoft.com/en-us/windows/win32/api/objbase/nf-objbase-coregistermessagefilter)
 - [CoSetMessageDispatcher](https://docs.microsoft.com/en-us/windows/win32/api/messagedispatcherapi/nf-messagedispatcherapi-cosetmessagedispatcher)([IMessageDispatcher](https://docs.microsoft.com/en-us/windows/win32/api/imessagedispatcher/nn-imessagedispatcher-imessagedispatcher)) "This function is usually called by CoreWindow"
