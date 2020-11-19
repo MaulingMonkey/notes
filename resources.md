@@ -23,6 +23,7 @@ A windows build might want DXT-compressed textures, a console might want PNG-com
 Perhaps high-definition HDR textures are only downloaded on consoles with 4k HDR TVs connected.
 Android APKs might bundle different shaders for vulkan-enabled phones vs gles-enabled phones.
 iOS apps might bundle different textures for retina devices vs non-retina.
+An editor might want to load the editable asset on disk, whereas the game might want to load a preprocessed and prebaked version of the same asset.
 
 ### Input: Debug
 
