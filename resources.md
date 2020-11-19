@@ -38,3 +38,7 @@ On the other hand, trying to handle that at the resource loader level might be..
 ### Input: LOD
 
 Textures might be loadable at different LODs.  Might preload a low resolution texture, then stream in a high resolution texture as the graphics pipeline requests higher and higher mip levels.
+
+### Input: Device Handle
+
+Textures and shaders are often specific to a given device handle and must be reloaded on device resets, renderer backend switches (d3d9 -> d3d11), etc.
