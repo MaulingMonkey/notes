@@ -34,3 +34,7 @@ Text might have "localization ID replacement" variants.
 
 Might load a different resource for `ui/menu/next.png` based on if the last input was keyboard vs gamepad vs mouse.
 On the other hand, trying to handle that at the resource loader level might be... awkward.
+
+### Input: LOD
+
+Textures might be loadable at different LODs.  Might preload a low resolution texture, then stream in a high resolution texture as the graphics pipeline requests higher and higher mip levels.
