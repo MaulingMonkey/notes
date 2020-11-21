@@ -2,7 +2,7 @@
 
 * [Getting Started - Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)
 * [Tokio Tutorial](https://tokio.rs/tokio/tutorial)
-
+    * [Shared State](https://tokio.rs/tokio/tutorial/shared-state)
 
 ## Code
 
