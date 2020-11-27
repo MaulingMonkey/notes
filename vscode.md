@@ -51,6 +51,11 @@ For making custom extensions with commands:
         "command": "workbench.action.tasks.runTask"
     },
     {
+        "key": "ctrl+f1",
+        "command": "workbench.action.tasks.runTask",
+        "args": "help"
+    },
+    {
         "key": "ctrl+f7",
         "command": "workbench.action.tasks.runTask",
         "args": "check-file"
