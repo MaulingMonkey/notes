@@ -39,9 +39,26 @@ For making custom extensions with commands:
 * `matklad.rust-analyzer`
 * `ms-vscode.vscode-typescript-tslint-plugin`
 
-# Settings.json
+# Settings
 
-* `%USERPROFILE%\AppData\Roaming\Code\User\settings.json`
+### `%USERPROFILE%\AppData\Roaming\Code\User\keybindings.json`
+
+```js
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+alt+p",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "ctrl+f7",
+        "command": "workbench.action.tasks.runTask",
+        "args": "check-file"
+    },
+]
+```
+
+### `%USERPROFILE%\AppData\Roaming\Code\User\settings.json`
 
 ```js
 {
