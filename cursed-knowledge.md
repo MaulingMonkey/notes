@@ -12,3 +12,36 @@
 
 **Q:** Null pointers always have a bit pattern of 0, right?<br>
 **A:** No.  C++ "Pointers to data member"s are offsets, and 0 is a valid offset.  `nullptr`/`(int C::*)0` may have a bit pattern of `-1`
+
+# Array Co/contra variance type hole (C#, Java)
+
+```java
+// Java
+class Base {}
+class Derived1 extends Base {}
+class Derived2 extends Base {}
+Base[] array = new Derived1[1];
+array[0] = new Derived2(); // ArrayStoreException 
+```
+
+```csharp
+// C#
+class Base {}
+class Derived1 : Base {}
+class Derived2 : Base {}
+Base[] array = new Derived1[1];
+array[0] = new Derived2(); // ArrayTypeMismatchException
+```
+
+Leads to some fun "optimizations" in C#, as shared by [Washu](https://discord.com/channels/186813135263367169/186813135263367169/912149381069824000):
+```csharp
+struct Derived1Holder { public Derived1 Instance; }
+
+static void OptimizedAssigner(Derived1Holder[] array) {
+    array[0].Instance = new Derived1(); // under the hood bounds check, but no under the hood type-check
+}
+
+static void SlowerAssigner(Derived1[] array) {
+    array[0] = new Derived1(); // under the hood bounds check *and* type check
+}
+```
