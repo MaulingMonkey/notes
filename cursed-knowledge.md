@@ -20,7 +20,7 @@
 class Base {}
 class Derived1 extends Base {}
 class Derived2 extends Base {}
-Base[] array = new Derived1[1];
+Base[] array = new Derived1[1]; // Legal implicit cast
 array[0] = new Derived2(); // ArrayStoreException 
 ```
 
@@ -29,7 +29,7 @@ array[0] = new Derived2(); // ArrayStoreException
 class Base {}
 class Derived1 : Base {}
 class Derived2 : Base {}
-Base[] array = new Derived1[1];
+Base[] array = new Derived1[1]; // Legal implicit cast
 array[0] = new Derived2(); // ArrayTypeMismatchException
 ```
 
@@ -45,3 +45,7 @@ static void SlowerAssigner(Derived1[] array) {
     array[0] = new Derived1(); // under the hood bounds check *and* type check
 }
 ```
+
+# ARM
+
+* [ARM PC register points two instructions ahead](https://stackoverflow.com/questions/24091566/why-does-the-arm-pc-register-point-to-the-instruction-after-the-next-one-to-be-e/24092329#24092329)
