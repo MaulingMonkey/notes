@@ -76,17 +76,8 @@ For making custom extensions with commands:
     "workbench.editor.enablePreview": false,
     "debug.allowBreakpointsEverywhere": true,
     "search.usePCRE2": true,
-    "terminal.integrated.fontSize": 12,
     "extensions.ignoreRecommendations": false,
     "references.preferredLocation": "view",
-    "window.zoomLevel": 2,
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    //"rust.rls": {
-    //    "revealOutputChannelOn": "info",
-    //},
-    //"rust.mode": "rls",
-    //"rust-client.channel": "beta",
-    //"rust-client.disableRustup": true,
     "editor.lineHeight": 13,
     "editor.rulers": [80, 120, 160],
     "workbench.colorCustomizations": {
@@ -95,18 +86,30 @@ For making custom extensions with commands:
     "[markdown]": {
         "editor.wordWrap": "off",
     },
+    "[html]": {
+        "editor.wordWrap": "off",
+    },
+    "[xml]": {
+        "editor.wordWrap": "off",
+    },
+    "[javascript]": {
+        "editor.wordWrap": "off",
+    },
+    "diffEditor.wordWrap": "off",
+    "editor.wordWrap": "off",
     "editor.fontSize": 11,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "terminal.integrated.rendererType": "canvas",
     "workbench.colorTheme": "Default Light+",
     "files.associations": {
-        "*.xml": "html"
+        "*.xml": "html",
+        "*.json": "jsonc"
     },
     "editor.accessibilitySupport": "off",
     "java.home": "C:\\Program Files\\Android\\Android Studio\\jre",
     "java.configuration.checkProjectSettingsExclusions": false,
     "rust-analyzer.checkOnSave.enable": false,  // bogus intellisense errors in problems pane
+    "rust-analyzer.diagnostics.enable": false,
     "rust-analyzer.hoverActions.enable": false, // "goto XYZ" menu items when hovering over underlined identifiers
     "rust-analyzer.inlayHints.enable": false,   // inline hints like ": usize"
     "rust-analyzer.lens.enable": false,         // inline hints like "2 implementations"
@@ -121,7 +124,18 @@ For making custom extensions with commands:
                 "fontStyle": "bold",
             },
         }
-    }
+    },
+    "rust-analyzer.assist.importPrefix": "crate",
+    "[jsonc]": {
+        "files.trimTrailingWhitespace": true,
+    },
+    "files.trimTrailingWhitespace": true,
+    "docker.showStartPage": false,
+    "rust-analyzer.assist.importGranularity": "module",
+    "terminal.integrated.gpuAcceleration": "canvas",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "window.zoomLevel": 2,
 
     //"editor.parameterHints.enabled": false,
     //"rust-analyzer.callInfo.full": false,
