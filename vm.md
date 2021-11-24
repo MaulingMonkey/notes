@@ -11,6 +11,7 @@
 
 * <https://upload.wikimedia.org/wikipedia/commons/e/e4/ELF_Executable_and_Linkable_Format_diagram_by_Ange_Albertini.png>
 * <https://stackoverflow.com/questions/24091566/why-does-the-arm-pc-register-point-to-the-instruction-after-the-next-one-to-be-e>
+* ARMv7: <https://developer.arm.com/documentation/ddi0406/cb/Application-Level-Architecture/ARM-Instruction-Set-Encoding/ARM-instruction-set-encoding>
 * <https://developer.arm.com/documentation/dui0473/m/overview-of-the-arm-architecture/program-counter>
 * <https://www.keil.com/support/man/docs/ARMASM/armasm_dom1359731138020.htm>
 * MOS 6502 lineage?
