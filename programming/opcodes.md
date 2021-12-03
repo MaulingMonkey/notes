@@ -26,3 +26,5 @@
 ### x86
 
 * <https://en.wikipedia.org/wiki/X86>
+* <https://en.wikipedia.org/wiki/FLAGS_register>
+* <https://www.felixcloutier.com/x86/sub>
