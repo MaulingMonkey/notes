@@ -53,3 +53,9 @@ Large family of decoders
 * <https://lib.rs/search?q=yaxpeax>
 * <https://docs.rs/yaxpeax-x86/>
 * <https://github.com/iximeow/yaxpeax-x86>
+
+# Other
+
+* <https://www.reddit.com/r/programming/comments/hvs8xx/we_just_open_sourced_a_cross_platform_x86x64/>
+* <https://sr.ht/~nabijaczleweli/yaxpeax-friends/>
+* <https://github.com/iximeow/disas-bench>
