@@ -28,3 +28,28 @@
 * <https://en.wikipedia.org/wiki/X86>
 * <https://en.wikipedia.org/wiki/FLAGS_register>
 * <https://www.felixcloutier.com/x86/sub>
+
+# Rust Crates
+
+### iced-x86
+
+x86 only? not to be confused with the gui thing by the same name
+
+* <https://github.com/icedland/iced>
+* <https://lib.rs/crates/iced-x86>
+
+### csx64
+
+x64 only? isolated?
+
+* <https://lib.rs/crates/csx64>
+* <https://github.com/dragazo/csx64-rs-lib>
+
+### yaxpeax
+
+Large family of decoders
+
+* <https://git.iximeow.net/yaxpeax-arch/about/>
+* <https://lib.rs/search?q=yaxpeax>
+* <https://docs.rs/yaxpeax-x86/>
+* <https://github.com/iximeow/yaxpeax-x86>
