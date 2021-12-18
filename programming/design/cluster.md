@@ -12,3 +12,7 @@ set PATH=~/.cargo/bin:${PATH}
 cargo install ...
 ...
 ```
+
+# Kiosk / Login
+
+* <https://unix.stackexchange.com/questions/253928/how-to-configure-agetty-to-autologon-on-only-one-terminal>
