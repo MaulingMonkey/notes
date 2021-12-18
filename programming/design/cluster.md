@@ -26,6 +26,16 @@ cargo install ...
 ...
 ```
 
+### Update
+
+```sh
+#!/usr/bin
+rustup update stable
+cargo install ...
+killall --wait ...
+...
+```
+
 # Kiosk / Login
 
 * <https://unix.stackexchange.com/questions/253928/how-to-configure-agetty-to-autologon-on-only-one-terminal>
