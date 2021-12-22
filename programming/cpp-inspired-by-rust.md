@@ -11,6 +11,11 @@
 #include <cassert>
 #include <vector>
 #include <iostream>
+#include <type_traits>
+
+namespace gsl {
+    template <class T, class = std::enable_if_t<std::is_pointer<T>::value>> using owner = T;
+}
 
 template < typename T > class Borrow;
 template < typename T > class BorrowMut;
@@ -25,44 +30,62 @@ template < typename T > class RefCell {
     T value;
     mutable unsigned borrows = 0u;
 public:
-    RefCell(T value): value(std::move(value)) {}
-    RefCell(RefCell&& other): value(std::move(other.value)) {}
+    RefCell(T value) noexcept : value(std::move(value)) {}
+    RefCell(RefCell&& other) noexcept : value(std::move(other.value)) {}
 
-    Borrow<T> borrow() const;
-    BorrowMut<T> borrow_mut();
+    Borrow<T> borrow() const noexcept;
+    BorrowMut<T> borrow_mut() noexcept;
 };
 
 template < typename T > class Borrow {
-    const RefCell<T> & refcell;
     friend class RefCell<T>;
-    Borrow(const RefCell<T> & refcell): refcell(refcell) {
+
+    const T & value;
+    unsigned & borrows;
+
+    explicit Borrow(const RefCell<T> & refcell) noexcept : value(refcell.value), borrows(refcell.borrows) {
         assert(refcell.borrows != ~0u);
         ++refcell.borrows;
     }
-public:
-    ~Borrow() { --refcell.borrows; }
 
-    const T& operator*()  const [[clang::lifetimebound]] { return refcell.value; }
-    const T* operator->() const [[clang::lifetimebound]] { return &refcell.value; }
+    Borrow& operator=(const Borrow&) = delete;
+    Borrow& operator=(Borrow&&) = delete;
+    Borrow() = delete;
+public:
+    Borrow(Borrow&& other) : value(other.value), borrows(other.borrows) { ++borrows; }
+    Borrow(const Borrow& other) : value(other.value), borrows(other.borrows) { ++borrows; }
+    ~Borrow() noexcept { --borrows; }
+
+    const T& operator*()  const noexcept [[clang::lifetimebound]] { return  value; }
+    const T* operator->() const noexcept [[clang::lifetimebound]] { return &value; }
 };
 
 template < typename T > class BorrowMut {
-    RefCell<T> & refcell;
     friend class RefCell<T>;
-    BorrowMut(RefCell<T> & refcell): refcell(refcell) {
+
+    gsl::owner<T*> const value;
+    unsigned* borrows;
+
+    explicit BorrowMut(RefCell<T> & refcell) noexcept : value(&refcell.value), borrows(&refcell.borrows) {
         assert(refcell.borrows == 0u);
         refcell.borrows = ~0u;
     }
-public:
-    ~BorrowMut() { refcell.borrows = 0u; }
 
-    T& operator*()  [[clang::lifetimebound]] { return refcell.value; }
-    T* operator->() [[clang::lifetimebound]] { return &refcell.value; }
+    BorrowMut& operator=(const BorrowMut&) = delete;
+    BorrowMut& operator=(BorrowMut&&) = delete;
+    BorrowMut() = delete;
+    BorrowMut(const BorrowMut&) = delete;
+public:
+    BorrowMut(BorrowMut&& other) : value(other.value), borrows(other.borrows) { other.borrows = nullptr; }
+    ~BorrowMut() noexcept { if (borrows) *borrows = 0u; }
+
+    T& operator*()  noexcept [[clang::lifetimebound]] { return *value; }
+    T* operator->() noexcept [[clang::lifetimebound]] { return  value; }
 };
 
 
-template < typename T > Borrow   <T> RefCell<T>::borrow    () const { return Borrow   <T>(*this); }
-template < typename T > BorrowMut<T> RefCell<T>::borrow_mut()       { return BorrowMut<T>(*this); }
+template < typename T > Borrow   <T> RefCell<T>::borrow    () const noexcept { return Borrow   <T>(*this); }
+template < typename T > BorrowMut<T> RefCell<T>::borrow_mut() noexcept       { return BorrowMut<T>(*this); }
 
 
 
@@ -78,7 +101,7 @@ int main() {
         const auto a = vec.borrow();
         const auto b = vec.borrow();
     }
-    
+
     //auto a = &*vec.borrow(); // error: temporary bound to local reference 'e' will be destroyed at the end of the full-expression [-Werror,-Wdangling]
     //std::cout << a->size() << "\n";
 
