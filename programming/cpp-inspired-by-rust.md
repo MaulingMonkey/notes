@@ -1,6 +1,9 @@
 # RefCell clone
 
 * [wandbox](https://wandbox.org/permlink/fHd8Tsz1BmBTXlWx)
+* [Lifetime Profile Update in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/)
+* [Warning C26815 The pointer is dangling because it points at a temporary instance that was destroyed. (ES.65)](https://docs.microsoft.com/en-us/cpp/code-quality/c26815?view=msvc-170)
+* [F.22: Use T* or owner<T*> to designate a single object](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f22-use-t-or-ownert-to-designate-a-single-object)
 
 ```cpp
 // compile with -Werror=dangling
