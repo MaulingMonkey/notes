@@ -1,5 +1,6 @@
 | feature       | winapi                                                             | windows |
 | ------------- | ------------------------------------------------------------------ | ------- |
+| safety        | ⚠️ everything is `unsafe`, which is at least sound                | ❌ soundness issues like [windows-rs#1409](https://github.com/microsoft/windows-rs/issues/1409) |
 | api stability | ✔️ fairly stable 0.3.x                                            | ❌ 0.28.x and continuing to skyrocket
 | codegen       | ⚠️ manual                                                         | ⚠️ from `*.winmd` metadata |
 | coverage      | ⚠️ decent coverage of Win32, but missing some stuff               | ✔️ everything under the sun, including new UWP APIs
