@@ -28,7 +28,14 @@
 
 
 
+# Concepts
+
+*   [BATNA: Best Alternative To Negotiated Agreement](https://en.wikipedia.org/wiki/Best_alternative_to_a_negotiated_agreement)
+*   [Opportunity cost](https://en.wikipedia.org/wiki/Opportunity_cost)
+
 # External Advice
 
 *   [Retirement Plans: Last Week Tonight with John Oliver (HBO)](https://www.youtube.com/watch?v=gvZSpET11ZY)
     warns about financial advisors etc.
+*   [Mike Monteiro: F*ck You, Pay Me](https://www.youtube.com/watch?v=jVkLVRt6c1U)
+    discusses contract negotiation, getting paid by clients, lawyers, etc.
