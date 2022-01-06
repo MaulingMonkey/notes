@@ -5,7 +5,7 @@
 *   Diversified stocks for long term gains (short term unstable)
 *   Bonds for short term stability (middling long term gains)
     *   Possibly worthwhile as you near retirement
-    *   Alternatively, just make enough money that the instability isn't an issue
+    *   Alternatively, just make enough money that the instability of stocks isn't an issue
 *   Diversify!  Don't put all your $$$ in one place.
     *   Don't put all your $$$ in tech          (tech bubbles have wrecked people)
     *   Don't put all your $$$ in crypto        (tech bubbles have wrecked people)
