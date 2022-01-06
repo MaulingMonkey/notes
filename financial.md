@@ -2,6 +2,10 @@
 
 *   Pay off high interest rate debts first
 *   Compound interest is amazing
+*   In theory: buy low, sell high.
+   *   In practice: you mostly don't know what's high/low.
+   *   Avoid buying into the clearly overhyped
+   *   If it's clearly worth selling, it's probably too late to sell high.
 *   Diversified stocks for long term gains (short term unstable)
 *   Bonds for short term stability (middling long term gains)
     *   Possibly worthwhile as you near retirement
