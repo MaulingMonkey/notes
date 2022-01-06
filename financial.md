@@ -16,6 +16,9 @@
     *   Bernie Madoff should only be able to run off with half your savings
     *   Your bank having a freakout and locking your account might only lock up half your savings
     *   Won't prevent the feds from freezing both accounts though.
+*   Use your employer's 401k matching for great profit
+*   Avoid early 401k withdrawls and associated penalties
+*   Have an emergency savings fund.
 
 
 
