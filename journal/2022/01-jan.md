@@ -9,6 +9,7 @@
     \(`PostThreadMessage`  is unreliable thanks to dialog message loops, but `PostMessage` to an HWND can dispatch to `WndProc` - see [#windows-dev Discord Ramblings](https://discord.com/channels/273534239310479360/583054410670669833/928069858682355733)\)
 
 ### TODO:
+*   Merge xinput bindings into thindx from wherever I hid them
 *   Experiment with Syncthing for code backup, media sync?
 *   Fuzz coverage for thindx
 *   Finish `thindx::d3d9::*`
