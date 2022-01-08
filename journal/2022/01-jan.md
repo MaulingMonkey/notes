@@ -9,8 +9,15 @@
     \(`PostThreadMessage`  is unreliable thanks to dialog message loops, but `PostMessage` to an HWND can dispatch to `WndProc` - see [#windows-dev Discord Ramblings](https://discord.com/channels/273534239310479360/583054410670669833/928069858682355733)\)
 
 ### TODO:
-*   Merge xinput bindings into thindx from wherever I hid them
+*   ~~Merge xinput bindings into thindx from wherever I hid them~~
 *   Experiment with Syncthing for code backup, media sync?
 *   Fuzz coverage for thindx
 *   Finish `thindx::d3d9::*`
 *   Example coverage for `thindx::d3d9::*`
+
+
+
+## Saturday January 8th, 2022
+*   Hidden bindings weren't just XInput.  Reimplemented in thindx.
+*   TODO: Test/fuzz coverage of `thindx::xinput`
+*   TODO: Audit/use [Rust Test Explorer](https://marketplace.visualstudio.com/items?itemName=swellaby.vscode-rust-test-adapter&ssr=false#overview) (VSCode Extension)?
