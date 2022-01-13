@@ -108,14 +108,19 @@ For making custom extensions with commands:
     "editor.accessibilitySupport": "off",
     "java.home": "C:\\Program Files\\Android\\Android Studio\\jre",
     "java.configuration.checkProjectSettingsExclusions": false,
+
     "rust-analyzer.checkOnSave.enable": false,  // bogus intellisense errors in problems pane
     "rust-analyzer.diagnostics.enable": false,
     "rust-analyzer.hoverActions.enable": false, // "goto XYZ" menu items when hovering over underlined identifiers
     "rust-analyzer.inlayHints.enable": false,   // inline hints like ": usize"
     "rust-analyzer.lens.enable": false,         // inline hints like "2 implementations"
     "rust-analyzer.rustfmt.overrideCommand": null,
-    "editor.minimap.enabled": true,
     "rust-analyzer.updates.askBeforeDownload": false,
+    "rust-analyzer.assist.importPrefix": "crate",
+    "rust-analyzer.assist.importGranularity": "module",
+    //"rust-analyzer.callInfo.full": false,
+
+    "editor.minimap.enabled": true,
     "workbench.editor.openSideBySideDirection": "down",
     "editor.semanticTokenColorCustomizations": {
         "rules": {
@@ -125,19 +130,17 @@ For making custom extensions with commands:
             },
         }
     },
-    "rust-analyzer.assist.importPrefix": "crate",
     "[jsonc]": {
         "files.trimTrailingWhitespace": true,
     },
     "files.trimTrailingWhitespace": true,
     "docker.showStartPage": false,
-    "rust-analyzer.assist.importGranularity": "module",
     "terminal.integrated.gpuAcceleration": "canvas",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "window.zoomLevel": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.enablePersistentSessions": false,
 
     //"editor.parameterHints.enabled": false,
-    //"rust-analyzer.callInfo.full": false,
 }
 ```
