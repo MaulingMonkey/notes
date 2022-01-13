@@ -26,6 +26,8 @@
 
 ## Wednesday January 12th, 2022
 *   [cargo clippy](https://github.com/rust-lang/rust-clippy) might not be too hard to hack on?
+    *   <https://github.com/rust-lang/rust-clippy/blob/master/CONTRIBUTING.md>
+    *   <https://github.com/rust-lang/rust-clippy/blob/master/doc/adding_lints.md>
 *   Rust Code Coverage
     *   <https://www.reddit.com/r/rust/comments/j0ribi/rust_code_coverage_in_vscode/>
     *   <https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters>
