@@ -21,3 +21,16 @@
 *   Hidden bindings weren't just XInput.  Reimplemented in thindx.
 *   TODO: Test/fuzz coverage of `thindx::xinput`
 *   TODO: Audit/use [Rust Test Explorer](https://marketplace.visualstudio.com/items?itemName=swellaby.vscode-rust-test-adapter&ssr=false#overview) (VSCode Extension)?
+
+
+
+## Wednesday January 12th, 2022
+*   [cargo clippy](https://github.com/rust-lang/rust-clippy) might not be too hard to hack on?
+*   Rust Code Coverage
+    *   <https://www.reddit.com/r/rust/comments/j0ribi/rust_code_coverage_in_vscode/>
+    *   <https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters>
+    *   <https://github.com/mozilla/grcov#example-how-to-generate-source-based-coverage-for-a-rust-project>
+    *   <https://coveralls.io/>
+    *   <https://github.com/tismith/example-cli-rs> -> <https://app.codecov.io/gh/tismith/example-cli-rs/blob/master/src/utils/cmdline.rs>
+*   `cargo html` doesn't support library wasm demos very well
+*   `cargo install wasm-pack --no-default-features` to workaround openssl vendoring issues
