@@ -36,3 +36,23 @@
     *   <https://github.com/tismith/example-cli-rs> -> <https://app.codecov.io/gh/tismith/example-cli-rs/blob/master/src/utils/cmdline.rs>
 *   `cargo html` doesn't support library wasm demos very well
 *   `cargo install wasm-pack --no-default-features` to workaround openssl vendoring issues
+
+
+
+## Saturday January 15th, 2022
+*   cargo clippy looks annoying to hack on
+    *   [dylint](https://lib.rs/crates/dylint) is conceptually cool
+    *   experimented with [wasmer](https://docs.rs/wasmer/2.0.0/wasmer/) + `wasm32-{wasi,unknown-unknown}` - not too annoying
+    *   `cargo mmlint` could take a mixture of prebuilt wasm binaries + workspace linter project @ custom target dir?
+    *   have a "make your own lint rule" focused readme
+*   `#![register_tool(...)]` et all are in [backlog hell](https://github.com/rust-lang/rust/issues/66079)
+    ```rust
+    // eww gross:
+    #![feature(register_tool)]
+    #![register_tool(mmlint)]
+    #[cfg_attr(mmlint, allow(mmlint::whatever))]
+    
+    // for now:
+    #[cfg_attr(mmlint, allow(mmlint_whatever))]
+    // ?
+    ```
