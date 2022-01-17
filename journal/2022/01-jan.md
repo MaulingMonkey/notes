@@ -56,3 +56,13 @@
     #[cfg_attr(mmlint, allow(mmlint_whatever))]
     // ?
     ```
+
+
+
+## Monday January 17th, 2022
+
+> ok, since I've been down this path before, I'll link you some stuff <br>
+> https://github.com/maroider/syringe : DLL injector I made based on http://blog.opensecurityresearch.com/2013/01/windows-dll-injection-basics.html <br>
+> https://lib.rs/crates/djin: DLL injector someone I once chatted with made <br>
+> https://github.com/maroider/asbestos :  a thingy I made using function hooking and DLL injection <br>
+> --[maroider](https://discord.com/channels/273534239310479360/583054410670669833/932415966518853712) <br>
