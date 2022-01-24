@@ -66,3 +66,11 @@
 > https://lib.rs/crates/djin: DLL injector someone I once chatted with made <br>
 > https://github.com/maroider/asbestos :  a thingy I made using function hooking and DLL injection <br>
 > --[maroider](https://discord.com/channels/273534239310479360/583054410670669833/932415966518853712) <br>
+
+## Monday January 24th, 2022
+
+*   I should really be trying my hand at libclang for C++ parsing
+    *   <https://clang.llvm.org/doxygen/group__CINDEX.html>
+    *   `C:\Program Files\LLVM\bin\libclang.dll` (+ `LLVM-C.dll`?)
+    *   <https://lib.rs/crates/clang-sys>
+    *   <https://lib.rs/crates/clang>
