@@ -74,3 +74,4 @@
     *   `C:\Program Files\LLVM\bin\libclang.dll` (+ `LLVM-C.dll`?)
     *   <https://lib.rs/crates/clang-sys>
     *   <https://lib.rs/crates/clang>
+*   <https://crates.io/crates/interoptopus> - generate C, C#, Python, ... bindings to a Rust DLL
