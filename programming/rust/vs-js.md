@@ -10,6 +10,7 @@
 | `{}`                                                                                                                      | [`js_sys::Object::new()`](https://docs.rs/js-sys/latest/js_sys/struct.Object.html#method.new)
 | [`any`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any) / [`unknown`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type) | [`wasm_bindgen::JsValue`](https://docs.rs/wasm-bindgen/0.2.79/wasm_bindgen/struct.JsValue.html)
 | `unknown[]`                                                                                                               | [`js_sys::Array`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Array.html)
+| `T?` | [`Option<T>`](https://doc.rust-lang.org/std/option/enum.Option.html)
 
 ### Syntax Equivalents
 
@@ -21,3 +22,11 @@
 | `any.prop = v;`     | [`js_sys::Reflect::set`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.set.html) `(&any, &js_sys::String::from("string"), &v)` `?;`
 | `key in target`     | [`js_sys::Reflect::has`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.has.html) `(&target, &js_sys::String::from("key"))` `?`
 | `delete target.key` | [`js_sys::Reflect::delete_property`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.delete_property.html) `(&target, &js_sys::String::from("key"))` `?`
+
+### Conversions
+
+| Conversion       | Rust |
+| ---------------- | ---- |
+| `any -> bool?`   | [`any.as_bool()`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Object.html#method.as_bool)
+| `any -> number?` | [`any.as_f64()`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Object.html#method.as_f64)
+| `any -> string?` | [`any.dyn_ref::<js_sys::JsString>()`](https://rustwasm.github.io/wasm-bindgen/api/wasm_bindgen/trait.JsCast.html#method.dyn_ref) (JS) <br> [`js_sys::JsString::try_from(&any)`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.JsString.html#method.try_from) (JS) <br> [`any.as_string()`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Object.html#method.as_string) (Rust)
