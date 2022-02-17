@@ -21,8 +21,7 @@
 | [`array.forEach(...)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) | [`array.for_each(&mut \|...\| ...)`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Array.html#method.for_each)
 | `let v = any.prop;` | `let v =` [`js_sys::Reflect::get`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.get.html) `(&any, &js_sys::String::from("string"))` `?;`
 | `any.prop = v;`     | [`js_sys::Reflect::set`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.set.html) `(&any, &js_sys::String::from("string"), &v)` `?;`
-| `key in target`     | `js_sys::String::from("key").` [`js_in`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.JsString.html#method.js_in) `(&target)`
-| `key in target`     | [`js_sys::Reflect::has`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.has.html) `(&target, &js_sys::String::from("key"))` `?`
+| `key in target`     | `js_sys::String::from("key").` [`js_in`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.JsString.html#method.js_in) `(&target)` <br> [`js_sys::Reflect::has`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.has.html) `(&target, &js_sys::String::from("key"))` `?`
 | `delete target.key` | [`js_sys::Reflect::delete_property`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.delete_property.html) `(&target, &js_sys::String::from("key"))` `?`
 
 ### Conversions
