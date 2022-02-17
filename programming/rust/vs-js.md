@@ -20,3 +20,4 @@
 | `let v = any.prop;` | `let v =` [`js_sys::Reflect::get`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.get.html) `(&any, &js_sys::String::from("string"))` `?;`
 | `any.prop = v;`     | [`js_sys::Reflect::set`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.set.html) `(&any, &js_sys::String::from("string"), &v)` `?;`
 | `key in target`     | [`js_sys::Reflect::has`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.has.html) `(&target, &js_sys::String::from("key"))` `?`
+| `delete target.key` | [`js_sys::Reflect::delete_property`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/Reflect/fn.delete_property.html) `(&target, &js_sys::String::from("key"))` `?`
