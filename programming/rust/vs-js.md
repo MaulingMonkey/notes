@@ -3,6 +3,8 @@
 * [wasm-bindgen Guide](https://rustwasm.github.io/docs/wasm-bindgen/)
 * [rustwasm.github.io API docs](https://rustwasm.github.io/wasm-bindgen/api/wasm_bindgen/index.html) cover js_sys, wasm_bindgen, wasm_bindgen_futures, & web_sys with one search function
 
+# Cheat Sheet
+
 ### Type Equivalents
 
 | JavaScript or TypeScript | Rust |
