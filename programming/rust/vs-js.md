@@ -2,17 +2,18 @@
 
 | JavaScript or TypeScript | Rust |
 | ------------------------ | ---- |
+| [`any`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any) / [`unknown`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type) | [`wasm_bindgen::JsValue`](https://docs.rs/wasm-bindgen/0.2.79/wasm_bindgen/struct.JsValue.html)
 | [`number`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#the-primitives-string-number-and-boolean)   | [`f64`](https://doc.rust-lang.org/std/primitive.f64.html)
 | [`boolean`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#the-primitives-string-number-and-boolean)  | [`bool`](https://doc.rust-lang.org/std/primitive.bool.html)
 | [`string`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#the-primitives-string-number-and-boolean)   | [`js_sys::JsString`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.JsString.html)
 | `"string"`                                                                                                                | [`js_sys::JsString::from("string")`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.JsString.html#impl-From%3C%26%27a%20str%3E)
 | `object`                                                                                                                  | [`js_sys::Object`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Object.html)
 | `{}`                                                                                                                      | [`js_sys::Object::new()`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Object.html#method.new)
-| [`any`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any) / [`unknown`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type) | [`wasm_bindgen::JsValue`](https://docs.rs/wasm-bindgen/0.2.79/wasm_bindgen/struct.JsValue.html)
-| `unknown[]`                                                                                                               | [`js_sys::Array`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Array.html)
 | `T?` | [`Option<T>`](https://doc.rust-lang.org/std/option/enum.Option.html)
 | `undefined` | N/A / [`Option::None`](https://doc.rust-lang.org/std/option/enum.Option.html#variant.None)
 | `null` | N/A / [`Option::None`](https://doc.rust-lang.org/std/option/enum.Option.html#variant.None)
+| `unknown[]`                                                                                                               | [`js_sys::Array`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Array.html) (JS Owned) <br> `Vec<`[`wasm_bindgen::JsValue`](https://rustwasm.github.io/wasm-bindgen/api/wasm_bindgen/struct.JsValue.html)`>` (Rust Owned)
+| [`Float32Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)           | [`js_sys::Float32Array`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Float32Array.html) (JS Owned) <br> `Vec<f32>` / `Box<[f32]>` (Rust Owned) <br> [`js_sys::Float32Array::view(..)`](https://rustwasm.github.io/wasm-bindgen/api/js_sys/struct.Float32Array.html#method.view) (Rust Owned, Lent to JS)
 
 ### Syntax Equivalents
 
