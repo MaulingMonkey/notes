@@ -5,6 +5,7 @@
 *   Worked a ton on [thindx](https://docs.rs/thindx/)
 *   Worked on a hwnd-focused competitor to [winsafe](https://docs.rs/winsafe/)
 *   Filed soundness issues against winsafe
+*   [🦀 raw-git-experiments 🦀](https://github.com/MaulingMonkey/raw-git-experiments)
 
 ### Looked into compiling rustc for wasm
 *   <https://github.com/rust-lang/miri/issues/722>
