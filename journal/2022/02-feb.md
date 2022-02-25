@@ -6,6 +6,10 @@
 *   Worked on a hwnd-focused competitor to [winsafe](https://docs.rs/winsafe/)
 *   Filed soundness issues against winsafe
 
+### Looked into compiling rustc for wasm
+*   <https://github.com/rust-lang/miri/issues/722>
+*   <https://github.com/RReverser/rust/tree/compile_rustc_for_wasm>
+
 ### TODO projects not of note
 *   Asset Pack Theorycrafting
     *   Example Use Case: <https://thoseawesomeguys.com/prompts/>
