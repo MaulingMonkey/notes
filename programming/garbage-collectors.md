@@ -69,3 +69,4 @@ However, they tend to be more predictable and incrementally improvable.
 * [Go memory ballast: How I learnt to stop worrying and love the heap](https://blog.twitch.tv/en/2019/04/10/go-memory-ballast-how-i-learnt-to-stop-worrying-and-love-the-heap/)
     * Allocating 10GB to stop GCing 10 times per second in an effort to reduce the 30% overhead of GC is the kind of cargo culting bullshit that arises from not having real control over your allocator.
 * [The Broken Promises of MRI/REE/YARV](http://timetobleed.com/the-broken-promises-of-mrireeyarv/)
+* [Lessons learned while fixing memory leaks in our first Unity title](http://richg42.blogspot.com/2015/05/lessons-learned-while-fixing-memory.html)
