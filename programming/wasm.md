@@ -20,6 +20,7 @@
     * Manual FFI ala [miniquad](https://github.com/not-fl3/miniquad): what I'm leaning towards these days
     * [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen) / wasm-pack / web_sys / js_sys: maintainence mode / low velocity, but still works
     * [stdweb](https://github.com/koute/stdweb): dead and now broken
+    * [emscripten](https://emscripten.org/): when you really want to force a full desktop application into the browser
 * Needs JS boilerplate, and none of the tools play nicely with each other.
 * WASM modules tend to import JS functions that take pointers, without providing memory access to said wasm modules.
     * Easily worked around with manually written javascript
