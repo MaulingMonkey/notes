@@ -15,6 +15,7 @@ engine::app!(Game::new());
 fn main() {
     engine::init(include_dir!(...));
     engine::d3d11::spawn_window(Game::new());
+    engine::wait_for_views_to_close();
 }
 
 struct Game {}
@@ -23,12 +24,7 @@ impl Game {
     pub fn new() -> Self { Self {} }
 }
 
-impl engine::App for Game {
-    fn update(&mut self, ctx: &mut engine::UpdateCtx) { // optional? skip for v1?
-        let dt = ...;
-        // ...
-    }
-
+impl engine::View for Game {
     fn render(&mut self, ctx: &mut engine::RenderCtx) {
         let dt = ...;
         let sprite = ctx.sprites.get("something"); // assets/sprites.json: { "something": { ... } }
