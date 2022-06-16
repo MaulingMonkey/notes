@@ -39,3 +39,36 @@ impl engine::View for Game {
     }
 }
 ```
+
+## Thursday June 16th, 2022
+*   Satisfactory yeet
+*   Small notepad ftw
+
+#### Projects to consider
+*   [ ] engine2 font
+*   [ ] sandboxing playground (apply/demo chromium sandbox techniques in Rust)
+*   [ ] hello world dll for x64 decompiling might be easier than hello world exe
+*   [ ] web flamegrapher
+*   [ ] d3d flamegrapher
+*   [ ] RIIR (DCSS? OpenTTD?)
+
+#### Minimal HTTP Server Notes
+* <https://datatracker.ietf.org/doc/html/rfc7231>
+    * ~100 pages
+* **"MUST:"**
+    * Generate `CR` `LF`
+    * Generate `Content-Encoding: gzip` etc. if compressing
+    * Support `GET` and `HEAD`
+    * Not abuse "safe" methods
+    * Not send a body in response to `HEAD`
+    * Handle `Expect: 100-continue` for `HTTP/1.1` requests
+    * Not send a `1xx` response to an `HTTP/1.0` client
+    * Not generate a payload in a 205 (Reset Content) response
+    * Generate an `Allow` header field in a 405 (Method Not Allowed) response containing a list of the target resource's currently supported methods.
+    * Send an `Upgrade` header field in a 426 (Upgrade Required) response to indicate the required protocol(s)
+    * Generate any header timestamps in the IMF-fixdate format (e.g. `Sun, 06 Nov 1994 08:49:37 GMT`.)
+    * Not generate additional whitespace in an HTTP-date beyond that specifically included as SP in the grammar
+    * Interpret a timestamp that appears to be more than 50 years in the future as representing the most recent year in the past that had the same last two digits.
+    * Not send a `Date` header field if it does not have a clock capable of providing a reasonable approximation of the current instance in Coordinated Universal Time.
+    * MAY send a `Date` header field if the response is in the 1xx (Informational) or 5xx (Server Error) class of status codes.
+    * MUST send a `Date` header field in all other cases.
