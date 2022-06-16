@@ -49,6 +49,7 @@ impl engine::View for Game {
 *   [ ] sandboxing playground (apply/demo chromium sandbox techniques in Rust)
 *   [ ] hello world dll for x64 decompiling might be easier than hello world exe
 *   [ ] web flamegrapher
+    *    Use [Server Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
 *   [ ] d3d flamegrapher
 *   [ ] RIIR (DCSS? OpenTTD?)
 
