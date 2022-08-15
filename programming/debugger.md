@@ -19,6 +19,9 @@ A more complicated COM-filled API rich with breakpoints etc. (behind WinDbg, VS?
     *   [DebugCreate](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-debugcreate)\[[Ex](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-debugcreateex)\] - local debugging
     *   [DebugConnect](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-debugconnect)\[[Wide](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-debugconnectwide)\] - remote machine debugging
     *   [Client Objects](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/client-objects)
+    *   [Using Client Objects](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/using-client-objects)
+    *   [IDebugControl3::AddBreakpoint](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-idebugcontrol3-addbreakpoint)
+    *   [Controlling Threads and Processes](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/controlling-threads-and-processes)
 *   [dbgeng.h header](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/)
 *   [Debug Engine Interfaces](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/client-com-interfaces)
 *   [Writing DbgEng Extension Code](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/writing-dbgeng-extension-code)
