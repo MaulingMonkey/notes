@@ -69,3 +69,25 @@
 > > Lua: debug.traceback: Horrible Software
 >
 > The place where poor software engineering decisions come back to haunt everyone.
+
+
+> []----[] — Today at 6:20 PM<br>
+> wait.  i just tried this online.
+> https://tio.run/##bY3BCoAgEETvfcUcW@hSYbc@RkpLiDVMv99WiboEw8DOzmOOpHO2iZfoPMN63@qw9R3Eh@oj4QyOI34ehtemeWF9rbaWCM6WRo95hkLcDSOYmALLJczDla2CKOqgRPRFk0STiHK@AQ
+
+...
+
+> Lucien — Today at 6:21 PM<br>
+> print(asdf(5)) will not print anything
+
+> []----[] — Today at 6:21 PM<br>
+> Well, two wrongs make a right.  It's a sane language now.
+
+> Lucien — Today at 6:21 PM<br>
+> but print((asdf(5))) will print nil<br>
+> notice the extra parens<br>
+> Lua's () operator is the "exactly one value" operator<br>
+> amusingly, `print(asdf(5), asdf(5))` will print `nil`<br>
+> if you ever call a function and pass its result directly to table.insert, I recommend<br>
+> `table.insert(list, (foo()))`<br>
+> because `table.insert` has an optional middle argument that has caused production issues in my life, too<br>
