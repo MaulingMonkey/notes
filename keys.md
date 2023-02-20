@@ -23,18 +23,17 @@
 | `▄` | <kbd>2</kbd><kbd>2</kbd><kbd>0</kbd> | `▌` | <kbd>2</kbd><kbd>2</kbd><kbd>1</kbd> | `▐` | <kbd>2</kbd><kbd>2</kbd><kbd>2</kbd> | `▀` | <kbd>2</kbd><kbd>2</kbd><kbd>3</kbd> | Block (Bottom, Left, Right, Top)
 | `░` | <kbd>2</kbd><kbd>7</kbd><kbd>6</kbd> | `▒` | <kbd>2</kbd><kbd>7</kbd><kbd>7</kbd> | `▓` | <kbd>2</kbd><kbd>7</kbd><kbd>8</kbd> | `█` | <kbd>2</kbd><kbd>1</kbd><kbd>9</kbd> | Block (25%, 50%, 75%, 100% opacity)
 |     | **Other**
-| `™` | <kbd>0</kbd><kbd>1</kbd><kbd>5</kbd><kbd>3</kbd> | | | | | | | Trademark
-| `€` | <kbd>0</kbd><kbd>1</kbd><kbd>2</kbd><kbd>8</kbd> | | | | | | | Euro
-| `¢` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>2</kbd> | | | | | | | Cents
-| `£` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>3</kbd> | | | | | | | British Pound
-| `¤` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>4</kbd> | | | | | | | Currency Placeholder?
-| `¥` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>5</kbd> | | | | | | | Yen
-| `©` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>9</kbd> | | | | | | | Copyright
+| `™` | <kbd>0</kbd><kbd>1</kbd><kbd>5</kbd><kbd>3</kbd> | `©` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>9</kbd> | | | | | Trademark, Copyright
+| `€` | <kbd>0</kbd><kbd>1</kbd><kbd>2</kbd><kbd>8</kbd> | `¢` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>2</kbd> | `¤` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>4</kbd> | `¥` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>5</kbd> | Euro, Cents, Currency Placeholder, Yen
 | `☺` | <kbd>1</kbd> | `☻` | <kbd>2</kbd> | | | | | Face, Inverted Face
 | `♥` | <kbd>3</kbd> | `♦` | <kbd>4</kbd> | `♣` | <kbd>5</kbd> | `♠` | <kbd>6</kbd> | Hearts, Tiles/Diamonds, Clovers/Clubs, Pikes/Spades
 | `•` | <kbd>7</kbd> | `◘` | <kbd>8</kbd> | | | | | Bullet, Inverted Bullet
 | `♪` | <kbd>1</kbd><kbd>3</kbd> | `♫` | <kbd>1</kbd><kbd>4</kbd> | `☼` | <kbd>1</kbd><kbd>5</kbd> | | | Notes, Sun
 | | &emsp;&emsp;&emsp;&emsp;&emsp; | | &emsp;&emsp;&emsp;&emsp;&emsp; | | &emsp;&emsp;&emsp;&emsp;&emsp; | | &emsp;&emsp;&emsp;&emsp;&emsp; 
+
+<!--
+| `£` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>3</kbd> | | | | | | | British Pound
+-->
 
 ## References
 
