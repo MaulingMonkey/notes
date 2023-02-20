@@ -12,7 +12,7 @@
 | `ƒ` | <kbd>1</kbd><kbd>5</kbd><kbd>9</kbd> | `¼` | <kbd>1</kbd><kbd>7</kbd><kbd>2</kbd> | `½` | <kbd>1</kbd><kbd>7</kbd><kbd>1</kbd> | | | Function, Fractions
 |     |                                      | `¼` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>8</kbd> | `½` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>9</kbd> | `¾` | <kbd>0</kbd><kbd>1</kbd><kbd>7</kbd><kbd>0</kbd> | Fractions
 | `α` | <kbd>2</kbd><kbd>2</kbd><kbd>4</kbd> | `π` | <kbd>2</kbd><kbd>2</kbd><kbd>7</kbd> | `Σ` | <kbd>2</kbd><kbd>2</kbd><kbd>8</kbd> | `Θ` | <kbd>2</kbd><kbd>3</kbd><kbd>3</kbd> | Alpha, Pi (3.1415...), Sigma (Sum), Theta (Angle)
-| `∞` | <kbd>2</kbd><kbd>3</kbd><kbd>6</kbd> | `≡` | <kbd>2</kbd><kbd>4</kbd><kbd>0</kbd> | `±` | <kbd>2</kbd><kbd>4</kbd><kbd>1</kbd> |     |                                      | Infinity / Identity, equivalence, modular arithmetic, if-and-only-if / Plus or minus
+| `∞` | <kbd>2</kbd><kbd>3</kbd><kbd>6</kbd> | `≡` | <kbd>2</kbd><kbd>4</kbd><kbd>0</kbd> | `±` | <kbd>2</kbd><kbd>4</kbd><kbd>1</kbd> |     |                                      | Infinity, Identity/equivalence/modulo/iif, plus/minus
 | `≥` | <kbd>2</kbd><kbd>4</kbd><kbd>2</kbd> | `≤` | <kbd>2</kbd><kbd>4</kbd><kbd>3</kbd> | `⌠` | <kbd>2</kbd><kbd>4</kbd><kbd>4</kbd> | `⌡` | <kbd>2</kbd><kbd>4</kbd><kbd>5</kbd> |
 | `÷` | <kbd>2</kbd><kbd>4</kbd><kbd>6</kbd> | `≈` | <kbd>2</kbd><kbd>4</kbd><kbd>7</kbd> | `°` | <kbd>2</kbd><kbd>4</kbd><kbd>8</kbd> | `√` | <kbd>2</kbd><kbd>5</kbd><kbd>1</kbd> | Divide, Approximately Equal, Degrees, Sqrt
 | `ⁿ` | <kbd>2</kbd><kbd>5</kbd><kbd>2</kbd> | `²` | <kbd>2</kbd><kbd>5</kbd><kbd>3</kbd> |     |                                      |     |                                      | Power, Square
