@@ -7,7 +7,7 @@
 |     | **Symbols**
 | `¶` | <kbd>2</kbd><kbd>0</kbd> | `§` | <kbd>2</kbd><kbd>1</kbd> | `†` | <kbd>0</kbd><kbd>1</kbd><kbd>3</kbd><kbd>4</kbd> | `‡` | <kbd>0</kbd><kbd>1</kbd><kbd>3</kbd><kbd>5</kbd> | Paragraph, Section, Daggers
 | `⌐` | <kbd>1</kbd><kbd>6</kbd><kbd>9</kbd> | `¬` | <kbd>1</kbd><kbd>7</kbd><kbd>0</kbd> | `«` | <kbd>1</kbd><kbd>7</kbd><kbd>4</kbd> | `»` | <kbd>1</kbd><kbd>7</kbd><kbd>5</kbd>
-| `…` | <kbd>0</kbd><kbd>1</kbd><kbd>3</kbd><kbd>3</kbd> | | | | | | | Ellipsis
+| `…` | <kbd>0</kbd><kbd>1</kbd><kbd>3</kbd><kbd>3</kbd> | `µ` | <kbd>0</kbd><kbd>1</kbd><kbd>8</kbd><kbd>1</kbd> | | | | | Ellipsis, Micro
 |     | **Math**
 | `ƒ` | <kbd>1</kbd><kbd>5</kbd><kbd>9</kbd> | `¼` | <kbd>1</kbd><kbd>7</kbd><kbd>2</kbd> | `½` | <kbd>1</kbd><kbd>7</kbd><kbd>1</kbd> | | | Function, Fractions
 |     |                                      | `¼` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>8</kbd> | `½` | <kbd>0</kbd><kbd>1</kbd><kbd>6</kbd><kbd>9</kbd> | `¾` | <kbd>0</kbd><kbd>1</kbd><kbd>7</kbd><kbd>0</kbd> | Fractions
