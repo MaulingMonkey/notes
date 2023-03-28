@@ -22,3 +22,12 @@ Content-Type: text/html; charset=utf-8
 ```
 
 In reality, this will probably be served over HTTP 2+, the content will be compressed, various additional optional headers will be provided by both the browser and the responding server (including headers to allow the content to be gzip compressed), caching may have happened, etc. etc. etc. - but this serves as a minimal example of what a "hello world" http client or server must aspire to.
+
+# WebDAV
+
+Extensions to HTTP to create a network mountable filesystem \[<http://www.webdav.org/>, [RFC4918](http://www.webdav.org/specs/rfc4918.html)\]
+
+The absolute minimum support for a read-only server might be adding `PROPFIND` support for "collections" to enumerate directories - see:
+*	[§ 9.1 • PROPFIND Method](http://www.webdav.org/specs/rfc4918.html#METHOD_PROPFIND)
+*	[§ 9.1.4 • Example - Using 'propname' to Retrieve All Property Names](http://www.webdav.org/specs/rfc4918.html#rfc.section.9.1.4)
+*	[§ 9.1.5 • Example - Using So-called 'allprop'](http://www.webdav.org/specs/rfc4918.html#rfc.section.9.1.5)
