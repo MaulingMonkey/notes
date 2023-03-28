@@ -31,3 +31,13 @@ The absolute minimum support for a read-only server might be adding `PROPFIND` s
 *	[§ 9.1 • PROPFIND Method](http://www.webdav.org/specs/rfc4918.html#METHOD_PROPFIND)
 *	[§ 9.1.4 • Example - Using 'propname' to Retrieve All Property Names](http://www.webdav.org/specs/rfc4918.html#rfc.section.9.1.4)
 *	[§ 9.1.5 • Example - Using So-called 'allprop'](http://www.webdav.org/specs/rfc4918.html#rfc.section.9.1.5)
+
+### Initial Connection Request
+```http
+OPTIONS / HTTP/1.1
+Connection: Keep-Alive
+User-Agent: Microsoft-WebDAV-MiniRedir/10.0.19045
+translate: f
+Host: 127.0.0.99:9001
+
+```
