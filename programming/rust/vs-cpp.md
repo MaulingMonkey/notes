@@ -10,7 +10,7 @@ This is an intentionally incomplete list with exemplar types and some overlap. A
 
 | Rust                                                        | C++ |
 | ------------------------------------------------------------| ----|
-| [`bool`](https://doc.rust-lang.org/std/primitive.bool.html) | `bool`, assuming `sizeof(bool)==1`
+| [`bool`](https://doc.rust-lang.org/std/primitive.bool.html) | ≈ `bool`, assuming `sizeof(bool)==1`
 | [`abibool::???`](https://docs.rs/abibool/)                  | Exact FFI match for other ≈boolean types
 | [`char`](https://doc.rust-lang.org/std/primitive.char.html) (guaranteed [Unicode Scalar Value](https://www.unicode.org/glossary/#unicode_scalar_value)) | ≈ `char32_t` (might not be a [USV](https://www.unicode.org/glossary/#unicode_scalar_value))
 | [`u8`](https://doc.rust-lang.org/std/primitive.u8.html), [`u16`](https://doc.rust-lang.org/std/primitive.u16.html), [`u32`](https://doc.rust-lang.org/std/primitive.u32.html), [`u64`](https://doc.rust-lang.org/std/primitive.u64.html)          | `uint8_t`, `uint16_t`, `uint32_t`, `uint64_t`
