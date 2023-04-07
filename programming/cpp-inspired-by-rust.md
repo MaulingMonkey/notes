@@ -112,6 +112,8 @@ int main() {
 
 # Result clone
 *   [wandbox](https://wandbox.org/permlink/2YstEhUSXnK2l4aW)
+*   Need to dig into std::monostate more
+*   Need to see if clang-tidy or --analyze can check for nullable derefs
 
 ```cpp
 #include <iostream>
