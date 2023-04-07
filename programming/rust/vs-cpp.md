@@ -47,7 +47,7 @@ This is an intentionally incomplete list with exemplar types and some overlap. A
 
 See also [The Rust PL 2nd Ed.](https://doc.rust-lang.org/book/ch15-05-interior-mutability.html) on Interior Mutability.
 
-Like in C++, the constness of the outer object can affect access to it's members. For example, given `const std::vector<int> & v`, you cannot modify the elements of the vector with `v[0] = 42;` - this will fail to compile. Given a `const gsl::span<int> & av`, however, `av[0] = 42;` will compile just fine. Rust calls this second case "interior mutability".
+Like in C++, the `const`ness of the outer object can - but does not always - affect access to it's members. For example, given `const std::vector<int> & v`, you cannot modify the elements of the vector with `v[0] = 42;` - this will fail to compile. Given a `const gsl::span<int> & av`, however, `av[0] = 42;` will compile just fine. Rust calls this second case "interior mutability".
 
 Another example: In C++, given `const some_struct & s`, you cannot modify members with `s.some_field = 42;` unless `some_field` used the `mutable` keyword. Similarly, in Rust, given `s : &SomeStruct`, you cannot modify members with `s.some_field = 42;` unless some_field was wrapped in `Cell` or another type that provides "interior mutability".
 
