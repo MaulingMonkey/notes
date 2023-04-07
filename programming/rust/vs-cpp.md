@@ -17,8 +17,8 @@ This is an intentionally incomplete list with exemplar types and some overlap. A
 | [`i8`](https://doc.rust-lang.org/std/primitive.i8.html), [`i16`](https://doc.rust-lang.org/std/primitive.i16.html), [`i32`](https://doc.rust-lang.org/std/primitive.i32.html), [`i64`](https://doc.rust-lang.org/std/primitive.i64.html)          | `int8_t`, `int16_t`, `int32_t`, `int64_t`
 | [`u128`](https://doc.rust-lang.org/std/primitive.u128.html), [`i128`](https://doc.rust-lang.org/std/primitive.i128.html) | ≈ `__uint128`, `__int128`, but [different alignment](https://github.com/rust-lang/rust/issues/54341)
 | [`f32`](https://doc.rust-lang.org/std/primitive.f32.html), [`f64`](https://doc.rust-lang.org/std/primitive.f64.html) | `float`, `double`, on most implementations
-| [`usize`](https://doc.rust-lang.org/std/primitive.usize.html), [`isize`](https://doc.rust-lang.org/std/primitive.isize.html) | `uintptr_t`, `intptr_t`
-| [`usize`](https://doc.rust-lang.org/std/primitive.usize.html), [`isize`](https://doc.rust-lang.org/std/primitive.isize.html) | ≈ `size_t`, `ptrdiff_t`
+| [`usize`](https://doc.rust-lang.org/std/primitive.usize.html), [`isize`](https://doc.rust-lang.org/std/primitive.isize.html) (pointer sized) | `uintptr_t`, `intptr_t` (pointer sized)
+| [`usize`](https://doc.rust-lang.org/std/primitive.usize.html), [`isize`](https://doc.rust-lang.org/std/primitive.isize.html) (pointer sized) | ≈ `size_t`, `ptrdiff_t` (could be smaller)
 | [`()`](https://doc.rust-lang.org/std/primitive.unit.html) – read as "unit"                         | `void`
 | [`!`](https://doc.rust-lang.org/std/primitive.never.html) – read as "never"                        | `[[noreturn]] void`
 | [`&Struct`](https://doc.rust-lang.org/std/primitive.reference.html) – "(shareable) reference"      | `const Struct &`
