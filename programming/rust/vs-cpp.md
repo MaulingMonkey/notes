@@ -6,7 +6,7 @@
 
 See also [Notes on Type Layouts and ABIs in Rust](https://gankro.github.io/blah/rust-layouts-and-abis/#the-layoutsabis-of-builtins).
 
-This is an intentionally incomplete list with exemplar types and some overlap. Also note that for FFI, the Rust types sometimes impose additional restrictions over the equivalent C types. Bool must be 0/1 (not merely truthy), non-listed enum values have undefined behavior (maybe use a u?? instead at the FFI layer), etc.
+This is an intentionally incomplete list with exemplar types and some overlap. Also note that for FFI, the Rust types sometimes impose additional restrictions over the equivalent C types. Bool must be `0`/`1` (not merely truthy), non-listed enum values have undefined behavior (maybe use a `u??` instead at the FFI layer), etc.
 
 | Rust                                                        | C++ |
 | ------------------------------------------------------------| ----|
