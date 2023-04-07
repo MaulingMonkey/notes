@@ -109,3 +109,59 @@ int main() {
     //std::cout << e << "\n";
 }
 ```
+
+# Result clone
+*   [wandbox](https://wandbox.org/permlink/2YstEhUSXnK2l4aW)
+
+```cpp
+#include <iostream>
+#include <variant>
+#include <climits>
+
+struct Moved {};
+template < typename R > struct Ok  { R value;  Ok(R value): value(std::move(value)) {} };
+template < typename E > struct Err { E value; Err(E value): value(std::move(value)) {} };
+
+template < typename R, typename E > class [[nodiscard]] Result {
+    std::variant<Moved, Ok<R>, Err<E>> value;
+
+    Result() = default;
+public:
+    Result(const Result &) = default;
+    Result(Result && other) { value.swap(other.value); } // TODO: copy instead if R & E are copyable/POD?
+    Result(Ok<R>  value): value(std::move(value)) {}
+    Result(Err<E> value): value(std::move(value)) {}
+
+    // TODO: add "_ptr" suffixes, replace unsuffixed versions with std::optional s? those would move/consume - consider adding as_ref() etc.?
+    R const * _Nullable ok()  const [[clang::lifetimebound]] { if (auto value = std::get_if<1>(&this->value)) return &value->value; return nullptr; }
+    R       * _Nullable ok()        [[clang::lifetimebound]] { if (auto value = std::get_if<1>(&this->value)) return &value->value; return nullptr; }
+    E const * _Nullable err() const [[clang::lifetimebound]] { if (auto value = std::get_if<2>(&this->value)) return &value->value; return nullptr; }
+    E       * _Nullable err()       [[clang::lifetimebound]] { if (auto value = std::get_if<2>(&this->value)) return &value->value; return nullptr; }
+};
+
+template < typename R, typename E > std::ostream& operator<<(std::ostream& os, const Result<R, E> & result) {
+    if (auto ok = result.ok()) {
+        os << "Result::Ok(" << *ok << ")";
+    } else if (auto err = result.err()) {
+        os << "Result::Err(" << *err << ")";
+    } else {
+        os << "Result::Moved";
+    }
+    return os;
+}
+
+Result<int, int> x2(int n) {
+    if (n < INT_MIN/2) return Err(n);
+    if (n > INT_MAX/2) return Err(n);
+    return Ok(2*n);
+}
+
+int main(int argc, char **) {
+    std::cout << "x2(4)          = " << x2(4) << "\n";
+    std::cout << "x2(0x7FFFFFFF) = " << x2(0x7FFFFFFF) << "\n";
+    x2(4); // warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+    if (argc > 9001) {
+        std::cout << "x2(...) = " << *x2(0x7FFFFFFF).ok() << "\n"; // No warning for nullable deref? Boo~
+    }
+}
+```
