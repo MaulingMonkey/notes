@@ -26,3 +26,11 @@ This is an intentionally incomplete list with exemplar types and some overlap. A
 | <code>&amp;dyn [Trait](https://doc.rust-lang.org/1.8.0/book/traits.html)</code>                    | `std::tuple<const TraitVtable *, const Struct &>`
 | `&Trait` – Pre 1.27 version                                                                        | `std::tuple<const TraitVtable *, const Struct &>`
 | [`&mut T`](https://doc.rust-lang.org/std/primitive.reference.html) – read as "exclusive reference" | Like !mut, but exclusive access and writable
+
+
+| Rust                                                        | C++ |
+| ------------------------------------------------------------| ----|
+| <code>std::option::[Option](https://doc.rust-lang.org/std/option/enum.Option.html)</code> | [`std::optional`](https://en.cppreference.com/w/cpp/utility/optional) (C++17)
+| <code>std::result::[Result](https://doc.rust-lang.org/std/result/enum.Result.html)</code> | [`std::expected`](https://en.cppreference.com/w/cpp/utility/expected) (C++23)
+| <code>std::result::Result::[Err](https://doc.rust-lang.org/std/result/enum.Result.html#variant.Err)</code> | [`std::unexpected`](https://en.cppreference.com/w/cpp/utility/expected/unexpected) (C++23)
+| <code>std::result::Result::[Ok](https://doc.rust-lang.org/std/result/enum.Result.html#variant.Ok)</code> | No extra type/wrapper
