@@ -66,4 +66,46 @@ For application development, this is almost entirely moot.  Your `Cargo.lock` fi
         <td><code>mcom::Rc&lt;...&gt;::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html#method.co_create">co_create</a></code></td>
         <td><code>windows::Win32::System::Com::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/Com/fn.CoCreateInstance.html">CoCreateInstance</a></code></td>
     </tr>
+    <tr><th colspan="3">COM Init/Teardown</th></tr>
+    <tr>
+        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/objbase/nf-objbase-coinitialize">CoInitialize</a></code></td>
+        <td>
+            <code>winapi::um::objbase::<a href="https://docs.rs/winapi/latest/winapi/um/objbase/fn.CoInitialize.html">CoInitialize</a></code><br>
+            <code>mcom::init::<a href="https://docs.rs/mcom/latest/mcom/init/fn.sta.html">sta</a></code> (more or less)<br>
+        </td>
+        <td><code>windows::Win32::System::Com::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/Com/fn.CoInitialize.html">CoInitialize</a></code></td>
+    </tr>
+    <tr>
+        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex">CoInitializeEx</a></code></td>
+        <td>
+            <code>winapi::um::combaseapi::<a href="https://docs.rs/winapi/latest/winapi/um/combaseapi/fn.CoInitializeEx.html">CoInitializeEx</a></code><br>
+            <code>mcom::init::<a href="https://docs.rs/mcom/latest/mcom/init/fn.mta.html">mta</a></code> (typical MTA init)<br>
+            <code>mcom::init::<a href="https://docs.rs/mcom/latest/mcom/init/fn.co_initialize_ex.html">co_initialize_ex</a></code><br>
+        </td>
+        <td><code>windows::Win32::System::Com::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/Com/fn.CoInitializeEx.html">CoInitializeEx</a></code></td>
+    </tr>
+    <tr>
+        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/roapi/nf-roapi-roinitialize">RoInitialize</a></code></td>
+        <td>
+            <code>winapi::winrt::roapi::<a href="https://docs.rs/winapi/latest/winapi/winrt/roapi/fn.RoInitialize.html">RoInitialize</a></code><br>
+            <code>mcom::???</code>: TODO<br>
+        </td>
+        <td><code>windows::Win32::System::WinRT::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/WinRT/fn.RoInitialize.html">RoInitialize</a></code></td>
+    </tr>
+    <tr>
+        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-couninitialize">CoUninitialize</a></code></td>
+        <td>
+            <code>winapi::um::combaseapi::<a href="https://docs.rs/winapi/latest/winapi/um/combaseapi/fn.CoUninitialize.html">CoUninitialize</a></code><br>
+            <code>mcom::init::<a href="https://docs.rs/mcom/latest/mcom/init/fn.uninitialize.html">uninitialize</a></code><br>
+        </td>
+        <td><code>windows::Win32::System::Com::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/Com/fn.CoUninitialize.html">CoUninitialize</a></code></td>
+    </tr>
+    <tr>
+        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/roapi/nf-roapi-rouninitialize">RoUninitialize</a></code></td>
+        <td>
+            <code>winapi::winrt::roapi::<a href="https://docs.rs/winapi/latest/winapi/winrt/roapi/fn.RoUninitialize.html">RoUninitialize</a></code><br>
+            <code>mcom::???</code>: TODO<br>
+        </td>
+        <td><code>windows::Win32::System::WinRT::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/WinRT/fn.RoUninitialize.html">RoUninitialize</a></code></td>
+    </tr>
 </table>
