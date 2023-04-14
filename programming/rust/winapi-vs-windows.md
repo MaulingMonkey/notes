@@ -62,9 +62,14 @@ For application development, this is almost entirely moot.  Your `Cargo.lock` fi
         <td><code>&lt;... as windows::core::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/Media/Audio/XAudio2/struct.IXAudio2.html#impl-ComInterface-for-IXAudio2">ComInterface</a>&gt;::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/Media/Audio/XAudio2/struct.IXAudio2.html#method.cast">cast</a></td>
     </tr>
     <tr>
-        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance">CoCreateInstance</a>[<a href="https://docs.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp">FromApp</a>]</code></td>
-        <td><code>mcom::Rc&lt;...&gt;::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html#method.co_create">co_create</a></code></td>
+        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance">CoCreateInstance</a></code></td>
+        <td><code>mcom::Rc&lt;...&gt;::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html#method.co_create">co_create</a></code>*</td>
         <td><code>windows::Win32::System::Com::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/Com/fn.CoCreateInstance.html">CoCreateInstance</a></code></td>
+    </tr>
+    <tr>
+        <td><code><a href="https://docs.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp">CoCreateInstanceFromApp</a></code></td>
+        <td><code>mcom::Rc&lt;...&gt;::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html#method.co_create">co_create</a></code>*</td>
+        <td><code>windows::Win32::System::Com::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/Com/fn.CoCreateInstanceFromApp.html">CoCreateInstanceFromApp</a></code></td>
     </tr>
     <tr><th colspan="3">COM Init/Teardown</th></tr>
     <tr>
