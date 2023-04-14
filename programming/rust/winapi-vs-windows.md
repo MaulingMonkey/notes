@@ -1,6 +1,6 @@
 | feature       | [winapi]                                                           | [windows]<br>[windows-sys] |
 | ------------- | ------------------------------------------------------------------ | ------- |
-| safety        | ⚠️ everything is `unsafe`, which is at least sound                | ❌ history of (now fixed) soundness issues like:<br>[windows-rs#1409](https://github.com/microsoft/windows-rs/issues/1409) (unsound delegates)<br>[win32metadata#917](https://github.com/microsoft/win32metadata/issues/917) (very wrong fn signatures)
+| safety        | ⚠️ everything is `unsafe`, which is at least sound<br>[winapi-rs#945](https://github.com/retep998/winapi-rs/issues/945) (`CONTEXT` is underaligned) | ❌ history of (now fixed) soundness issues like:<br>[windows-rs#1409](https://github.com/microsoft/windows-rs/issues/1409) (unsound delegates)<br>[win32metadata#917](https://github.com/microsoft/win32metadata/issues/917) (very wrong fn signatures)<br>[win32metadata#1044](https://github.com/microsoft/win32metadata/issues/1044) (`CONTEXT` underaligned)
 | api stability | ✔️ fairly stable 0.3.x                                            | ❌ 0.39 and continuing to skyrocket
 | codegen       | ⚠️ manual                                                         | ⚠️ from `*.winmd` metadata |
 | coverage      | ⚠️ decent coverage of Win32, but missing some stuff               | ✔️ everything under the sun, including new UWP APIs
