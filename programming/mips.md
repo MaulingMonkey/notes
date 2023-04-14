@@ -17,3 +17,4 @@ J | opcode | target address (24 bits)               | opcode = 2 or 3, "jump for
 ### References
 *   <https://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_Green_Sheet.pdf>
 *   <https://courses.cs.washington.edu/courses/cse378/10sp/lectures/lec06.pdf>
+*   <https://www.mips.com/products/architectures/mips32-2/>
