@@ -30,3 +30,40 @@ Attempting to support a constraint on [`windows::core::Interface`](https://micro
 [windows-sys] is at least no longer bumping versions unless actual metadata updates change types/fns, but that still means multiple major version bumps a year vs [winapi] remaining on 0.3.x since before [windows]'s first release.
 
 For application development, this is almost entirely moot.  Your `Cargo.lock` file means you'll only upgrade when you want to, and I believe much of the breakage is fairly minor in practice.
+
+### COM
+
+`winapi` COM interface types are ≈1:1 matches to their C++ equivalents, complete with manual lifetime management, unless you use a wrapper such as <code>[mcom](https://docs.rs/mcom/)::[Rc](https://docs.rs/mcom/latest/mcom/struct.Rc.html)</code> or <code>[wio](https://docs.rs/wio/latest/x86_64-pc-windows-msvc/wio/index.html)::com::[ComPtr](https://docs.rs/wio/latest/x86_64-pc-windows-msvc/wio/com/struct.ComPtr.html)</code>.  `windows` COM interface types are implicitly smart pointers and wrap their C++ equivalents in an extra level of indirection:
+
+<table>
+    <tr>
+        <th>C++</th>
+        <th><code>winapi</code></th>
+        <th><code>windows</code></th>
+    </tr>
+    <tr>
+        <td><code><a href="[ComPtr](https://learn.microsoft.com/en-us/cpp/cppcx/wrl/comptr-class)">ComPtr</a>&lt;<a href="https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nn-unknwn-iunknown">IUnknown</a>&gt;</code></td>
+        <td><code>mcom::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html">Rc</a>&lt;winapi::um::unknwnbase::<a href="https://docs.rs/winapi/latest/winapi/um/unknwnbase/struct.IUnknown.html">IUnknown</a>&gt;</code></td>
+        <td><code>windows::core::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/core/struct.IUnknown.html">IUnknown</a></code></td>
+    </tr>
+    <tr>
+        <td><code>IUnknown::<a href="https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nf-unknwn-iunknown-addref">AddRef</a></code></td>
+        <td><code>&lt;mcom::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html">Rc</a>&lt;...&gt; as <a href="https://doc.rust-lang.org/std/clone/trait.Clone.html">Clone</a>&gt;::clone</code></td>
+        <td><code>&lt;IWhatever as <a href="https://doc.rust-lang.org/std/clone/trait.Clone.html">Clone</a>&gt;::clone</code></td>
+    </tr>
+    <tr>
+        <td><code>IUnknown::<a href="https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nf-unknwn-iunknown-release">Release</a></code></td>
+        <td><code>&lt;mcom::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html">Rc</a>&lt;...&gt; as <a href="https://doc.rust-lang.org/std/ops/trait.Drop.html">Drop</a>&gt;::drop</code></td>
+        <td><code>&lt;IWhatever as <a href="https://doc.rust-lang.org/std/ops/trait.Drop.html">Drop</a>&gt;::drop</code></td>
+    </tr>
+    <tr>
+        <td><code>IUnknown::<a href="https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)">QueryInterface</a></code></td>
+        <td><code>mcom::Rc&lt;...&gt;::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html#method.try_cast">try_cast</a></code></td>
+        <td><code>&lt;... as windows::core::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/Media/Audio/XAudio2/struct.IXAudio2.html#impl-ComInterface-for-IXAudio2">ComInterface</a>&gt;::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/Media/Audio/XAudio2/struct.IXAudio2.html#method.cast">cast</a></td>
+    </tr>
+    <tr>
+        <td><code><a href="https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance">CoCreateInstance</a>[<a href="https://docs.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp">FromApp</a>]</code></td>
+        <td><code>mcom::Rc&lt;...&gt;::<a href="https://docs.rs/mcom/latest/mcom/struct.Rc.html#method.co_create">co_create</a></code></td>
+        <td><code>windows::Win32::System::Com::<a href="https://microsoft.github.io/windows-docs-rs/doc/windows/Win32/System/Com/fn.CoCreateInstance.html">CoCreateInstance</a></code></td>
+    </tr>
+</table>
