@@ -5,7 +5,7 @@
 | codegen       | ⚠️ manual                                                         | ⚠️ from `*.winmd` metadata |
 | coverage      | ⚠️ decent coverage of Win32, but missing some stuff               | ✔️ everything under the sun, including new UWP APIs
 | docs          | ⚠️ [docs.rs](https://docs.rs/winapi/) at least has all symbols    | ⚠️ [docs.rs](https://docs.rs/windows-sys/) has all symbols for windows<strong>-sys</strong><br>⚠️ [github pages](https://microsoft.github.io/windows-docs-rs/doc/windows/) I can't remember the URL of, for windows
-| maintainence  | ⚠️ pull requests backlogged                                       | ✔️ responsive last I checked |
+| maintainence  | ❌ abandoned, although the author is at least alive               | ✔️ responsive last I checked |
 | api design    | ⚠️ 1:1 match of headers and their mishandled constness            | ⚠️ [windows] drowns in traits and newtypes that add little<br>⚠️ [windows-sys] gives up and uses `*mut c_void` for COM
 
 [winapi]:      https://docs.rs/winapi/
