@@ -9,6 +9,7 @@
 *   External QA
 *   Manual Developer Testing
 *   Performance Testing (Benchmarking, Profiling, ...)
+*   Debug/Validation Testing? (Valgrind / Address Sanitizer / Debug Heap / AppVerifier ...)
 
 ## TDD pros/cons
 *   Lots of overlap with integration testing, which I would generally prioritize.
