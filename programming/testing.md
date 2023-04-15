@@ -22,8 +22,12 @@
     [regression tests cdb against their .natvis files](https://github.com/rust-lang/rust/pull/76390), among other shennanigans.  I will do the hard
     work *if it'll catch real problems before they end up in production*.
 
-## Catch
+Justify your tests:  will they make bugs shallower enough / builds stabler enough to be worth the effort of writing and maintaining them?  If so, write them, otherwise don't, and feel free to re-evaluate.  I didn't write debugger unit tests until rustc shipped broken .natvis embeds a couple times and I decided that was terribly annoying.
+
+## Hard to Catch Bugs:
 *   Normal maps accidentally unpacking normals into the `[0..1]` range instead of `[-1..+1]` in a niche shader variant.
 *   [O(scary) strlen behavior](https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/)
 *   Win8 apps "crashing" via `exit(3)` if you open the charm bar for &gt;10 seconds while spamming a specific internet connectivity check
 *   OOMing after 2 hour soak tests / repeated level transitions in active gameplay sessions causing fatal memory fragmentation
+
+Examples of things that often just need a human in the loop and/or ridiculous amounts of humans.
