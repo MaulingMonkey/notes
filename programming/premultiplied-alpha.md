@@ -35,8 +35,8 @@ When not using premultiplied alpha, what color is a fully transparent pixel?  Tr
 
 Say we move an image half a pixel, and end up blending a non-premultiplied transparent pixel with a color 50% via linear interpolation:
 
-| Color                      | Transparent                      | Result |
-| ---------------------------| ---------------------------------| -------|
+| Color                      | Transparent                      | Result (Non-premultiplied) |
+| ---------------------------| ---------------------------------| ---------------------------|
 | `0.0, 0.0, 0.0, 1.0` black | `0.0, 0.0, 0.0, 0.0` transparent | ✔️ `0.0, 0.0, 0.0, 0.5` 50% transparent black
 | `0.0, 0.0, 0.0, 1.0` black | `1.0, 0.0, 0.0, 0.0` transparent | ❌ `0.5, 0.0, 0.0, 0.5` 50% transparent **dark red?!?**
 | `0.0, 0.0, 0.0, 1.0` black | `1.0, 1.0, 1.0, 0.0` transparent | ❌ `0.5, 0.5, 0.5, 0.5` 50% transparent **grey?!?**
