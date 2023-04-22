@@ -1,4 +1,4 @@
-# First, a review of alpha blending.
+# A review of alpha blending.
 
 First, let's review a typical non-premultiplied alpha blending equation:
 
@@ -12,7 +12,7 @@ dst.a = dst.a * (1-src.a) + 1 * src.a; // typically ignored for fully opaque win
 
 This is fairly straightforward.
 
-# First, a minor optimization
+# A minor optimization
 
 Astute observers might notice `src.rgb` is always multiplied against `src.a`.
 While this is pretty cheap, in the land of per-pixel operations, even "pretty cheap" can be worth optimizing away.
