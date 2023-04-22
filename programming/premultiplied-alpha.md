@@ -46,3 +46,17 @@ Say we move an image half a pixel, and end up blending a non-premultiplied trans
 | `1.0, 1.0, 1.0, 1.0` white | `1.0, 1.0, 1.0, 0.0` transparent | ✔️ `1.0, 1.0, 1.0, 0.5` 50% transparent white
 
 This can lead to subtle shimmering "halo" effects.  Note that no transparent color works with all colors.  "Overpainting" color into the fully transparent area can help some, but all pixels have 4-8 neighbors (depending on how you're counting) and it just plain doesn't seem to work all that well.
+
+# Premultiplied alpha linear interpolation just works
+
+It turns out that premultiplied alpha solves linear interpolation properly too.  There's only one fully transparent color: `(0,0,0,0)`.  Any other alpha=0 color is "glowing" (e.g. `(1, 0, 0, 0)` is a red glow that obscures nothing but always saturates the red channel).  Interpolating between color channels and 0 scales down said color channel... but does so by exactly the amount it should to account for alpha premultiplication!
+
+| Color                      | Transparent                      | Result (Premultiplied) | rgb / a |
+| ---------------------------| ---------------------------------| -----------------------| --------|
+| `0.0, 0.0, 0.0, 1.0` black | `0.0, 0.0, 0.0, 0.0` transparent | ✔️ `0.0, 0.0, 0.0, 0.5` 50% transparent black | `0,0,0`
+| `1.0, 0.0, 0.0, 1.0` red   | `0.0, 0.0, 0.0, 0.0` transparent | ✔️ `0.5, 0.0, 0.0, 0.5` 50% transparent red   | `1,0,0`
+| `1.0, 1.0, 1.0, 1.0` white | `0.0, 0.0, 0.0, 0.0` transparent | ✔️ `0.5, 0.5, 0.5, 0.5` 50% transparent white | `1,1,1`
+
+# Gamma correction
+
+All the above assumes linear RGB.  That's a bad assumption.  Your textures are probably sRGB / not linearly encoded, making premultiplication slightly more complicated than `rgb *= a` - instead you might want `rgb = linear2srgb( srgb2linear(rgb) * a )`, unless your graphics API already took care of conversion to/from linear color space for you.
