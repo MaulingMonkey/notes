@@ -9,3 +9,9 @@
 *   <code>const blob = new [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob)(view, { type: "image/png" })</code>
 *   <code>const imageBitmap = **await** [createImageBitmap](https://developer.mozilla.org/en-US/docs/Web/API/createImageBitmap)(blob, { imageOrientation: "flipY", premultiplyAlpha: "premultiply" })</code>
 *   <code>[gl](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext).[textImage2D](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D)(..., imageBitmap)</code>
+
+### Debugging browser wasm
+
+*   `wasm32-wasi` dwarf not sufficient?
+*   <https://developer.chrome.com/blog/wasm-debugging-2020/>
+*   <https://chrome.google.com/webstore/detail/cc%20%20-devtools-support-dwa/pdcpmagijalfljmkmjngeonclgbbannb>
