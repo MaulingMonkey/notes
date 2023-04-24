@@ -1,6 +1,6 @@
 # Monday April 24th, 2023
 
-*   [sepia](https://github.com/mdn/dom-examples/blob/d99884173bde8a8d8f09f258cfc8465308447645/canvas/pixel-manipulation/color-manipulation.js#L16-L28
+*   [sepia](https://github.com/mdn/dom-examples/blob/d99884173bde8a8d8f09f258cfc8465308447645/canvas/pixel-manipulation/color-manipulation.js#L16-L28)
 
 ### Efficient wasm png -> webgl texture
 
