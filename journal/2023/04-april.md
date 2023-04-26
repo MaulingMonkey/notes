@@ -8,7 +8,7 @@
 *   <code>const view = new [DataView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView)(this.[memory](https://developer.mozilla.org/en-US/docs/WebAssembly/JavaScript_interface/Memory).[buffer](https://developer.mozilla.org/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer), ptr, length)</code>
 *   <code>const blob = new [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob)(\[view\], { type: "image/png" })</code>
 *   <code>const imageBitmap = **await** [createImageBitmap](https://developer.mozilla.org/en-US/docs/Web/API/createImageBitmap)(blob, { imageOrientation: "flipY", premultiplyAlpha: "premultiply" })</code>
-*   <code>[gl](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext).[textImage2D](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D)(..., imageBitmap)</code>
+*   <code>[gl](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext).[texImage2D](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D)(..., imageBitmap)</code>
 
 ### Debugging browser wasm
 
