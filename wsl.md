@@ -30,6 +30,22 @@ C:\local>wsl -d Ubuntu cat /proc/version
 Linux version 4.19.128-microsoft-standard (oe-user@oe-host) (gcc version 8.2.0 (GCC)) #1 SMP Tue Jun 23 12:58:10 UTC 2020
 ```
 
+# Graphics
+WSL2 has X11(?) support for easy GUI shit:
+
+```
+C:\> wsl --install "Ubuntu-22.04"
+...setup username/password...
+
+monkey@necromancy:~$ sudo apt-get update
+...
+
+monkey@necromancy:~$ sudo apt-get install mesa-utils
+...
+
+monkey@necromancy:~$ glxgears
+```
+
 # APIs
 
 ### wslapi ([win32](https://docs.microsoft.com/en-us/windows/win32/api/wslapi/), [rust](https://docs.rs/wslapi/))
