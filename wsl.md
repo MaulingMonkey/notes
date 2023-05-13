@@ -34,7 +34,7 @@ Linux version 4.19.128-microsoft-standard (oe-user@oe-host) (gcc version 8.2.0 (
 WSL2 has X11(?) support for easy GUI shit:
 
 ```
-C:\> wsl --install "Ubuntu-22.04"
+C:\> wsl --install Ubuntu-22.04
 ...setup username/password...
 
 monkey@necromancy:~$ sudo apt-get update
@@ -44,6 +44,10 @@ monkey@necromancy:~$ sudo apt-get install mesa-utils
 ...
 
 monkey@necromancy:~$ glxgears
+...see cool window...
+
+C:\> wsl --unregister Ubuntu-22.04
+...cleaned up...
 ```
 
 # APIs
