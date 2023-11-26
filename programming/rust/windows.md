@@ -9,4 +9,9 @@ Literals: <code>[`windows::core`](https://microsoft.github.io/windows-docs-rs/do
 
 "WinRT" strings: <code>[windows::core](https://microsoft.github.io/windows-docs-rs/doc/windows/core/index.html)::{[HSTRING](https://microsoft.github.io/windows-docs-rs/doc/windows/core/struct.HSTRING.html), [h!](https://microsoft.github.io/windows-docs-rs/doc/windows/core/macro.h.html)}</code> - refcounted, immutable, utf16ish
 - Implements `From`, `TryFrom`, `PartialEq` for many things
-- Can be passed (by reference?) to a `IntoParam<PCWSTR>`?
+- [`impl IntoParam<PCWSTR> for &HSTRING`](https://github.com/microsoft/windows-rs/blob/0a64f0ea5905af961bd4b1223c0ffd7a397e4317/crates/libs/core/src/strings/hstring.rs#L404-L408)
+
+Narrow strings:
+- Use `std::ffi::{CStr, CString}`
+- Pass to `windows` via `PCSTR(my_cstr.as_ptr().cast())`?
+- Avoid - ambiguous locale specific unicode-hating encoding hell
