@@ -1,5 +1,6 @@
 Cheat sheet for the [`windows`](https://microsoft.github.io/windows-docs-rs/doc/windows/) crate.  Note that I don't actually use the `windows` crate.
 - [generated docs](https://microsoft.github.io/windows-docs-rs/doc/windows/)
+- [github](https://github.com/microsoft/windows-rs/tree/master)
 - [crates/samples/windows](https://github.com/microsoft/windows-rs/tree/master/crates/samples/windows)
 
 # Strings
