@@ -16,3 +16,5 @@
 | Rust: web-sys docs        | web-sys       | `https://docs.rs/web-sys/0.3.25/web_sys/?search=%s`
 | Rust: winapi docs         | winapi        | `https://docs.rs/winapi/0.3.8/winapi/?search=%s`
 | Wolfram\|Alpha            | wa            | `http://www.wolframalpha.com/input/?i=%s`
+
+Also consider renaming keyword google.com -> zzzgoogle.com
