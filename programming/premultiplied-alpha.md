@@ -31,7 +31,7 @@ We can reuse that every single time we render with that texture by simplifying o
 
 # Non-premultiplied alpha linear interpolation is messy and wrong
 
-When not using premultiplied alpha, what color is a fully transparent pixel?  Trick question:  **Anything with alpha=0**.  `(1,1,1,0)` ≈ `(0,0,0,0)` ≈ `(?,?,?,0)`.  However, when using typical [texture filtering](https://en.wikipedia.org/wiki/Texture_filtering#Bilinear_filtering) to sample in-between pixels through naieve component-wise linear interpolation, each of these 100% transparent pixels **blends differently**.
+When not using premultiplied alpha, what color is a fully transparent pixel?  Trick question:  **Anything with alpha=0**.  `(1,1,1,0)` ≈ `(0,0,0,0)` ≈ `(?,?,?,0)`.  However, when using typical [texture filtering](https://en.wikipedia.org/wiki/Texture_filtering#Bilinear_filtering) to sample in-between pixels through naïve component-wise linear interpolation, each of these 100% transparent pixels **blends differently**.
 
 Say we move an image half a pixel, and end up blending a non-premultiplied transparent pixel with a color 50% via linear interpolation:
 
