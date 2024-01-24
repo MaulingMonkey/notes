@@ -49,13 +49,22 @@ This can lead to subtle shimmering "halo" effects.  Note that no transparent col
 
 # Premultiplied alpha linear interpolation just works
 
-It turns out that premultiplied alpha solves linear interpolation properly too.  There's only one fully transparent color: `(0,0,0,0)`.  Any other alpha=0 color is "glowing" (e.g. `(1, 0, 0, 0)` is a red glow that obscures nothing but always saturates the red channel).  Interpolating between color channels and 0 scales down said color channel... but does so by exactly the amount it should to account for alpha premultiplication!
+It turns out that premultiplied alpha solves linear interpolation properly too.  There's only one fully transparent color: `(0,0,0,0)`.  Interpolating between color channels and 0 scales down said color channel... but does so by exactly the amount it should to account for alpha premultiplication!
 
 | Color                      | Transparent                      | Result (Premultiplied) | rgb / a |
 | ---------------------------| ---------------------------------| -----------------------| --------|
 | `0.0, 0.0, 0.0, 1.0` black | `0.0, 0.0, 0.0, 0.0` transparent | ✔️ `0.0, 0.0, 0.0, 0.5` 50% transparent black | `0,0,0`
 | `1.0, 0.0, 0.0, 1.0` red   | `0.0, 0.0, 0.0, 0.0` transparent | ✔️ `0.5, 0.0, 0.0, 0.5` 50% transparent red   | `1,0,0`
 | `1.0, 1.0, 1.0, 1.0` white | `0.0, 0.0, 0.0, 0.0` transparent | ✔️ `0.5, 0.5, 0.5, 0.5` 50% transparent white | `1,1,1`
+
+# When "premultiplied" becomes a misnomer
+
+If `(0,0,0,0)` is the only transparent color, what about other alpha=0 colors like `(1,0,0,0)`?  Under "premultiplied" alpha, these "glow".
+While not particularly *realistic*, this can be (ab)used to accomplish a cheap highlighting/glowing effect.
+`(1,0,0,0)` will saturate the red channel (assuming the render target isn't HDR at least) while leaving the green/blue channels untouched.
+
+These colors are impossible to arrive at via premultiplication - given any x, x * 0 = 0 ≠ 1, after all - but such colors can still be constructed and fed into color equations expecting "premultiplied" alpha colors.
+This has [inspired rants](https://community.adobe.com/t5/photoshop-ecosystem-discussions/change-in-exr-open-from-cs2-to-cs3-can-this-be-fixed/m-p/1521042/page/4#M918) disparaging the term.
 
 # Gamma correction
 
