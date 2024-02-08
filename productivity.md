@@ -1,11 +1,12 @@
-# Techniques / Keywords
+* Enter morning flow state by getting started on "work" before you wake up enough to want to distract yourself.
+* Keep decent energy levels with proper exercise, proper food, self care, etc.
 
+## Techniques / Keywords
 * Time Boxing
 * Schedule Relaxation (schedules should not be tyrants)
 * Negotiate with oneself
 
-# Web Spam
-
+## Web Spam
 * https://litemind.com/time-boxing/
 * https://medium.com/@charcoalhibiscus/guilt-productivity-and-why-i-finally-said-goodbye-to-getting-things-done-25a66441f4dc
 
