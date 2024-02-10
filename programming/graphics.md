@@ -12,7 +12,8 @@
 * [NVIDIA PerfHud](https://developer.nvidia.com/nvidia-perfhud)
 
 ### Intel
-* [Intel VTune Profiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html)
+* [Intel Graphics Performance Analyzers (GPA)](https://www.intel.com/content/www/us/en/developer/tools/graphics-performance-analyzers/download.html)
+* ~~[Intel VTune Profiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html)~~ (CPU / GPGPU focused rather than graphics IIRC?)
 
 
 
