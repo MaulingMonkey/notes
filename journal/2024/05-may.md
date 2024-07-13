@@ -23,3 +23,4 @@ References:
 - <https://en.wikipedia.org/wiki/Armstrong_limit#/media/File:Comparison_International_Standard_Atmosphere_space_diving.svg>
 - <https://en.wikipedia.org/wiki/Mount_Everest#Climbing>
 - <https://web.archive.org/web/20141014072430/http://imagine.gsfc.nasa.gov/docs/ask_astro/answers/970603.html>
+- [Consequences of shooting a WWII Bomber’s G-1 Oxygen Cylinder. Explosion Vulnerability footage.](https://www.youtube.com/watch?v=TdNi4J10mLk)
