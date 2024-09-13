@@ -8,13 +8,15 @@
 
 # Shopping List
 *   Ice Trays
-*   Bookmarks
+*   ~~Bookmarks~~
 *   Laundry Basket
 *   Serrated Kitchen Knife/Knives
 *   Linux NUC
 *   Powered Cheese Shredder?
 *   Masks
 *   Dining Table
+*   C-Shaped End Table
+*   Razor
 
 # Not-Shopping List
 *   ~~Food Processor~~
