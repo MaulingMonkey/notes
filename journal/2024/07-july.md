@@ -17,6 +17,7 @@
 *   Dining Table
 *   C-Shaped End Table
 *   Razor
+*   Cheese Wire
 
 # Not-Shopping List
 *   ~~Food Processor~~
