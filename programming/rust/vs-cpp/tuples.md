@@ -4,23 +4,23 @@
 
 ## Types
 
-| Rust                                                                  | C++98     | C++11     |
-| ----------------------------------------------------------------------| ----------| ----------|
-| [`()`](https://doc.rust-lang.org/std/primitive.tuple.html)            | <code>[boost::tuple]\<\></code> ?         | <code>[std::tuple]\<\></code> ?         |
-| [`(T1)`](https://doc.rust-lang.org/std/primitive.tuple.html)          | <code>[boost::tuple]\<T1\></code>         | <code>[std::tuple]\<T1\></code>         |
-| [`(T1, T2)`](https://doc.rust-lang.org/std/primitive.tuple.html)      | <code>[boost::tuple]\<T1, T2\></code>     | <code>[std::tuple]\<T1, T2\></code>     |
-| [`(T1, T2, T3)`](https://doc.rust-lang.org/std/primitive.tuple.html)  | <code>[boost::tuple]\<T1, T2, T3\></code> | <code>[std::tuple]\<T1, T2, T3\></code> |
+| Rust                                                                  | C++98                                                                         | C++11                                 |
+| ----------------------------------------------------------------------| ------------------------------------------------------------------------------| --------------------------------------|
+| [`()`](https://doc.rust-lang.org/std/primitive.tuple.html)            | <code>[boost::tuple]\<\></code> ?                                             | <code>[std::tuple]\<\></code> ?       |
+| [`(A)`](https://doc.rust-lang.org/std/primitive.tuple.html)           | <code>[boost::tuple]\<A\></code>                                              | <code>[std::tuple]\<A\></code>        |
+| [`(A, B)`](https://doc.rust-lang.org/std/primitive.tuple.html)        | <code>[std::pair]\<A, B\> </code> <br> <code>[boost::tuple]\<A, B\></code>    | <code>[std::tuple]\<A, B\></code>     |
+| [`(A, B, C)`](https://doc.rust-lang.org/std/primitive.tuple.html)     | <code>[boost::tuple]\<A, B, C\></code>                                        | <code>[std::tuple]\<A, B, C\></code>  |
 
 
 
 
 ## Expressions
 
-| Language          | Construct a tuple                                             |
-| ------------------| --------------------------------------------------------------|
-| Rust              | `(1, 2, 3)`                                                   |
-| C++98             | `boost::make_tuple(1, 2, 3)`                                  |
-| C++11             | `std::make_tuple(1, 2, 3)` <br> `{1, 2, 3}` (some contexts)   |
+| Language          | Construct a tuple                                                                 |
+| ------------------| ----------------------------------------------------------------------------------|
+| Rust              | `(1, 2)`                                                                          |
+| C++98             | `std::make_pair(1, 2)` <br> `boost::make_tuple(1, 2)`                             |
+| C++11             | `std::make_pair(1, 2)` <br> `std::make_tuple(1, 2)` <br> `{1, 2}` (some contexts) |
 
 | Language          | Destructure a tuple               | Notes                     |
 | ------------------| ----------------------------------| --------------------------|
@@ -29,10 +29,15 @@
 | C++11             | `std::tie(a, b, c) = ...;`        | Variables must already exist, can't be `const`
 | C++17             | `const auto [a, b, c] = ...;`     | Defines new vars
 
-| Language          | Access a tuple's first element    |
-| ------------------| ----------------------------------|
-| Rust              | `tuple.0`                         |
-| C++98             | `get<0>(tuple)`                   |
+| Language          | Access a tuple's first element        |
+| ------------------| --------------------------------------|
+| Rust              | `tuple.0`                             |
+| C++98             | `get<0>(tuple)` <br> `pair.first`     |
+
+| Language          | Access a tuple's second element       |
+| ------------------| --------------------------------------|
+| Rust              | `tuple.1`                             |
+| C++98             | `get<1>(tuple)` <br> `pair.second`    |
 
 | Language          | Access a tuple's `int` element    |
 | ------------------| ----------------------------------|
@@ -88,3 +93,4 @@ int main() {
 
 [boost::tuple]:     https://www.boost.org/doc/libs/1_57_0/libs/tuple/doc/tuple_users_guide.html
 [std::tuple]:       https://en.cppreference.com/w/cpp/utility/tuple
+[std::pair]:        https://en.cppreference.com/w/cpp/utility/pair
