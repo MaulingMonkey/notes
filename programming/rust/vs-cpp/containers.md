@@ -69,18 +69,46 @@ These aren't ABI compatible, but are roughly equivalent semantically.
 | <code>[alloc]::[collections]::[BTreeSet]\<K\></code>                      | <code>[std::set]\<K\></code>                      |
 | <code>[std]::[collections]::[HashMap]\<K, V\></code>                      | <code>[std::unordered_map]\<K, V\></code> (C++11) |
 | <code>[std]::[collections]::[HashSet]\<K\></code>                         | <code>[std::unordered_set]\<K\></code> (C++11)    |
-| *N/A in the standard library*                                             | <code>std::multi\*</code>                         |
-| *N/A in the standard library*                                             | <code>std::unordered_multi\*</code>               |
+| *N/A in the standard library*                                             | <code>[std::multiset]</code>                      |
+| *N/A in the standard library*                                             | <code>[std::multimap]</code>                      |
+| *N/A in the standard library*                                             | <code>[std::unordered_multiset]</code>            |
+| *N/A in the standard library*                                             | <code>[std::unordered_multimap]</code>            |
+| *N/A in the standard library*                                             | <code>[std::flat_set]\<K\></code>                 |
+| *N/A in the standard library*                                             | <code>[std::flat_map]\<K, V\></code>              |
+| *N/A in the standard library*                                             | <code>[std::flat_multiset]\<K\></code>            |
+| *N/A in the standard library*                                             | <code>[std::flat_multimap]\<K, V\></code>         |
 
 [HashMap]:      https://doc.rust-lang.org/std/collections/struct.HashMap.html
 [HashSet]:      https://doc.rust-lang.org/std/collections/struct.HashSet.html
 [BTreeMap]:     https://doc.rust-lang.org/std/collections/struct.BTreeMap.html
 [BTreeSet]:     https://doc.rust-lang.org/std/collections/struct.BTreeSet.html
 
-[std::map]:             https://en.cppreference.com/w/cpp/container/map
-[std::set]:             https://en.cppreference.com/w/cpp/container/set
-[std::unordered_map]:   https://en.cppreference.com/w/cpp/container/unordered_map
-[std::unordered_set]:   https://en.cppreference.com/w/cpp/container/unordered_set
+[std::map]:                 https://en.cppreference.com/w/cpp/container/map
+[std::set]:                 https://en.cppreference.com/w/cpp/container/set
+[std::multiset]:            https://en.cppreference.com/w/cpp/container/multiset
+[std::multimap]:            https://en.cppreference.com/w/cpp/container/multimap
+[std::flat_set]:            https://en.cppreference.com/w/cpp/container/flat_set
+[std::flat_map]:            https://en.cppreference.com/w/cpp/container/flat_map
+[std::flat_multiset]:       https://en.cppreference.com/w/cpp/container/flat_multiset
+[std::flat_multimap]:       https://en.cppreference.com/w/cpp/container/flat_multimap
+[std::unordered_map]:       https://en.cppreference.com/w/cpp/container/unordered_map
+[std::unordered_set]:       https://en.cppreference.com/w/cpp/container/unordered_set
+[std::unordered_multiset]:  https://en.cppreference.com/w/cpp/container/unordered_multiset
+[std::unordered_multimap]:  https://en.cppreference.com/w/cpp/container/unordered_multimap
+
+### Miscellanious
+
+| Rust                                                      | C++                                               |
+| ----------------------------------------------------------| --------------------------------------------------|
+| <code>[alloc]::[collections]::[BinaryHeap]\<T\></code>    | <code>[std::priority_queue]\<T\></code>           |
+| *Just use <code>[VecDeque]\<T\></code> and `pop_front`*   | <code>[std::queue]\<T\></code>                    |
+| *Just use <code>[Vec]\<T></code>*                         | <code>[std::stack]\<T\></code>                    |
+
+[BinaryHeap]:   https://doc.rust-lang.org/std/collections/struct.BinaryHeap.html
+
+[std::priority_queue]:  https://en.cppreference.com/w/cpp/container/priority_queue
+[std::queue]:           https://en.cppreference.com/w/cpp/container/queue
+[std::stack]:           https://en.cppreference.com/w/cpp/container/stack
 
 ### Slices and Views
 
