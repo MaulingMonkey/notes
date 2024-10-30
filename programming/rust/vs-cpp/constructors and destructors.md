@@ -120,6 +120,47 @@ Rust *does* have *destructors*.
 This does mean Rust code needs to worry about panicing while unwinding to handle a panic,
 much like C++ code needs to worry about throwing exceptions while unwinding to handle an exception.
 
+
+
+## Semantic Differences: Drop order
+
+While C++ destroys `class`es and `struct`s in [reverse declaration order](https://isocpp.org/wiki/faq/dtors#order-dtors-for-members),
+Rust instead destroys `struct`s in *forwards declaration order*, which may trip up an experienced C++ developer.
+That is:
+
+```cpp
+struct CPlusPlus : Destroyed2nd, Destroyed1st {
+    ~CPlusPlus() {} // Called 3rd
+    Destroyed5th a;
+    Destroyed4th b;
+};
+```
+
+```rust
+struct Rust {
+    pub a: Destroyed2st,
+    pub b: Destroyed3rd,
+}
+
+impl Drop for Rust {
+    fn drop(&mut self) {} // called 1st
+}
+```
+
+Because Rust lacks inheritence, there are no partially constructed objects to worry about.
+After <code>[Drop]::[drop]</code> is called, the fields only exist as separate entities.
+C++ instead has some horror show of intermediate vtable states, just in case any virtual methods are called.
+
+See also (for Rust):
+-   <https://doc.rust-lang.org/reference/destructors.html> (Rust)
+-   <https://vojtechkral.github.io/blag/rust-drop-order/> ("Drop order in Rust: It's tricky")
+
+See also (for C++):
+-   <https://isocpp.org/wiki/faq/dtors#order-dtors-for-members>
+-   <https://stackoverflow.com/a/58220036>
+
+
+
 ### Example Destructor: C++
 
 ```cpp
