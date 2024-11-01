@@ -32,6 +32,16 @@ This *does* dial up the awkwardness with string slices to 11 when calling C or C
 
 
 
+## Locale
+
+C and C++ APIs often depend on ambient global locale state to determine how strings are formatted and sorted.
+This often leads to horrors like the French being forced to set `LANG=C.UTF-8` lest they end up with pi encoded as `3,1415` in their JSON instead of `3.1415`.
+
+Rust's standard library is all effectively invariant locale (≈`C.UTF-8`).
+Third party crates are available for locale-aware text manipulation.
+
+
+
 ## Types
 
 | Use case                      | Rust                                                          | C++                                       |
