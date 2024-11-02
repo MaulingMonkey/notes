@@ -4,6 +4,12 @@
     "presentation": { "clear": true },
     "tasks": [
         {
+            "label":            "git push *",
+            "command":          "git push nas1 HEAD && git push github HEAD",
+            "problemMatcher":   [],
+            "group":            { "kind": "build", "isDefault": true },
+        },
+        {
             "label":            "git pull --ff-only github",
             "command":          "git pull --ff-only github",
             "runOptions":       { "runOn": "folderOpen" },
