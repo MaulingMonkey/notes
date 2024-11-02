@@ -4,8 +4,8 @@
     "presentation": { "clear": true },
     "tasks": [
         {
-            "label":            "git fetch github",
-            "command":          "git fetch github",
+            "label":            "git pull --ff-only github",
+            "command":          "git pull --ff-only github",
             "runOptions":       { "runOn": "folderOpen" },
             "problemMatcher":   [],
         },
