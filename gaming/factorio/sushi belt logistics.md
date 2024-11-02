@@ -66,7 +66,7 @@ This variation allows you to keep the belt clean:
 
 #### Cargo
 
--   Ammo, turrets, walls, repair packs, construction bots.
+-   Ammo, turrets, walls, repair packs, construction bots, mines, crude oil (flamethrower turrets.)
 -   Reserve slots with middle mouse button.
 
 ### Home Base Station (Load Supplies)
