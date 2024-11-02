@@ -98,11 +98,11 @@ These aren't ABI compatible, but are roughly equivalent semantically.
 
 ### Miscellanious
 
-| Rust                                                      | C++                                               |
-| ----------------------------------------------------------| --------------------------------------------------|
-| <code>[alloc]::[collections]::[BinaryHeap]\<T\></code>    | <code>[std::priority_queue]\<T\></code>           |
-| *Just use <code>[VecDeque]\<T\></code> and `pop_front`*   | <code>[std::queue]\<T\></code>                    |
-| *Just use <code>[Vec]\<T></code>*                         | <code>[std::stack]\<T\></code>                    |
+| Rust                                                                              | C++                                               |
+| ----------------------------------------------------------------------------------| --------------------------------------------------|
+| <code>[alloc]::[collections]::[BinaryHeap]\<T\></code>                            | <code>[std::priority_queue]\<T\></code>           |
+| *Just use <code>[VecDeque]\<T\></code> and `pop_front`*                           | <code>[std::queue]\<T\></code>                    |
+| *Just use <code>[Vec]\<T></code>, it's methods are already called `push`/`pop`*   | <code>[std::stack]\<T\></code>                    |
 
 [BinaryHeap]:   https://doc.rust-lang.org/std/collections/struct.BinaryHeap.html
 
