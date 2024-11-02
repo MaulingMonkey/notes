@@ -9,23 +9,30 @@ or performing another challenge where attacks must be weathered instead of preve
 
 
 
+## Prior Art
+
+-   [Turret damage research. This chart answers - how many shots to kill a biter?](https://docs.google.com/spreadsheets/d/1Vysp2mgA8cqSGulcrS6FU8CJ3nAWTMI3JB_O1AiNY6U/edit?gid=0#gid=0) (google docs linked from comments in <https://www.reddit.com/r/factorio/comments/hywb77/fyi_why_gun_turrets_are_far_superior_to_laser/>)
+
+
+
+
 ## The Enemy
 
 What we need to defeat.
 
-| [Enemies](https://wiki.factorio.com/Enemies)  | Health    | Physical <br> [Resistances](https://wiki.factorio.com/Damage#Resistance)  | Range <br> (Tiles)    |
-| ----------------------------------------------| ---------:| -------------------------------------------------------------------------:| ---------------------:|
+| [Enemies](https://wiki.factorio.com/Enemies)  | Health    | Physical <br> [Resistances](https://wiki.factorio.com/Damage#Resistance)  | Range <br> (Tiles)    | Pollution <br> (to attack)    |
+| ----------------------------------------------| ---------:| -------------------------------------------------------------------------:| ---------------------:| -----------------------------:|
 | **Biter**                                     |           |                                                                           |
-| Small                                         |        15 | <span style="opacity: 25%">*None*</span>                                  |     1 |
-| Medium                                        |        75 |  4 <span style="opacity: 25%">/ 10%</span>                                |     1 |
-| Large                                         |       375 |  8 <span style="opacity: 25%">/ 10%</span>                                | **2** |
-| Behemoth                                      |      3000 | 12 <span style="opacity: 25%">/ 10%</span>                                | **2** |
+| Small                                         |        15 | <span style="opacity: 25%">*None*</span>                                  |     1 |   4 |
+| Medium                                        |        75 |  4 <span style="opacity: 25%">/ 10%</span>                                |     1 |  20 |
+| Large                                         |       375 |  8 <span style="opacity: 25%">/ 10%</span>                                | **2** |  80 |
+| Behemoth                                      |      3000 | 12 <span style="opacity: 25%">/ 10%</span>                                | **2** | 400 |
 |                                               |           |                                                                           |
 | **Spitter**                                   |           |                                                                           |
-| Small                                         |        10 | <span style="opacity: 25%">*None*</span>                                  |    13 |
-| Medium                                        |        50 | <span style="opacity: 25%">*None*</span>                                  |    14 |
-| Large                                         |       200 | <span style="opacity: 25%">*None*</span>                                  |    15 |
-| Behemoth                                      |      1500 | <span style="opacity: 25%">*None*</span>                                  |    16 |
+| Small                                         |        10 | <span style="opacity: 25%">*None*</span>                                  |    13 |   4 |
+| Medium                                        |        50 | <span style="opacity: 25%">*None*</span>                                  |    14 |  12 |
+| Large                                         |       200 | <span style="opacity: 25%">*None*</span>                                  |    15 |  30 |
+| Behemoth                                      |      1500 | <span style="opacity: 25%">*None*</span>                                  |    16 | 200 |
 |                                               |           |                                                                           |
 |                                               |           |                                                                           |
 
@@ -87,6 +94,30 @@ Probably worth upgrading to avoid turret/wall damage, since the 3.5x resource co
 Especially considering spitters don't have resistances, dropping the bonus to less that double the damage versus them.
 
 OTOH, even large biters might motivate flamethrowers or lasers for extra range - your gun turrets only have 3 range on 'em, which might mean your walls are in range of the spitters, when the spitters aren't in range of your turrets.
+
+Pollution economics:
+
+-   1x Gun Turret can use 1 yellow ammo magazine / second.
+-   This can ≈3 small biters (12 pollution's worth) / second at 0 upgrades.
+-   This requires ≈ 2-4 pollution / second to produce.
+-   Not counting inserters.  (Un)loading everything maybe takes 30 half-active @ 105 kW?  Not too impactful.
+-   Not counting repair packs.  Skill issue, git gud.
+-   Switching to solar won't help much - the mining itself is the largest problem.
+
+| Machine                                                   | Pollution     |
+| ----------------------------------------------------------| --------------|
+| 1x Assembler generating 1 yellow ammo magazine / second   | 4 / minute    |
+| 13x Stone Furnaces generating 4.0625 iron / second        | 26 / minute   |
+| 16x Burner Mining Drills generating 4 iron ore / second   | 192 / minute  |
+| **Total**                                                 | ≈ 3.7 / second|
+
+| Machine                                                   | Pollution     |
+| ----------------------------------------------------------| --------------|
+| 1x Assembler generating 1 yellow ammo magazine / second   | 4 / minute    |
+| 13x Stone Furnaces generating 4.0625 iron / second        | 26 / minute   |
+| 8x Electric Mining Drills generating 4 iron ore / second  | 80 / minute   |
+| 0.4x Boilers generating 720 kW                            | 12 / minute   |
+| **Total**                                                 | ≈ 2 / second  |
 
 
 
@@ -158,20 +189,23 @@ Requires batteries.
 
 ## Walls
 
-| Item                                                      | Cost (Approx)                             | Health    |
-| ----------------------------------------------------------| ------------------------------------------| ---------:|
-| [Stone furnace](https://wiki.factorio.com/Stone_furnace)  | 5 Stone Ore                               |  200      |
-| [Stone wall](https://wiki.factorio.com/Wall)              | 10 Stone Ore                              |  350      |
-| [Gun Turret]                                              | 10 Copper Ore, 40 Iron Ore                |  400      |
-| [Laser Turret]                                            | 42 Copper Ore, 137 Iron Ore, 25 Sulfur    | 1000      |
-| [Solar panel](https://wiki.factorio.com/Solar_panel)      | 27 Copper Ore, 40 Iron Ore                |  200      |
+| Item              | Cost (Approx)                             | Health    |
+| ------------------| ------------------------------------------| ---------:|
+| [Stone furnace]   | 5 Stone Ore                               |       200 |
+| [Stone wall]      | 10 Stone Ore                              |       350 |
+| [Gun Turret]      | 10 Copper Ore, 40 Iron Ore                |       400 |
+| [Laser Turret]    | 42 Copper Ore, 137 Iron Ore, 25 Sulfur    |      1000 |
+| [Solar panel]     | 27 Copper Ore, 40 Iron Ore                |       200 |
+| [Pipe]            | 1 Iron Ore                                |       100 |
 
 
 
 ## Land Mines
 
 [Land mine](https://wiki.factorio.com/Land_mine)s are great... once you get oil and construction robots.
+Or if you use them offensively, placing them on enemy bases.
 
+4x 250 explosion damage for 1 steel, 2 sulfur (2 coal, oil.)
 
 
 <!-- References -->
@@ -186,3 +220,8 @@ Requires batteries.
 [Laser turret]:                 https://wiki.factorio.com/Laser_turret
 [Laser weapons damage]:         https://wiki.factorio.com/Laser_weapons_damage_(research)
 [Laser shooting speed]:         https://wiki.factorio.com/Laser_shooting_speed_(research)
+
+[Pipe]:                         https://wiki.factorio.com/Pipe
+[Stone Furnace]:                https://wiki.factorio.com/Stone_furnace
+[Stone Wall]:                   https://wiki.factorio.com/Wall
+[Solar Panel]:                  https://wiki.factorio.com/Solar_panel
