@@ -8,3 +8,11 @@
     -   Laser turrets might not pack enough dakka for large biter spam?
         -   No, they should, it's just a question of Rate of Fire, right?
         -   ...Flamethrower turrets if they don't?
+
+
+
+# Saturday Novemeber 2nd, 2024
+
+## Youtube
+-   [N-O-D-E • Make it Yourself: 1000 Useful Things to Make](https://www.youtube.com/watch?v=TSFJ2OH1PQA)
+-   ♪♫ [10,000 Light Years](https://www.youtube.com/watch?v=zHcJgHNRqLs) ♪♫ (same people who did [Starship Velociraptor](https://www.youtube.com/watch?v=2n_Ae9DGC0U))
