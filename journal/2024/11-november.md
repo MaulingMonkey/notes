@@ -16,3 +16,6 @@
 ## Youtube
 -   [N-O-D-E • Make it Yourself: 1000 Useful Things to Make](https://www.youtube.com/watch?v=TSFJ2OH1PQA)
 -   ♪♫ [10,000 Light Years](https://www.youtube.com/watch?v=zHcJgHNRqLs) ♪♫ (same people who did [Starship Velociraptor](https://www.youtube.com/watch?v=2n_Ae9DGC0U))
+
+## Factorio
+-   Nefrums did a speedrun attempt of default settings space age: [part 1](https://www.youtube.com/watch?v=AcQhio33TuY), [part 2](https://www.youtube.com/watch?v=77oAMgoCl0o)
