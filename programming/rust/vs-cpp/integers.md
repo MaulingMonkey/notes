@@ -22,7 +22,7 @@
 1.  Previously, there were some ABI mismatches between Rust and C (different alignments): [rust-lang/rust#54341](https://github.com/rust-lang/rust/issues/54341).
     Hopefully they're all fixed, but caveat emptor!
 
-2.  Rust's standard library and ecosystem currently assumes `sizeof(void*)` = `sizeof(ptrdiff_t`) = `sizeof(size_t)`.
+2.  Rust's standard library and ecosystem currently assumes `sizeof(void*)` = `sizeof(ptrdiff_t)` = `sizeof(size_t)`.
     This wasn't true in the 16-bit era, where far pointers might be 32 bits, but array sizes limited to 16 bits.
     CHERI etc. are threatening to make this a bad assumption today as well, with metadata bloating pointers to 128 bits.
     But *for now*, these assumptions hold.
