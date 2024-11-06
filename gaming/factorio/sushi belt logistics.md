@@ -5,11 +5,24 @@
 -   A single fast-inserter trash box will auto-sort trash without overwhelming the sinks.
 
 
+
+## Learnings
+
+-   Overproduction bugs make me sad.
+-   `Settings` > `Interface` > `Interaction` > `[x] Show all items in selections lists` is super handy for pre-configuring filtered inserters for chest storage.
+-   *Multiple* sushi belts might be nice.  In particular:
+    -   Have everything sink from mall sushi belt.  Hook up storage + entire belt to 🟢, limit most insertion based on that limit.
+    -   Have a (local?) intermediates sushi belt.  Have insertion-limit filter inserters to transfer from intermediate to mall sushi.
+-   Could avoid a dedicated sushi line by placing the sushi belt *outside* the typical range.
+
+
+
 ## Mall
 
 -   A bunch of storage chests loading from the sushi belt
 -   Nice and compact
 -   A single fast-inserter from trash bin to sushsi belt for auto-sorting
+
 
 
 ## Direct-to-sushi Assemblers
