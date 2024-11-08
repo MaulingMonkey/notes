@@ -105,3 +105,4 @@ For planning out mall assemblers.
 | Stone         |  4 .. 5   | Stone furnaces, rail, bricks/concrete.  Mostly off-site.
 | Brick         |  4        | Steel furnace, oil refinery, concrete, walls.  
 | Plastic       |  2        | Only used for red circuits, low density structures, and cannon shells.  Not suitable for primary mall belts.
+| Batteries     |           | Only used for accumulators, flying robot frames, laser turrets, and personal logistics (batteries, roboports).  Secondary bus / p2p.
