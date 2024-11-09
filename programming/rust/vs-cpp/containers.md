@@ -32,8 +32,9 @@ These aren't ABI compatible, but are roughly equivalent semantically.
 
 | Rust                                                                                                                      | C++                                               |
 | --------------------------------------------------------------------------------------------------------------------------| --------------------------------------------------|
-| <code>let variable : [\[T; 3\]](https://doc.rust-lang.org/std/primitive.array.html);</code>                               | <code>T variable[3];</code>                       |
-| [`[T; 3]`](https://doc.rust-lang.org/std/primitive.array.html)                                                            | <code>[std::array]\<T, 3\></code> (C++11)         |
+| <code>let variable : [\[T; 3\]];</code>                                                                                   | <code>T variable\[3\];</code>                     |
+| <code>[\[T; 3\]]</code>                                                                                                   | <code>[boost::array]\<T, 3\></code>               |
+| <code>[\[T; 3\]]</code>                                                                                                   | <code>[std::array]\<T, 3\></code> (C++11)         |
 | [`(A, B)`](https://doc.rust-lang.org/std/primitive.tuple.html) <sup>(see also [rust/vs-cpp/tuples.md](tuples.md))</sup>   | <code>[std::pair]\<A, B\></code>                  |
 | [`(A, B)`](https://doc.rust-lang.org/std/primitive.tuple.html) <sup>(see also [rust/vs-cpp/tuples.md](tuples.md))</sup>   | <code>[std::tuple]\<A, B\></code> (C++11)         |
 | <code>[alloc]::[vec]::[Vec]\<T\></code>                                                                                   | <code>[std::vector]\<T\></code>                   |
@@ -45,6 +46,9 @@ These aren't ABI compatible, but are roughly equivalent semantically.
 
 1.  Allocator APIs require nightly Rust
 
+[\[T\]]:        https://doc.rust-lang.org/std/primitive.slice.html
+[\[T; 3\]]:     https://doc.rust-lang.org/std/primitive.array.html
+
 [LinkedList]:   https://doc.rust-lang.org/std/collections/struct.LinkedList.html
 [Vec]:          https://doc.rust-lang.org/alloc/vec/struct.Vec.html
 [VecDeque]:     https://doc.rust-lang.org/std/collections/struct.VecDeque.html
@@ -52,6 +56,7 @@ These aren't ABI compatible, but are roughly equivalent semantically.
 [collections]:          https://doc.rust-lang.org/std/collections/index.html
 [vec]:                  https://doc.rust-lang.org/alloc/vec/index.html
 
+[boost::array]:         https://www.boost.org/doc/libs/1_86_0/doc/html/boost/array.html
 [std::array]:           https://en.cppreference.com/w/cpp/container/array
 [std::deque]:           https://en.cppreference.com/w/cpp/container/deque
 [std::forward_list]:    https://en.cppreference.com/w/cpp/container/forward_list
@@ -112,12 +117,15 @@ These aren't ABI compatible, but are roughly equivalent semantically.
 
 ### Slices and Views
 
-| Rust                                                                      | C++                                               |
-| --------------------------------------------------------------------------| --------------------------------------------------|
-| <code>&\[T\]</code>                                                       | <code>[std::span]\<T\></code> (C++20)         |
-| <code>&\[T; 3\]</code>                                                    | <code>[std::span]\<T, 3\></code> (C++20) <br> <code>T (&)[3]</code>   |
-| *N/A in the standard library*                                             | <code>[std::mdspan]\<T, ...\></code> (C++23)                  |
+| Rust                          | C++03                                 | C++20                                         |
+| ----------------------------- | --------------------------------------| ----------------------------------------------|
+| <code>\&    [\[T\]]</code>    | <code>[boost::span]\<const T\></code> | <code>[std::span]\<const T\></code>           |
+| <code>\&mut [\[T\]]</code>    | <code>[boost::span]\<      T\></code> | <code>[std::span]\<      T\></code>           |
+| <code>\&    [\[T; 3\]]</code> | <code>const T (\&)\[3\]</code>        | <code>[std::span]\<const T, 3\></code>        |
+| <code>\&mut [\[T; 3\]]</code> | <code>T       (\&)\[3\]</code>        | <code>[std::span]\<      T, 3\></code>        |
+| *N/A in the standard library* |                                       | <code>[std::mdspan]\<T, ...\></code> (C++23)  |
 
+[boost::span]:          https://www.boost.org/doc/libs/1_86_0/libs/core/doc/html/core/span.html
 [std::mdspan]:          https://en.cppreference.com/w/cpp/container/mdspan
 [std::span]:            https://en.cppreference.com/w/cpp/container/span
 
@@ -127,3 +135,7 @@ These aren't ABI compatible, but are roughly equivalent semantically.
 [alloc]:        https://doc.rust-lang.org/alloc/index.html
 [core]:         https://doc.rust-lang.org/core/index.html
 [std]:          https://doc.rust-lang.org/std/index.html
+
+<style>
+    code { white-space: pre; }
+</style>
