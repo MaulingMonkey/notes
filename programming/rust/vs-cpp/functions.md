@@ -50,7 +50,29 @@ fn main() {
 
 ## Calling Conventions
 
-TODO
+| Rust                                  | MSVC                                                                      | GNU                                       |
+| --------------------------------------| --------------------------------------------------------------------------| ------------------------------------------|
+| `extern "system"`                     | `WINAPI`                                                                  | `WINAPI`                                  |
+| `extern "efiapi"`                     | `EFIAPI`                                                                  | `EFIAPI`                                  |
+| `extern "C"`                          | (default)                                                                 | (default)                                 |
+| `extern "Rust"` (default)             | <span style="opacity: 25%">N/A</span>                                     | <span style="opacity: 25%">N/A</span>     |
+| `extern "cdecl"`                      | [`__cdecl`](https://learn.microsoft.com/en-us/cpp/cpp/cdecl)              | `__attribute__((cdecl))`                  |
+| <span style="opacity: 25%">N/A</span> | [`__clrcall`](https://learn.microsoft.com/en-us/cpp/cpp/clrcall)          | <span style="opacity: 25%">N/A?</span>    |
+| `extern "stdcall"`                    | [`__stdcall`](https://learn.microsoft.com/en-us/cpp/cpp/stdcall)          | `__attribute__((stdcall))`                |
+| `extern "fastcall"`                   | [`__fastcall`](https://learn.microsoft.com/en-us/cpp/cpp/fastcall)        | `__attribute__((fastcall))`               |
+| `extern "thiscall"`                   | [`__thiscall`](https://learn.microsoft.com/en-us/cpp/cpp/thiscall)        | `__attribute__((thiscall))`               |
+| `extern "vectorcall"`                 | [`__vectorcall`](https://learn.microsoft.com/en-us/cpp/cpp/vectorcall)    | `__attribute__((vectorcall))`             |
+
+Additional notes:
+-   Rust's `extern "..."`s are effectively `noexcept` (will abort instead of unwinding), unless you use their `extern "...-unwind"` variants.
+
+References:
+-   <https://doc.rust-lang.org/reference/items/external-blocks.html#abi>
+-   <https://doc.rust-lang.org/nomicon/ffi.html#foreign-calling-conventions>
+-   <https://wiki.osdev.org/UEFI#Calling_Conventions>
+-   <https://en.wikipedia.org/wiki/X86_calling_conventions>
+-   <https://clang.llvm.org/docs/AttributeReference.html#calling-conventions>
+-   <https://gcc.gnu.org/onlinedocs/gcc/x86-Function-Attributes.html>
 
 
 
