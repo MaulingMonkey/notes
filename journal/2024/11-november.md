@@ -19,3 +19,12 @@
 
 ## Factorio
 -   Nefrums did a speedrun attempt of default settings space age: [part 1](https://www.youtube.com/watch?v=AcQhio33TuY), [part 2](https://www.youtube.com/watch?v=77oAMgoCl0o)
+
+
+
+
+# Friday November 8th, 2024
+
+## Programming
+
+Windows 11 finally lets you write a proper hybrid console/gui app (e.g. blocks the console, but doesn't allocate one) with a manifest option?  <https://github.com/MicrosoftDocs/Console-Docs/blob/ebda27d75b1215dbab4740d602f8564ac9906c8a/docs/console-allocation-policy.md>
