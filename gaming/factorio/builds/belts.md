@@ -2,14 +2,17 @@
 
 Three rows of assemblers for Nauvis works.
 
-Four rows of foundaries on Vulcanus might be a thing.
+Four rows of foundries on Vulcanus might be a thing.
 
-| Belt Tier | Items | Notes |
-| ----------| -----:| -----:|
-| Yellow    | 15/s  |
-| Red       | 30/s  | Green tech.  Gear hog.
-| Blue      | 45/s  | Purple tech.  Gear hog.  Lube.  A splash of red circuits.
-| Green     | 60/s  | Import from Vulcanus.  Requires Tungsten & Foundry.
+| Belt Tier | Items | ÷ .75 | ÷ .50 | Notes |
+| ----------| -----:| -----:| -----:| ----- |
+| Yellow    | 15/s  | 20/s  |  30/s |
+| Red       | 30/s  | 40/s  |  60/s | Green tech.  Gear hog.
+| Blue      | 45/s  | 60/s  |  90/s | Purple tech.  Gear hog.  Lube.  A splash of red circuits.
+| Green     | 60/s  | 80/s  | 120/s | Import from Vulcanus.  Requires Tungsten & Foundry.
+
+-   `÷ .50`: For use in determing capacity in terms of normal quality `Assembler 1` crafting speeds.
+-   `÷ .75`: For use in determing capacity in terms of normal quality `Assembler 2` crafting speeds.
 
 
 
