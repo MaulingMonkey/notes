@@ -122,23 +122,23 @@ much like C++ code needs to worry about throwing exceptions while unwinding to h
 
 
 
-## Semantic Differences: Drop order
+### Semantic Differences: Drop order
 
 While C++ destroys `class`es and `struct`s in [reverse declaration order](https://isocpp.org/wiki/faq/dtors#order-dtors-for-members),
 Rust instead destroys `struct`s in *forwards declaration order*, which may trip up an experienced C++ developer.
 That is:
 
 ```cpp
-struct CPlusPlus : Destroyed2nd, Destroyed1st {
-    ~CPlusPlus() {} // Called 3rd
-    Destroyed5th a;
-    Destroyed4th b;
+struct CPlusPlus : Destroyed5th, Destroyed4th {
+    Destroyed3rd a;
+    Destroyed2nd b;
+    ~CPlusPlus() {} // Called 1st
 };
 ```
 
 ```rust
 struct Rust {
-    pub a: Destroyed2st,
+    pub a: Destroyed2nd,
     pub b: Destroyed3rd,
 }
 
@@ -151,13 +151,24 @@ Because Rust lacks inheritence, there are no partially constructed objects to wo
 After <code>[Drop]::[drop]</code> is called, the fields only exist as separate entities.
 C++ instead has some horror show of intermediate vtable states, just in case any virtual methods are called.
 
-See also (for Rust):
--   <https://doc.rust-lang.org/reference/destructors.html> (Rust)
--   <https://vojtechkral.github.io/blag/rust-drop-order/> ("Drop order in Rust: It's tricky")
 
-See also (for C++):
--   <https://isocpp.org/wiki/faq/dtors#order-dtors-for-members>
--   <https://stackoverflow.com/a/58220036>
+
+### Semantic Differences: Exceptions in Destructors and when Unwinding.
+
+Destructors execute when unwinding the stack... including when unwinding in response to an exception or panic.
+In these "double throw" scenarios, questions like which exception should be prioritized/caught are open ended and ambiguous.
+As a result, throwing from destructors in is strongly discouraged.
+
+If you do it anyways:
+
+-   C++03 will call <code>[std::terminate]\(\)</code> during a double throw (which in turn aborts by default.)
+-   C++11 marks destructors [`noexcept`](https://en.cppreference.com/w/cpp/language/noexcept_spec) by default, and will <code>[std::terminate]\(\)</code> during *any* throw from said `noexcept` destructors.
+    Destructors can opt out of such new mechanics with `noexcept(false)`.
+-   Rust doesn't have `noexcept`.  Double-panics will also abort.  There are issues about adopting C++'s destructor semantics, but they currently haven't been accepted:
+    -   <https://github.com/rust-lang/rfcs/pull/3288>
+    -   <https://github.com/rust-lang/lang-team/issues/97>
+-   [Rust 1.81 *kinda* has `noexcept` in the form of `extern "C"`](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#abort-on-uncaught-panics-in-extern-c-functions).
+    This is isn't intended as a general purpouse `noexcept`, but C presumably doesn't support unwinding.  (If it does, there's `extern "C-unwind"`.)
 
 
 
@@ -199,6 +210,25 @@ fn main() {
 
 
 
+## References
+
+### Rust
+
+-   The Rust Reference: [**10.8.** Destructors](https://doc.rust-lang.org/reference/destructors.html)
+-   The Rustonomicon: [**6.** Ownership Based Resource Management](https://doc.rust-lang.org/nomicon/obrm.html)
+    -   [**6.1.** Constructors](https://doc.rust-lang.org/nomicon/constructors.html)
+    -   [**6.2.** Destructors](https://doc.rust-lang.org/nomicon/destructors.html)
+    -   [**6.3.** Leaking](https://doc.rust-lang.org/nomicon/leaking.html)
+-   vojtěchkrál's blog: [Drop order in Rust: It's tricky](https://vojtechkral.github.io/blag/rust-drop-order/)
+
+### C++
+
+-   <https://isocpp.org/wiki/faq/dtors#order-dtors-for-members>
+-   <https://stackoverflow.com/a/58220036>
+
+
+
+
 <!-- References -->
 
 [core]:         https://doc.rust-lang.org/core/index.html
@@ -216,3 +246,5 @@ fn main() {
 [drop]:         https://doc.rust-lang.org/std/ops/trait.Drop.html#tymethod.drop
 [from]:         https://doc.rust-lang.org/std/convert/trait.From.html#tymethod.from
 [into]:         https://doc.rust-lang.org/std/convert/trait.Into.html#tymethod.into
+
+[std::terminate]:   https://en.cppreference.com/w/cpp/error/terminate
