@@ -10,8 +10,8 @@
             "group":            { "kind": "build", "isDefault": true },
         },
         {
-            "label":            "git pull --ff-only github",
-            "command":          "git pull --ff-only github",
+            "label":            "git pull --ff-only",
+            "command":          "git pull --ff-only",
             "runOptions":       { "runOn": "folderOpen" },
             "problemMatcher":   [],
         },
