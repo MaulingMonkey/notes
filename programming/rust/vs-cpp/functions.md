@@ -81,20 +81,20 @@ References:
 Rust doesn't have function overloading, but you can pretend it does:
 
 ```rust
-  fn main() {
-      foo((42));
-      foo((12.0, 13.0));
-  }
+fn main() {
+    foo((42));
+    foo((12.0, 13.0));
+}
 
-  pub fn foo(args: impl FooArgs) { args.exec() }
-  pub trait FooArgs { fn exec(self); }
-  impl FooArgs for u32 { fn exec(self) { println!("A number: {}", self) } }
-  impl FooArgs for (f32, f32) { fn exec(self) { println!("{} x {} = {}", self.0, self.1, self.0 * self.1) } }
+pub fn foo(args: impl FooArgs) { args.exec() }
+pub trait FooArgs { fn exec(self); }
+impl FooArgs for u32 { fn exec(self) { println!("A number: {}", self) } }
+impl FooArgs for (f32, f32) { fn exec(self) { println!("{} x {} = {}", self.0, self.1, self.0 * self.1) } }
 ```
 <https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=b726f7f6e21c250aba62f9fe61e6d5a0>
 ```text
-  A number: 42
-  12 x 13 = 156
+A number: 42
+12 x 13 = 156
 ```
 
 Abusing tuples like this isn't common.  Using traits - *without* the tuples - is a lot more common.  Alternatives to abusing traits on tuples:
