@@ -15,3 +15,7 @@ Narrow strings:
 - Use `std::ffi::{CStr, CString}`
 - Pass to `windows` via `PCSTR(my_cstr.as_ptr().cast())`?
 - Avoid - ambiguous locale specific unicode-hating encoding hell
+
+# COM
+
+<https://kennykerr.ca/rust-getting-started/how-to-implement-com-interface.html>
