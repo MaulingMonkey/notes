@@ -1,0 +1,44 @@
+# Factorio: Quality
+
+-   Tanks: Improved logistics grid space (6x8 → 8x10 for common → rare)
+-   Fuel: Acceleration, top speed (rare rocket fuel for personal vehicles? can't easily make rare solid fuel: no solid incredients = quality modules only.  no energy bonus.)
+-   Armor: Improved logistics grid space, inventory size bonus
+    -   Exoskeleton: Speed
+    -   Personal roboport: Robot capacity, recharge rate
+    -   Toolbelt equipment: Inventory size bonus
+    -   Power: Power
+    -   Personal laser defense: Range (not damage or speed)
+-   Robots: Improved speed, endurance, range
+-   Defenses
+    -   Walls:          Skip, just improved health
+    -   Turrets, Held:  Increased range (≈10%/level)
+    -   Ammo, Mines:    Increased damage (≈20%+/level)
+    -   Radar:          Mainly Continuous coverage
+    -   Roboport:       Recharge rate only
+-   Base
+    -   Inserters:              Minor speed boost (Rare Inserter < Common Fast Inserter)
+    -   Assemblers, Furnaces:   Speed (mostly useful for once-offs and decreased module use)
+    -   Modules:                Increased effect
+    -   Miners, pumpjacks:      Reduced resource drain
+    -   Power Poles:            Increased supply area, reach
+        -   Small:              Uncommon ≈ Medium, recycle for quality wood
+        -   Medium:             Uncommon for single belt side to cross two belts and reach assemblers
+        -   Large:              Start out with ≈no supply area, so maybe slightly useful for that?
+        -   Substation:         Pointless? (Minor bonus since it already starts out covering a large area)
+    -   Belts:                  Pointless (health only)
+    -   Chests:                 Pointless (health only)
+    -   Trains:                 Pointless (health only)
+    -   Cars:                   Pointless (health only)
+-   Modules:
+    -   Speed:                  More speed (n.b. reduces quality!)
+    -   Efficiency:             More efficiency (Uncommon 1s ≈ Normal 2s)
+    -   Productivity:           More productivity
+    -   Quality:                Compounding (Uncommon 2s > Normal 3s)
+-   Space Age
+    -   Rocket silo:            Pointless (speed)
+    -   Cargo landing pad:      Pointless (radar coverage)
+    -   Space platform:         Pointless (none!)
+    -   Cargo bay:              Inventory size bonus
+    -   Asteroid collector:     Arms, arm speed, collection area, storage
+    -   Crusher:                Speed (1x → 1.3x → 1.6x → 1.9x → 2.5x)
+    -   Thruster:               Pointless (Speed + Consumption)
