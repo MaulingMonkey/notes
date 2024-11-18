@@ -1,5 +1,13 @@
 # Factorio: Ratios
 
+## Advanced Fuel Processing
+
+| Qty   | Building          | Product
+| -----:| ------------------| ----------|
+|    20 | Refinery          | Advanced Fuel Processing
+|    17 | Chemical Plant    | Light oil cracking
+|     5 | Chemical Plant    | Heavy oil cracking
+
 ## Batteries
 
 | Qty   | Building          | Product   |
