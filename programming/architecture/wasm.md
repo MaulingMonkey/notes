@@ -32,3 +32,23 @@
 ## My own nonsense
 * <https://github.com/MaulingMonkey/rust_wasm_sample>
 * <https://github.com/MaulingMonkey/cargo-html> (WASI + Asyncify junk)
+
+## Misc.
+* <https://github.com/mbasso/awesome-wasm>
+* <https://kripken.github.io/blog/wasm/2019/07/16/asyncify.html>
+* <https://github.com/rustwasm/walrus>
+* Trunk
+    * <https://trunkrs.dev/>
+    * <https://github.com/trunk-rs/trunk>
+* <https://github.com/kettle11/wasm_set_stack_pointer>
+* <https://github.com/ktock/container2wasm>
+
+## Debug
+* <https://rustwasm.github.io/book/reference/debugging.html#using-a-debugger>
+* <https://github.com/yurydelendik/wasm-dwarf>
+
+## Optimization
+* <https://rustwasm.github.io/docs/book/reference/code-size.html>
+
+## Reference
+* <https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md>
