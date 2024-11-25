@@ -28,3 +28,15 @@
 ## Programming
 
 Windows 11 finally lets you write a proper hybrid console/gui app (e.g. blocks the console, but doesn't allocate one) with a manifest option?  <https://github.com/MicrosoftDocs/Console-Docs/blob/ebda27d75b1215dbab4740d602f8564ac9906c8a/docs/console-allocation-policy.md>
+
+
+
+# Saturday November 23rd, 2024
+
+Power is restored after a ≈2d4h outage.
+I'd say I got the short end of the stick again, but there are still downed traffic lights and lines... some of my neighbors have it worse for once.
+This has motivated another shopping list..
+
+-   [x] An ash bucket, so I don't choke to death on carbon monoxide emitted by unnoticed embers.
+-   [x] Something for log splitting.  Dedicated splitting maul?  Splitting wedge?  Can't get the mid-sized sticks needed for kindling from stores reliably.
+-   [ ] Battery backup?  LiFePO4?
