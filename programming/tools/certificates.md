@@ -1,0 +1,3 @@
+-   <https://letsencrypt.org/>
+-   <https://github.com/FiloSottile/mkcert>
+-   <https://stackoverflow.com/questions/10175812/how-to-generate-a-self-signed-ssl-certificate-using-openssl>
