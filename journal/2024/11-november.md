@@ -40,3 +40,10 @@ This has motivated another shopping list..
 -   [x] An ash bucket, so I don't choke to death on carbon monoxide emitted by unnoticed embers.
 -   [x] Something for log splitting.  Dedicated splitting maul?  Splitting wedge?  Can't get the mid-sized sticks needed for kindling from stores reliably.
 -   [ ] Battery backup?  LiFePO4?
+
+
+
+# Tuesday November 26th, 2024
+
+## Factorio
+-   [Fully automated iron and copper on Gleba - Factorio 2.0 Space Age Tips & Tricks](https://www.youtube.com/watch?v=PNmTJBQ6hN0)
