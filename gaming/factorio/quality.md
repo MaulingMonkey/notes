@@ -26,7 +26,7 @@
         -   Large:              Start out with ≈no supply area, so maybe slightly useful for that?
         -   Substation:         Pointless? (Minor bonus since it already starts out covering a large area)
     -   Belts:                  Pointless (health only)
-    -   Chests:                 Pointless (health only)
+    -   Chests:                 ~~Pointless (health only)~~ Now boosts capacity
     -   Trains:                 Pointless (health only)
     -   Cars:                   Pointless (health only)
 -   Modules:
