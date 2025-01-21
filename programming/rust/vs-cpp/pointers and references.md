@@ -34,6 +34,7 @@
 | <code>[std]::[sync]::[Weak](https://doc.rust-lang.org/std/sync/struct.Weak.html)\<T\></code>  | <code>[boost::weak_ptr]\<T\></code>   | <code>[std::weak_ptr]\<T\></code>     |
 | <code>[std]::[rc]::[Rc]\<T\></code> †                                                         | <code>[boost::shared_ptr]\<T\></code> | <code>[std::shared_ptr]\<T\></code>   |
 | <code>[std]::[rc]::[Weak](https://doc.rust-lang.org/std/rc/struct.Weak.html)\<T\></code> †    | <code>[boost::weak_ptr]\<T\></code>   | <code>[std::weak_ptr]\<T\></code>     |
+| [via `Rc::new_cyclic`](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=25f7ce3a26fd17bb5aae95970372c7e8) <br> [via interior mutability](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=90cbd2ff38117ff634673884921c9127) | <code>[boost::enable_shared_from_this]</code> | <code>[std::enable_shared_from_this]</code>|
 
 † Rust's <code>[std]::[rc]::\*</code> uses non-atomic refcounts
 
@@ -49,6 +50,9 @@
 [std::shared_ptr]:      https://en.cppreference.com/w/cpp/memory/shared_ptr
 [std::unique_ptr]:      https://en.cppreference.com/w/cpp/memory/unique_ptr
 [std::weak_ptr]:        https://en.cppreference.com/w/cpp/memory/weak_ptr
+
+[boost::enable_shared_from_this]:   https://www.boost.org/doc/libs/1_87_0/libs/smart_ptr/doc/html/smart_ptr.html#enable_shared_from_this
+[std::enable_shared_from_this]:     https://en.cppreference.com/w/cpp/memory/enable_shared_from_this
 
 
 
