@@ -1,5 +1,17 @@
 # C++
 
+For x64 MSVC:
+```cpp
+struct renderer;
+//void (renderer::*a)() = nullptr;
+struct renderer {};
+void (renderer::*b)() = nullptr;
+
+static_assert(sizeof(b) == 8);
+//static_assert(sizeof(b) == 24);
+```
+Uncommenting `a` will change the size of `b`, breaking the `static_assert`
+
 **Q:** What is the result of `std::is_signed<decltype(1L * 2U)>()`?<br>
 **A:** `sizeof(long) > sizeof(int)`, a compiler and target-arch dependent value.  See [the usual arithmetic conversions](sual_arithmetic_conversions) for details.
 <!--
