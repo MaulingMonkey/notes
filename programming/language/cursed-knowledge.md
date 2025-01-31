@@ -21,7 +21,7 @@ class Base {}
 class Derived1 extends Base {}
 class Derived2 extends Base {}
 Base[] array = new Derived1[1]; // Legal implicit cast
-array[0] = new Derived2(); // ArrayStoreException 
+array[0] = new Derived2(); // ArrayStoreException
 ```
 
 ```csharp
