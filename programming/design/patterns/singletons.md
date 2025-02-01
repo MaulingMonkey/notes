@@ -159,17 +159,19 @@ You may still run into issues where e.g. `LogLine` is used before any static dat
 FILE* log_destination = nullptr;
 
 void LogInit() {
+    if (log_destination) return; // already initialized
     log_destination = fopen("...", "rb");
 }
 
 void LogShutdown() {
+    if (!log_destination) return; // already shut down
     fclose(log_destination);
     log_destination = nullptr;
 }
 
 void LogLine(const char * message) {
     if (log_destination) {
-        fputs(message);
+        fputs(log_destination, message);
     } else {
         puts(message); // or just ignore logs?
     }
