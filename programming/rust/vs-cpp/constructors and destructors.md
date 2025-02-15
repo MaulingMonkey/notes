@@ -89,7 +89,7 @@ impl Color {
         }
     }
 
-    pub fn from_rgba(red: u8, green: u8, blue: u8, alpha) -> Self {
+    pub fn from_rgba(red: u8, green: u8, blue: u8, alpha: u8) -> Self {
         Self { red, green, blue, alpha }
     }
 }
