@@ -45,3 +45,20 @@ These have varying strengths.  Consider:
     -   Each driver having it's own process will ensure drivers don't corrupt each other and that crashes are driver-specific, and sandboxing can be maximized.
     -   This is compatible with the DLL per driver model: `svchost.exe` comes to mind?
     -   Mixing multiple drivers into the same process reduces isolation, but might be "preferred" for audio or "trusted" stable drivers?
+
+
+
+## Package Design
+
+```text
+package/
+    apps/{...}
+    codecs/
+        archive/{tar, zip, ...}.wasm
+        audio/{mp3, ogg, wav, webm?, ...}.wasm
+        executable/{pe, wasm, ...}.wasm
+        hash/{md5, sha1, sha256, ...}.wasm
+        image/{bmp, tga, png, jpeg, webm, ...}.wasm
+        video/{avi, mp4, ...}.wasm
+    drivers/{browser, linux, osx, windows}/{x86, x64, arm, arm64, ...}/gamepad.{dll, exe, js, so, wasm}
+```
