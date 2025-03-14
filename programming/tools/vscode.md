@@ -73,10 +73,8 @@ For making custom extensions with commands:
     "editor.cursorStyle": "line-thin",
     "workbench.tree.indent": 20,
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.enablePreview": false,
     "debug.allowBreakpointsEverywhere": true,
-    "search.usePCRE2": true,
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "references.preferredLocation": "view",
     "editor.lineHeight": 13,
     "editor.rulers": [80, 120, 160],
@@ -108,18 +106,11 @@ For making custom extensions with commands:
     "editor.accessibilitySupport": "off",
     "java.home": "C:\\Program Files\\Android\\Android Studio\\jre",
     "java.configuration.checkProjectSettingsExclusions": false,
-
-    "rust-analyzer.checkOnSave.enable": false,  // bogus intellisense errors in problems pane
+    "rust-analyzer.checkOnSave": false,  // bogus intellisense errors in problems pane
     "rust-analyzer.diagnostics.enable": false,
-    "rust-analyzer.hoverActions.enable": false, // "goto XYZ" menu items when hovering over underlined identifiers
-    "rust-analyzer.inlayHints.enable": false,   // inline hints like ": usize"
+    "rust-analyzer.hover.actions.enable": false, // "goto XYZ" menu items when hovering over underlined identifiers
     "rust-analyzer.lens.enable": false,         // inline hints like "2 implementations"
     "rust-analyzer.rustfmt.overrideCommand": null,
-    "rust-analyzer.updates.askBeforeDownload": false,
-    "rust-analyzer.assist.importPrefix": "crate",
-    "rust-analyzer.assist.importGranularity": "module",
-    //"rust-analyzer.callInfo.full": false,
-
     "editor.minimap.enabled": true,
     "workbench.editor.openSideBySideDirection": "down",
     "editor.semanticTokenColorCustomizations": {
@@ -135,12 +126,32 @@ For making custom extensions with commands:
     },
     "files.trimTrailingWhitespace": true,
     "docker.showStartPage": false,
-    "terminal.integrated.gpuAcceleration": "canvas",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "diffEditor.ignoreTrimWhitespace": false,
-    "terminal.integrated.enablePersistentSessions": false,
+    "rust-analyzer.inlayHints.renderColons": false,
+    "rust-analyzer.imports.granularity.group": "module",
+    "rust-analyzer.imports.prefix": "crate",
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
 
     //"editor.parameterHints.enabled": false,
+    //"rust-analyzer.callInfo.full": false,
+    "html.autoCreateQuotes": false,
+    "editor.minimap.showSlider": "always",
+    "terminal.integrated.enablePersistentSessions": false,
+    "editor.minimap.size": "fit",
+    "editor.stickyScroll.enabled": true,
+    "workbench.editor.enablePreview": false,
+    "dotnet.codeLens.enableReferencesCodeLens": false,
+    "terminal.integrated.hideOnStartup": "always",
+    "chat.commandCenter.enabled": false,
+    "files.readonlyInclude": {
+        "C:/Program Files (x86)/**": true,
+        "C:/Program Files/**": true,
+        "C:/rustc/**": true,
+        "C:/Users/*/.cargo/**": true,
+        "C:/Users/*/.rustup/**": true,
+    },
 }
 ```
