@@ -5,7 +5,7 @@
 ## Overall
 *   <https://satisfactory.wiki.gg/> (Official Wiki)
 *   <https://satisfactory.fandom.com/> (Previous Wiki?)
-
+*   <https://satisfactory-calculator.com/en/interactive-map> (Interactive Map)
 
 
 ## Building Techniques
@@ -23,6 +23,7 @@ Trains:
 ## Inspirations
 *   [Satisfactory 1.0 Tutorial: Get Your Belts up off the Floor](https://www.youtube.com/watch?v=Zluo4KpTeYU)               ([excrubulent])
 *   [You NEED to See This Satisfactory 1.0 World](https://www.youtube.com/watch?v=o-Okq75_Zps)                              ([ImKibitz], chaos build world)
+*   [INSANE Satisfactory Factory Tour](https://www.youtube.com/watch?v=LLZWWTqTRng)                                         ([TotalXclipse])
 
 
 

@@ -1,11 +1,12 @@
 # Builds: Power
 
+Item/fluid counts are in "per minute" quantities.
 
 
-## Biomass
 
-*   1x [Solid Biofuel] [Constructor]
-*   15x [Biomass Burner]s
+## Biomass (450 MW)
+*   1x [Constructor]:       120 [Biomass] → 60 [Solid Biofuel]
+*   15x [Biomass Burner]s:  60 [Solid Biofuel] → 450 MW
 
 Can be handled via a single Mk. 1 input belt, split per:
 *   Split 3x
@@ -15,23 +16,33 @@ Can be handled via a single Mk. 1 input belt, split per:
 
 
 
-## Coal
-
-Requires a single Mk. 2 input belt:
-*   8x [Coal Generator]s  (120 coal / min, 360 water / min)
-*   3x [Water Extractor]s (360 water / min @ 100%)
+## Coal (600 MW)
+*   3x [Water Extractor]s:      Lake → 360 [Water]
+*   8x [Coal Generator]s        120 [Coal] + 360 [Water] → 600 MW
 
 
 
-## Fuel (Basic)
+## Fuel (2,500 MW)
+*   5x  [Refinery]s:            300 [Crude Oil] → 200 [Fuel] + 150 [Polymer Resin] (discard?)
+*   10x [Fuel Generator]s:      200 [Fuel] → 2,500 MW
 
-TODO
+
+
+## Fuel (10,000 MW, Alternate Recipies: Heavy Oil Residue + Diluted Fuel)
+
+*   10x [Refinery]s:            300 [Crude Oil] → 400 [Heavy Oil Residue] + 200 [Polymer Resin] (discard?)
+*    8x [Blender]s:             400 [Heavy Oil Residue] + 800 [Water] → 800 [Fuel]
+* 6.66x [Water Extractor]s:     Lake → 800 [Water]
+*   40x [Fuel Generator]s:      800 [Fuel] → 10,000 MW
 
 
 
-## Fuel (Alternate Recipies)
+## Fuel (3,333 MW, Alternate Recipie: Heavy Oil Residue)
+Fairly pointless on it's own, don't bother with it.
 
-TODO
+*   10x [Refinery]s:            300 [Crude Oil] → 400 [Heavy Oil Residue] + 200 [Polymer Resin] (discard?)
+*    6.66x [Refinery]s:         400 [Heavy Oil Residue] → 266 [Fuel]
+*   13.33x [Fuel Generator]s:   266 [Fuel] → 3,333 MW
 
 
 
@@ -54,5 +65,10 @@ TODO
 
 <!-- Items -->
 
-[Coal]:             https://satisfactory.wiki.gg/wiki/Coal
-[Solid Biofuel]:    https://satisfactory.wiki.gg/wiki/Solid_Biofuel
+[Coal]:                 https://satisfactory.wiki.gg/wiki/Coal
+[Crude Oil]:            https://satisfactory.wiki.gg/wiki/Crude_Oil
+[Fuel]:                 https://satisfactory.wiki.gg/wiki/Fuel
+[Heavy Oil Residue]:    https://satisfactory.wiki.gg/wiki/Heavy_Oil_Residue
+[Polymer Resin]:        https://satisfactory.wiki.gg/wiki/Polymer_Resin
+[Solid Biofuel]:        https://satisfactory.wiki.gg/wiki/Solid_Biofuel
+[Water]:                https://satisfactory.wiki.gg/wiki/Water
