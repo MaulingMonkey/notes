@@ -14,6 +14,10 @@ Compact splitter/merger/conveyer nonsense:
 *   [Satisfactory 1.0 Tutorial: Compact Techniques That Don't Look Bad](https://www.youtube.com/watch?v=rQ-NTWPsniU)        ([excrubulent])
 *   [Satisfactory 1.0 Tutorial: Compact Stackable Dodeca Assembler (x12)](https://www.youtube.com/watch?v=R2HshIq4mnw)      ([excrubulent])
 
+Fluid mechanics:
+*   [I tested 4 methods for fluid byproducts in Satisfactory U8](https://www.youtube.com/watch?v=ZwO-F82sYE4)               <br>
+    (tl;dr: use an industrial fluid buffer + unpowered pump for head lift reset)
+
 Trains:
 *   [Satisfactory 1.0 Tutorial: Easy Point & Shoot Smooth Railways Anywhere](https://www.youtube.com/watch?v=dEaB0cbiotY)   ([excrubulent])
 *   [Satisfactory: Easier Beam Extensions](https://www.youtube.com/watch?v=yqXbOH0wsBU)                                     ([excrubulent])
