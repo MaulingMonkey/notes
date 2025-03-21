@@ -5,6 +5,8 @@ More like "a list of things I would prefer to change if creating a new language 
 
 *   Self borrowing structs are a horribly unsolved problem (does [Ouroboros](https://github.com/someguynamedjosh/ouroboros) still have soundness issues?)
 *   Self lending iterators are awkward/impossible based on current stdlib design.
+*   References are non-null (nice!), but pointers are nullable, but `NonNull` isn't, but that's ≈`mut` only... should've just made plain pointers non-null IMO.
+*   `CStr` is a fat pointer.  That's not C-style!
 *   Box's weird custom deref-into-inner behavior is a funky edge case that always trips me up.
 *   Rust assumes `'static` is `'eternal`, but it might not be if you unload DLLs.
 *   It would be nice to have "by-value borrows" (e.g. borrows that don't preserve the address of `self` but otherwise act as `&self`.)
