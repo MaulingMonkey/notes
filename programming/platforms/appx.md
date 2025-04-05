@@ -15,6 +15,16 @@
 
 
 
+# Permissions
+
+> ### [Implement an AppContainer](https://learn.microsoft.com/en-us/windows/win32/secauthz/implementing-an-appcontainer)
+>
+> To allow all AppContainers to access a resource, add the **ALL APPLICATION PACKAGES** SID to the ACL for that resource. This acts like a wildcard.
+
+This might be the magic SID one needs to add to allow .appx packages to access unbundled files during development?
+
+
+
 # API
 
 * [Windows::Management::Deployment](https://docs.microsoft.com/en-us/uwp/api/windows.management.deployment?view=winrt-19041) (WinRT)
