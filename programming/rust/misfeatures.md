@@ -45,3 +45,44 @@ impl Drop for Complicated {
 ```
 
 There's also the whole awkwardness with `#[may_dangle]`.
+
+
+
+## DSTs
+
+Dynamically Sized Types are half baked.  Also, footguns.
+
+```rust
+use std::alloc::{alloc_zeroed, Layout};
+
+struct Foo {
+    header: u64,
+    bytes: [u8],
+}
+
+fn main() {
+    let n = 3;
+    let layout = Layout::new::<u64>().extend(
+        Layout::array::<u8>(n).unwrap()
+    ).unwrap().0;
+
+    let p = unsafe { alloc_zeroed(layout) };
+    let foo = std::ptr::slice_from_raw_parts_mut(p, n) as *mut Foo;
+    let foo_ref = unsafe { &*foo };
+
+    dbg!(size_of_val(foo_ref));
+
+    dbg!(foo_ref.header);
+    dbg!(&foo_ref.bytes);
+}
+```
+
+```text
+error: Undefined Behavior: pointer not dereferenceable: pointer must be dereferenceable for 16 bytes, but got alloc462 which is only 11 bytes from the end of the allocation
+  --> src/main.rs:16:28
+   |
+16 |     let foo_ref = unsafe { &*foo };
+   |                            ^^^^^ Undefined Behavior occurred here
+```
+
+<https://discord.com/channels/273534239310479360/592856094527848449/1396590760480083988>
