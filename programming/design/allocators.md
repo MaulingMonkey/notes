@@ -1,5 +1,22 @@
 # Allocators
 
+## Simple Allocators
+
+TODO: Write up pros/cons, examples
+
+*   Linear Allocators
+    *   Basic Bump Allocators
+    *   Reusable or semi-reusable "temporary" allocators
+    *   Debug to detect leaks / use-after-free hazards
+*   [Pool Allocators](https://en.wikipedia.org/wiki/Memory_pool)
+    *   Styles: By Type, or by N-Byte Slot
+    *   Backing: Static/fixed, or page/heap, possibly growable (intrusive linked lists?)
+*   Best fit
+*   [Buddy Allocators](https://en.wikipedia.org/wiki/Buddy_memory_allocation)
+*   ZST Allocators (Refcount for debug info?)
+
+
+
 ## Considerations
 
 *   Call site debug info
