@@ -1,4 +1,6 @@
-# Considerations
+# Allocators
+
+## Considerations
 
 *   Call site debug info
 *   IAllocator chaining
@@ -8,18 +10,18 @@
 *   Rc cycle tracking
 *   ...
 
-# Minimal Interface
+## Minimal Interface
 
 *   Most APIs can get away with a malloc/free pair.
 *   Middleware might make malloc/free a callback to allow programs to override library allocs.
 
-# Maximal Interface
+## Maximal Interface
 
 ```cpp
 // allocators.h
 struct IAllocator {
     virtual ~IAllocator() {}
-    
+
     virtual void* alloc      (size_t align, size_t size) const = 0;
     virtual void* alloc_debug(size_t align, size_t size, const CallSiteInfo &) const { return alloc(align, size); }
     virtual void  free       (void*) const = 0;
