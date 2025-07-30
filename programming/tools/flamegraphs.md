@@ -8,6 +8,7 @@
 *   <https://github.com/jonasmr/microprofile>
 *   <https://github.com/loganek/hawktracer>
 *   <https://github.com/google/orbit>
+*   <https://github.com/EmbarkStudios/puffin>
 
 ## Postmortem Flamegraphs
 
