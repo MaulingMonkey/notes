@@ -1,5 +1,7 @@
 # Factorio: Power
 
+
+
 ## Boiler → Steam Engine
 
 | Qty   | Building          |
@@ -73,6 +75,20 @@ Main ratio:
 | -----:| --------------------------------------| ------|
 | 1     | Chemical Plant (Acid neutralization)  | 200 Sulfuric acid → 2,000 Steam/s
 | 33.33 | Steam Turbines                        | 60 Steam/s each, 193.9806 MW
+
+
+
+## Train Hauled
+
+Transporting power via train avoids the need to place power poles, which would be vulnerable to biters.
+-   Unload requires some bootstrap power for pumps (presumably necessary for water or steam.)
+-   1 solar panel 1 accumulator is enough to power a couple of pumps on Nauvis.  Aquilo or Bulk inserter spam will require more.
+-   Burner inserters, OTOH, can self-power when e.g. (un)loading solid fuel, and supposedly won't even freeze on Aquilo.
+
+Assuming "free" pumps and burner inserters for everything:
+-   Steam engines will consume ≈80k water for ≈2k solid fuel.  A 2:1 ratio of cargo will leave you with ≈20% excess water.
+-   Burner towers and Steam turbines will consume ≈60k water for ≈2k solid fuel.  A 1:1 ratio might make more sense, especially if siphoning more solid fuel for trains, or heating on Aquilo.
+-   1:10 water:steam ratio makes transporting steam inefficient.  It also can't be used to heat buildings on Aquilo.  OTOH, it's a lot simpler to unload.
 
 
 
