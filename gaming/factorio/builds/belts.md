@@ -4,6 +4,8 @@ Three rows of assemblers for Nauvis works.
 
 Four rows of foundries on Vulcanus might be a thing.
 
+Item rates include both sides of the belt, halve for single sides.
+
 | Belt Tier | Items | ÷ .75 | ÷ .50 | Notes |
 | ----------| -----:| -----:| -----:| ----- |
 | Yellow    | 15/s  | 20/s  |  30/s |
