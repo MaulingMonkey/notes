@@ -1,3 +1,10 @@
+# AAI Loaders
+<https://mods.factorio.com/mod/aai-loaders>
+
+N.B. base mod won't output stacked items
+
+
+
 # Research
 
 |  🔴  |   🟢  |  🔵  |   🟣  | Research          | Cost (Lubricated)     | Cost (Expensive)  |

@@ -17,3 +17,12 @@
     *   <https://mods.factorio.com/mod/aai-containers>
     *   <https://mods.factorio.com/mod/aai-loaders>
     *   <https://mods.factorio.com/mod/aai-signal-transmission>
+*   <https://mods.factorio.com/mod/cargo-bay-inserters>
+*   <https://mods.factorio.com/mod/even-distribution>
+
+## Trains
+
+*   <https://mods.factorio.com/mod/train-overhaul>
+*   <https://mods.factorio.com/mod/Mini-Trains-Lead-the-Way>
+*   <https://mods.factorio.com/mod/Mini_Trains>
+*   <https://mods.factorio.com/mod/single_train_unit>
