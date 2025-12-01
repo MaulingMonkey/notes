@@ -77,8 +77,15 @@ For the amazon store, larger APKs (1GB?) are supported, and APK Expansion Files 
 
 Earlier versions of the Downloader Library failed to request the proper storage permissions at runtime, although
 [apkx_sample](https://github.com/google/play-apk-expansion/blob/9ecf54e5ce7c5a74a2eeedcec4d940ea52b16f0e/apkx_sample/src/com/example/google/play/apkx/SampleDownloaderActivity.java#L446-L514)
-looks like it might be requesting everything now?  I can't find the old bug report either... the worst part is
-that *sometimes* access would work, sometimes not!
+looks like it might be requesting everything now?
+
+The worst part is that *sometimes* access would work, sometimes not!
+
+Bug w/ details?: <https://issuetracker.google.com/issues/37075181>
+-   `targetSdkVersion=23`+?
+-   Android 7.0? "Issue can be reproduced on Samsung Galaxy S8 and S8+. [...] Please confirm, we can reproduce this issue on S8 running 7.0 builds."
+-   `*.obb` file is owned by `root` until reboot (at which point it's re-owned by the app-specific user?)
+-   `"android.permission.READ_EXTERNAL_STORAGE"` specifically is required for read (`"WRITE_EXTERNAL_STORAGE"` should also be requested to download/update said obb?)
 
 ## SIGILL
 
