@@ -70,8 +70,9 @@ Also the one biters have proper resistances to.
 | [Physical projectile damage] 5    | 16.20 / 25.92 /  77.76 <span style="opacity: 25%">(324%)</span>       | 🔴🟢⚫🔵      |  Keeps 🟡 cost effective vs Behemoth biters by more than quadrupling effective damage (12.80-12=0.8 → 16.20-12=4.20).
 | [Physical projectile damage] 6    | 24.20 / 38.72 / 116.16 <span style="opacity: 25%">(484%)</span>       | 🔴🟢⚫🔵🟡    |
 | [Physical projectile damage] 7+   | 33.80+ / 54.08+ / 162.24+ <span style="opacity: 25%">(676%+)</span>   | 🔴🟢⚫🔵🟡⚪  |
-|                                   |                                                                       |
-| [Weapon shooting speed]           | Rate of Fire                                                          |
+
+| [Weapon shooting speed]           | Rate of Fire                                                          | Required Tech |
+| ----------------------------------| ----------------------------------------------------------------------| --------------|
 | [Weapon shooting speed] 0         | 10 / s <span style="opacity: 25%">(100%)</span>                       |
 | [Weapon shooting speed] 1         | 11 / s <span style="opacity: 25%">(110%)</span>                       | 🔴
 | [Weapon shooting speed] 2         | 13 / s <span style="opacity: 25%">(130%)</span>                       | 🔴🟢
@@ -79,7 +80,6 @@ Also the one biters have proper resistances to.
 | [Weapon shooting speed] 4         | 18 / s <span style="opacity: 25%">(180%)</span>                       | 🔴🟢⚫
 | [Weapon shooting speed] 5         | 21 / s <span style="opacity: 25%">(210%)</span>                       | 🔴🟢⚫🔵
 | [Weapon shooting speed] 6         | 25 / s <span style="opacity: 25%">(250%)</span>                       | 🔴🟢⚫🔵🟡
-|                                   |
 
 N.B. [Physical projectile damage] double-applies to turrets, which the above stats reflect.
 
