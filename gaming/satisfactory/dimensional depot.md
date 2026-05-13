@@ -61,9 +61,8 @@ Lame!
 ### Worn Gear
 Jetpack and Parachute might trade out, but most of this is in case of misclicks
 -   Parachute
--   Blade Runners
--   Parachute
 -   Jetpack
+-   Blade Runners
 -   Gas Mask
 -   ~~Nuclear Suit~~ (acquired too late to wait for, worn permanently anyways)
 
@@ -74,8 +73,8 @@ Jetpack and Parachute might trade out, but most of this is in case of misclicks
 -   Steel Beam
 -   Steel Pipe (not for belts)
 -   Encased Industrial Beam
--   Alclad Aluminum Sheet (not for belts)
 -   Aluminum Casing
+-   Alclad Aluminum Sheet (not for belts)
 
 ### Frames
 -   Screws
