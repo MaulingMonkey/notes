@@ -1,5 +1,6 @@
 # Warptorio2
 -   <https://mods.factorio.com/mod/warptorio2>
+-   <https://github.com/PyroFire232/warptorio2>
 -   <https://mods.factorio.com/mod/warptorio2_expansion>
 
 
