@@ -15,6 +15,8 @@ More like "a list of things I would prefer to change if creating a new language 
     *   Linux's custom stdlib / cfg experiments involve eliminating sources of panics.
     *   Intrinsics like slice indexing bake panics into core language features however.
     *   See also the fun/hacky [`#[no_panic]`](https://github.com/dtolnay/no-panic).
+*   It'd be similarly nice to be able to specify a minimum supported pointer size for a crate to conditionally enable the use of an `impl From<u32> for usize` etc.?
+*   Proc macros have no [`$crate`](https://doc.rust-lang.org/reference/macros-by-example.html#r-macro.decl.hygiene.crate) equivalent
 
 
 
