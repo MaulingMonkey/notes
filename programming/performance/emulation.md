@@ -1,0 +1,10 @@
+-   [Ubershaders: A Ridiculous Solution to an Impossible Problem](https://dolphin-emu.org/blog/2017/07/30/ubershaders/)
+-   Zelda64 Recompilation
+    -   [Recompilation: An Incredible New Way to Keep N64 Games Alive](https://www.youtube.com/watch?v=ywWwUuWRgsM) (Nerrel)
+    -   [Zelda 64: Recompiled for PC - Majora's Mask Release Trailer](https://www.youtube.com/watch?v=GIp7C2ro2T8) (Wiseguy)(
+    -   <https://github.com/Zelda64Recomp/Zelda64Recomp>
+-   [Why is PS3 emulation so fast: RPCS3 optimizations explained](https://www.youtube.com/watch?v=19ae5Mq2lJE) ([Whatcookie](https://www.youtube.com/@MrWhatcookie))
+    -   A deep dive into bit-accurate(?) floating point emulation shenannigans
+    -   <https://blog.rpcs3.net/>
+    -   <https://whatcookie.github.io/posts/why-is-avx-512-useful-for-rpcs3/>
+    -   <https://www.copetti.org/writings/consoles/playstation-3/>
