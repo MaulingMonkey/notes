@@ -13,6 +13,10 @@ Acquired a steam machine w/ steam controller.
 -   Power cycling bluetooth headphones fixed it, so it's a variable latency issue.
 -   Might not be Steam OS's fault.  My `Bose QC35 II`s don't always behave right on Windows either.
 
+## Bindings of Note
+-   `(Steam)`+`(X)`: On screen keyboard
+-   `Shift`+`Tab` (keyboard) ≈ `(Steam)` button (controller)
+
 ## Developer
 
 ### Option 1: `distrobox`
@@ -105,6 +109,13 @@ Out of the box:
 -   **Steam Controller unusable** (perhaps I need to reset a setting somewhere? I do presumably have old profile data. Couldn't move character, buttons seemed to map to keyboard inputs?)
 -   Keyboard + Mouse works fine.  Just use that.
 -   Performance good (1920x1080 @ 60hz?  Including my space age victory savegame on Gleba where my NUC struggled to perform.)
+
+## Game: EvE Online
+-   Single account performance seems fine
+-   Didn't test large fleet battles
+-   Didn't test steam controller
+-   Didn't test multiple account performance
+-   **If using keyboard+mouse:** Note that `Shift`+`Tab` will bring up the steam menu and let you return to game if you end up in the steam browser.
 
 
 
