@@ -17,7 +17,9 @@ More like "a list of things I would prefer to change if creating a new language 
     *   See also the fun/hacky [`#[no_panic]`](https://github.com/dtolnay/no-panic).
 *   It'd be similarly nice to be able to specify a minimum supported pointer size for a crate to conditionally enable the use of an `impl From<u32> for usize` etc.?
 *   Proc macros have no [`$crate`](https://doc.rust-lang.org/reference/macros-by-example.html#r-macro.decl.hygiene.crate) equivalent
-
+*   [`std::ops::Range`](https://doc.rust-lang.org/std/ops/struct.Range.html) is `!Copy` because `Copy` on `Iterator`s is a footgun.
+    *   [`std::range::Range`](https://doc.rust-lang.org/std/range/struct.Range.html) fixes this by merely being `IntoIterator`.
+    <br>["It is planned that the syntax start..end will construct this type in a future edition, but it does not do so today."](https://doc.rust-lang.org/std/range/struct.Range.html#edition-notes)
 
 
 ## Drop
