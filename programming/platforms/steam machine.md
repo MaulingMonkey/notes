@@ -111,11 +111,11 @@ Out of the box:
 -   Performance good (1920x1080 @ 60hz?  Including my space age victory savegame on Gleba where my NUC struggled to perform.)
 
 ## Game: EvE Online
--   Single account performance seems fine
--   Didn't test large fleet battles
--   Didn't test steam controller
--   Didn't test multiple account performance
+-   **Seems a bit crashy with Direct3D12?**  Select Direct3D11 in the launcher instead (seems stable.)  I initially thought I was getting disconnected by server crashes when chat channel population lists filled up slowly, but chat continued as if that were a client side artefact, and launcher showed stable population numbers.
 -   **If using keyboard+mouse:** Note that `Shift`+`Tab` will bring up the steam menu and let you return to game if you end up in the steam browser.
+-   Single account performance seems fine.  Didn't test multiple account performance.
+-   Didn't test large fleet battles or Jita
+-   Didn't test steam controller
 
 
 
