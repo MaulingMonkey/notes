@@ -26,3 +26,8 @@
 *   <https://mods.factorio.com/mod/Mini-Trains-Lead-the-Way>
 *   <https://mods.factorio.com/mod/Mini_Trains>
 *   <https://mods.factorio.com/mod/single_train_unit>
+
+## Mod Authoring References
+*   <https://lua-api.factorio.com/latest/>
+*   <https://wiki.factorio.com/Category:Technical>
+*   <https://mods.factorio.com/mod/FactorioKillsToScience> - potentially useful for making my own kill-based stuff
