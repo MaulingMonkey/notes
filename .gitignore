@@ -1,1 +1,6 @@
+# intentionally excluded
 *.wip.*
+*.wip/
+
+# Temporary files
+.~lock.*#
