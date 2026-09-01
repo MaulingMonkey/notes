@@ -13,6 +13,7 @@
             "label":            "git pull --ff-only",
             "command":          "git pull --ff-only",
             "runOptions":       { "runOn": "folderOpen" },
+            "presentation":     { "reveal": "silent" },
             "problemMatcher":   [],
         },
         {
