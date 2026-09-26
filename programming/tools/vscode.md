@@ -41,7 +41,7 @@ For making custom extensions with commands:
 
 # Settings
 
-### `%USERPROFILE%\AppData\Roaming\Code\User\keybindings.json`
+### `%USERPROFILE%\AppData\Roaming\Code\User\keybindings.json` or `~/.config/Code - OSS/User/keybindings.json`
 
 ```json
 [
@@ -62,7 +62,7 @@ For making custom extensions with commands:
 ]
 ```
 
-### `%USERPROFILE%\AppData\Roaming\Code\User\settings.json`
+### `%USERPROFILE%\AppData\Roaming\Code\User\settings.json` or `~/.config/Code - OSS/User/settings.json`
 
 ```json
 {
