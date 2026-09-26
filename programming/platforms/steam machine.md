@@ -37,11 +37,12 @@ Here are the commands I start with as a rust-lang developer:
 
 -   <code>sudo [pacman] -Syu</code> &mdash; Update existing packages and whatnot? ...skippable?
 
--   <code>sudo [pacman] -S base base-devel code git rustup</code> &mdash; Install various packages:
+-   <code>sudo [pacman] -S base base-devel code git keepass rustup</code> &mdash; Install various packages:
     -   `base` - ...already installed?
     -   `base-devel` - misc. packages including gcc, linkers
     -   `code` - My preferred editor, [Visual Studio Code].  Slightly awkward (no VSC icon, must be launched from VM) but UI shows up in SteamOS just fine otherwise, and has minimal friction when working within said VM.
     -   `git` - My preferred version control system (also used by ≈everyone else.)
+    -   `keepass` - My preferred password manager
     -   `rustup` - My preferred tool for installing/managing rust-lang installations.
 
 -   <code>rustup toolchain install stable</code> &mdash; Installs `rustc`, `cargo`, etc.
