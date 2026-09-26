@@ -19,6 +19,7 @@
         {
             "label":            "help",
             "windows":          { "command": "start \"\" \"https://github.com/MaulingMonkey/notes\"" },
+            "linux":            { "command": "xdg-open \"https://github.com/MaulingMonkey/notes\"" },
             "problemMatcher":   [],
             "presentation":     { "reveal": "never" },
         },
