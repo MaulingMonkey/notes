@@ -36,7 +36,7 @@ password=[redacted]
 # noauto:               don't automount at boot (optimization)
 # nofail:               allow successful boot even if it can't mount
 # _netdev:              hint: wait for network services before mounting
-# x-systemd.autmount:   auto-mount on demand
+# x-systemd.automount:  auto-mount on demand
 
 # Previously used on System76 Laptop running PopOS
 //nas1/all /mnt/nas1 smb                    vers=3.0,uid=1000,gid=1000,credentials=/etc/fstab.nas1.credentials 0 0
