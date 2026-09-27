@@ -11,4 +11,5 @@ git config --global pull.ff only
 
 git config --global core.editor "%LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe" --wait
 git config --global core.editor "%ProgramFiles%\Microsoft VS Code\Code.exe" --wait
+git config --global core.editor "code --wait"
 ```

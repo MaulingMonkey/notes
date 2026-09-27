@@ -9,7 +9,7 @@ For making custom extensions with commands:
 * [Color Themes](https://code.visualstudio.com/docs/getstarted/themes) (code.visualstudio.com)
 * [Semantic Highlight Guide](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide) (code.visualstudio.com)
 
-```js
+```json
 // .vscode/settings.json
 {
     "editor.semanticTokenColorCustomizations": {
@@ -41,10 +41,9 @@ For making custom extensions with commands:
 
 # Settings
 
-### `%USERPROFILE%\AppData\Roaming\Code\User\keybindings.json`
+### `%USERPROFILE%\AppData\Roaming\Code\User\keybindings.json` or `~/.config/Code - OSS/User/keybindings.json`
 
-```js
-// Place your key bindings in this file to override the defaultsauto[]
+```json
 [
     {
         "key": "ctrl+alt+p",
@@ -63,9 +62,9 @@ For making custom extensions with commands:
 ]
 ```
 
-### `%USERPROFILE%\AppData\Roaming\Code\User\settings.json`
+### `%USERPROFILE%\AppData\Roaming\Code\User\settings.json` or `~/.config/Code - OSS/User/settings.json`
 
-```js
+```json
 {
     "editor.renderWhitespace": "boundary",
     "editor.autoClosingBrackets": "never",

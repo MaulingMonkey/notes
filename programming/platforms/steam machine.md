@@ -17,6 +17,18 @@ Acquired a steam machine w/ steam controller.
 -   `(Steam)`+`(X)`: On screen keyboard
 -   `Shift`+`Tab` (keyboard) ≈ `(Steam)` button (controller)
 
+## Network Shares
+-   SteamOS uses systemd unit files.  Fortunately, cavemen like me who don't know systemd can still use their old tools.
+-   Overlay FS and preinstalled `cifs-utils` means I can mount shares via `/etc/fstab` in [the usual manner](../../software/mount%20(linux).md)
+-   If for some reason you want to (ab)use [kio-fuse] after you've e.g. already configured Dolphin to cache your credentials\:
+    ```text
+    $ dbus-send --session --print-reply --type=method_call                      \
+        --dest=org.kde.KIOFuse /org/kde/KIOFuse org.kde.KIOFuse.VFS.mountUrl    \
+        string:smb://user@nas1.local/all
+    method return [...]
+        string "/run/user/1000/kio-fuse-dxhmTP/smb/user@nas1.local/all"
+    ```
+
 ## Developer
 
 ### Option 1: `distrobox`
@@ -37,11 +49,12 @@ Here are the commands I start with as a rust-lang developer:
 
 -   <code>sudo [pacman] -Syu</code> &mdash; Update existing packages and whatnot? ...skippable?
 
--   <code>sudo [pacman] -S base base-devel code git rustup</code> &mdash; Install various packages:
+-   <code>sudo [pacman] -S base base-devel code git keepass rustup</code> &mdash; Install various packages:
     -   `base` - ...already installed?
     -   `base-devel` - misc. packages including gcc, linkers
     -   `code` - My preferred editor, [Visual Studio Code].  Slightly awkward (no VSC icon, must be launched from VM) but UI shows up in SteamOS just fine otherwise, and has minimal friction when working within said VM.
     -   `git` - My preferred version control system (also used by ≈everyone else.)
+    -   `keepass` - My preferred password manager
     -   `rustup` - My preferred tool for installing/managing rust-lang installations.
 
 -   <code>[rustup] toolchain install stable</code> &mdash; Installs `rustc`, `cargo`, etc.
@@ -125,6 +138,7 @@ Out of the box:
 [cargo]:                https://doc.rust-lang.org/cargo/
 [distrobox]:            https://wiki.archlinux.org/title/Distrobox
 [distrobox-export]:     https://distrobox.it/usage/distrobox-export/
+[kio-fuse]:             https://github.com/KDE/kio-fuse/blob/master/README.md
 [pacman]:               https://wiki.archlinux.org/title/Pacman
 [pacstrap]:             https://wiki.archlinux.org/title/Pacstrap
 [rustc]:                https://doc.rust-lang.org/rustc/
