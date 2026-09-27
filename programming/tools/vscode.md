@@ -36,8 +36,9 @@ For making custom extensions with commands:
 * `slevesque.vscode-hexdump`
 * `redhat.java`
 * `ms-vscode-remote.remote-wsl`
-* `matklad.rust-analyzer`
+* `rust-lang.rust-analyzer`
 * `ms-vscode.vscode-typescript-tslint-plugin`
+* `ryanluker.vscode-coverage-gutters`
 
 # Settings
 
