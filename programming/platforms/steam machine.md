@@ -1,12 +1,5 @@
-# Steam Controller
--   Decent as a gamepad
--   Charging puck works well enough and is neato
--   I hate the touchpads and pinky buttons, good experiment though.
-
-
-
 # Steam Machine
-Acquired a steam machine w/ steam controller.
+Acquired a steam machine with a steam controller.
 
 ## Audio
 -   Bluetooth latency was pretty horrible at one point (400ms?)
@@ -16,6 +9,9 @@ Acquired a steam machine w/ steam controller.
 ## Bindings of Note
 -   `(Steam)`+`(X)`: On screen keyboard
 -   `Shift`+`Tab` (keyboard) ≈ `(Steam)` button (controller)
+
+## Games
+-   See [../../gaming/steam machine.md](../../gaming/steam%20machine.md)
 
 ## Network Shares
 -   SteamOS uses systemd unit files.  Fortunately, cavemen like me who don't know systemd can still use their old tools.
@@ -28,6 +24,11 @@ Acquired a steam machine w/ steam controller.
     method return [...]
         string "/run/user/1000/kio-fuse-dxhmTP/smb/user@nas1.local/all"
     ```
+
+## Steam Controller
+-   Decent as a gamepad.
+-   Charging puck works well enough and is neato.
+-   I hate the touchpads and pinky buttons.  Good experiment though!
 
 ## Developer
 
@@ -109,33 +110,6 @@ I avoid this.
 -   It includes some dev tools by default (`gcc`, `python`, etc.)
 -   Flatpaks run in their own VM, orthogonal to [distrobox], adding friction if you want to run build commands in the context of the host, or in the context of some [distrobox] VM.
 -   It does **not** include <code>[pacman]</code>.  Possibly because the flatpak is based off a non-Arch distro?
-
-
-
-## Game: Satisfactory
--   Beat the game using the Steam Controller exclusively.  Works *mostly* OK.  Generic Xbox controls, nothing Steam Controller specific.
--   **Performance:** Good (1920x1080 @ 60hz, even with a game-beating factory.)
--   **Caveat:** ⚠️ Unreliable On Screen Keyboard (OSK.)
-    -   Name fields don't stay reliably focused for station and vehicle names.  I sometimes have to reopen the OSK a couple of times.
-    -   Name field for map markers can't be saved at all from what I can tell.
-
-## Game: Factorio
--   Tested my existing game-beating save.
--   Performance: Good (4k @ 60hz, including my space age victory savegame on Gleba where my NUC struggled to perform.)
--   **Caveat:** ⚠️ Steam Controller is unusable!
-    -   Perhaps I need to reset a setting somewhere? I do presumably have old profile data. Couldn't move character, buttons seemed to map to keyboard inputs?
-    -   Keyboard + Mouse works fine.  Just use that.
-
-## Game: EvE Online
--   Didn't test using the steam controller at all.
--   Performance: Good (1080p @ 60hz.  Can also do 4k, but that dips under 60fps in some cloudy environments.  Didn't test large fleet battles or multi-account.)
--   **Caveat:** ⚠️ A bit crashy!
-    -   Might be EvE Online's fault, I haven't used the windows version in a bit.
-    -   Selecting Direct3D11 in the launcher seems more stable than Direct3D12, but still not perfect.
--   **Caveat:** ⚠️ Unusable key bindings outside of big picture mode.
-    -   In big picture mode (boot default), `Alt`+`F4` and `Ctrl`+`F4` activate the second and third module rows.
-    -   In desktop mode, *they close the game.*
-    -   Not a problem if you stick to the top row.
 
 
 
