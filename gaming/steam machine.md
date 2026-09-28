@@ -2,6 +2,22 @@
 Personal notes on game compatability with the [Steam Machine](https://store.steampowered.com/hardware/steammachine).
 See [../../programming/platforms/steam machine.md](../programming/platforms/steam%20machine.md) for the game *developer* (and more general desktop usage?) experience.
 
+## Audio
+-   Bluetooth latency was pretty horrible at one point (400ms?)
+-   Power cycling bluetooth headphones fixed it, so it's a variable latency issue.
+-   Might not be Steam OS's fault.  My `Bose QC35 II`s don't always behave right on Windows either.
+
+## Bindings of Note
+-   `(Steam)`+`(X)`: On screen keyboard
+-   `Shift`+`Tab` (keyboard) ≈ `(Steam)` button (controller)
+
+## Steam Controller
+-   Decent as a gamepad.
+-   Charging puck works well enough and is neato.
+-   I hate the touchpads and pinky buttons.  Good experiment though!
+
+# Games
+
 ## 💚 EvE Online
 -   Didn't test using the steam controller at all.
 -   Performance: Good (1080p @ 60hz.  Can also do 4k, but that dips under 60fps in some cloudy environments.  Didn't test large fleet battles or multi-account.)

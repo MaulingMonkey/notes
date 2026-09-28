@@ -1,16 +1,6 @@
 # Steam Machine
-Acquired a steam machine with a steam controller.
 
-## Audio
--   Bluetooth latency was pretty horrible at one point (400ms?)
--   Power cycling bluetooth headphones fixed it, so it's a variable latency issue.
--   Might not be Steam OS's fault.  My `Bose QC35 II`s don't always behave right on Windows either.
-
-## Bindings of Note
--   `(Steam)`+`(X)`: On screen keyboard
--   `Shift`+`Tab` (keyboard) ≈ `(Steam)` button (controller)
-
-## Games
+## Audio, Bindings, Games, Steam Controller
 -   See [../../gaming/steam machine.md](../../gaming/steam%20machine.md)
 
 ## Network Shares
@@ -24,11 +14,6 @@ Acquired a steam machine with a steam controller.
     method return [...]
         string "/run/user/1000/kio-fuse-dxhmTP/smb/user@nas1.local/all"
     ```
-
-## Steam Controller
--   Decent as a gamepad.
--   Charging puck works well enough and is neato.
--   I hate the touchpads and pinky buttons.  Good experiment though!
 
 ## Developer
 
