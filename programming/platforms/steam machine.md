@@ -127,8 +127,10 @@ Out of the box:
 -   **Seems a bit crashy with Direct3D12?**  Select Direct3D11 in the launcher instead (seems stable.)  I initially thought I was getting disconnected by server crashes when chat channel population lists filled up slowly, but chat continued as if that were a client side artefact, and launcher showed stable population numbers.
 -   **If using keyboard+mouse:** Note that `Shift`+`Tab` will bring up the steam menu and let you return to game if you end up in the steam browser.
 -   Single account performance seems fine.  Didn't test multiple account performance.
--   Didn't test large fleet battles or Jita
+-   Didn't test large fleet battles
 -   Didn't test steam controller
+-   Full 4k resolution dips bellow 60fps in some environments
+-   In big picture mode (boot default), `Alt`+`F4` and `Ctrl`+`F4` activate the second and third module rows.  In desktop mode, *they close the game.*
 
 
 
