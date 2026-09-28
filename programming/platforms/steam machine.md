@@ -58,15 +58,17 @@ Here are the commands I start with as a rust-lang developer:
     -   `keepass` - My preferred password manager
     -   `rustup` - My preferred tool for installing/managing rust-lang installations.
 
--   <code>rustup toolchain install stable</code> &mdash; Installs `rustc`, `cargo`, etc.
+-   <code>[rustup] toolchain install stable</code> &mdash; Installs `rustc`, `cargo`, etc.
+
+-   <code>[distrobox-export] --app code</code> &mdash; Export a shortcut to the host.  Searching for "Code" in the launcher will show "Code - OSS (on dev)" which can be launched, pinned to the taskbar, etc.
 
 -   <code>exit</code> then <code>[distrobox] enter dev</code> again &mdash; so your shell has `~/.cargo/bin` in it's `${PATH}`?
 
--   <code>cargo new hello-world</code> &mdash; Create a test project
+-   <code>[cargo] new hello-world</code> &mdash; Create a test project
 
 -   <code>code hello-world</code> &mdash; Open said test project in Visual Studio Code
 
--   <code>cargo run</code> (in Visual Studio Code) &mdash; Test build tools on test project
+-   <code>[cargo] run</code> (in Visual Studio Code) &mdash; Test build tools on test project
 
 -   Profit?
 
@@ -114,8 +116,12 @@ I avoid this.
 
 
 <!-- References -->
+[cargo]:                https://doc.rust-lang.org/cargo/
 [distrobox]:            https://wiki.archlinux.org/title/Distrobox
+[distrobox-export]:     https://distrobox.it/usage/distrobox-export/
 [kio-fuse]:             https://github.com/KDE/kio-fuse/blob/master/README.md
 [pacman]:               https://wiki.archlinux.org/title/Pacman
 [pacstrap]:             https://wiki.archlinux.org/title/Pacstrap
+[rustc]:                https://doc.rust-lang.org/rustc/
+[rustup]:               https://rust-lang.github.io/rustup/
 [Visual Studio Code]:   https://code.visualstudio.com/

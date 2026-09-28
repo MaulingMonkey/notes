@@ -36,8 +36,9 @@ For making custom extensions with commands:
 * `slevesque.vscode-hexdump`
 * `redhat.java`
 * `ms-vscode-remote.remote-wsl`
-* `matklad.rust-analyzer`
+* `rust-lang.rust-analyzer`
 * `ms-vscode.vscode-typescript-tslint-plugin`
+* `ryanluker.vscode-coverage-gutters`
 
 # Settings
 
@@ -152,5 +153,20 @@ For making custom extensions with commands:
         "C:/Users/*/.cargo/**": true,
         "C:/Users/*/.rustup/**": true,
     },
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": true,
+    "C_Cpp.copilotHover": "disabled",
+    "chat.agent.enabled": false,
+    "chat.setupFromDialog": false,
+    "chat.focusWindowOnConfirmation": false,
+    "chat.extensionTools.enabled": false,
+    "chat.agent.maxRequests": 0,
+    "chat.detectParticipant.enabled": false,
+    "chat.promptFiles": false,
+    "inlineChat.lineNaturalLanguageHint": false,
+    "inlineChat.holdToSpeech": false,
+    "chat.mcp.access": "none",
+    "task.allowAutomaticTasks": "on",
+    "update.showReleaseNotes": false,
 }
 ```
