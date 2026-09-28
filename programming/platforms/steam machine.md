@@ -51,7 +51,7 @@ Here are the commands I start with as a rust-lang developer:
 
 -   <code>[cargo] new hello-world</code> &mdash; Create a test project
 
--   <code>code hello-world</code> &mdash; Open said test project in Visual Studio Code
+-   <code>[code] hello-world</code> &mdash; Open said test project in Visual Studio Code
 
 -   <code>[cargo] run</code> (in Visual Studio Code) &mdash; Test build tools on test project
 
@@ -101,6 +101,7 @@ I avoid this.
 
 
 <!-- References -->
+[code]:                 https://code.visualstudio.com/docs/configure/command-line
 [cargo]:                https://doc.rust-lang.org/cargo/
 [distrobox]:            https://wiki.archlinux.org/title/Distrobox
 [distrobox-export]:     https://distrobox.it/usage/distrobox-export/
