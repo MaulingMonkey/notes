@@ -1,5 +1,6 @@
 # Steam Machine
 Personal notes on game compatability with the [Steam Machine](https://store.steampowered.com/hardware/steammachine).
+See [../../programming/platforms/steam machine.md](../programming/platforms/steam%20machine.md) for the game *developer* (and more general desktop usage?) experience.
 
 ## 💚 EvE Online
 -   Didn't test using the steam controller at all.
