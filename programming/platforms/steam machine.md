@@ -113,24 +113,29 @@ I avoid this.
 
 
 ## Game: Satisfactory
--   Steam Controller works mostly OK.  Generic XB1 style controls, nothing Steam Controller specific.
-    **However:** I can't figure out how to get map marker names to stick when using the on-screen keyboard.
--   Performance good (1920x1080 @ 60hz?)
+-   Beat the game using the Steam Controller exclusively.  Works *mostly* OK.  Generic Xbox controls, nothing Steam Controller specific.
+-   **Performance:** Good (1920x1080 @ 60hz, even with a game-beating factory.)
+-   **Caveat:** ⚠️ Unreliable On Screen Keyboard (OSK.)
+    -   Name fields don't stay reliably focused for station and vehicle names.  I sometimes have to reopen the OSK a couple of times.
+    -   Name field for map markers can't be saved at all from what I can tell.
 
 ## Game: Factorio
-Out of the box:
--   **Steam Controller unusable** (perhaps I need to reset a setting somewhere? I do presumably have old profile data. Couldn't move character, buttons seemed to map to keyboard inputs?)
--   Keyboard + Mouse works fine.  Just use that.
--   Performance good (1920x1080 @ 60hz?  Including my space age victory savegame on Gleba where my NUC struggled to perform.)
+-   Tested my existing game-beating save.
+-   Performance: Good (4k @ 60hz, including my space age victory savegame on Gleba where my NUC struggled to perform.)
+-   **Caveat:** ⚠️ Steam Controller is unusable!
+    -   Perhaps I need to reset a setting somewhere? I do presumably have old profile data. Couldn't move character, buttons seemed to map to keyboard inputs?
+    -   Keyboard + Mouse works fine.  Just use that.
 
 ## Game: EvE Online
--   **Seems a bit crashy with Direct3D12?**  Select Direct3D11 in the launcher instead (seems stable.)  I initially thought I was getting disconnected by server crashes when chat channel population lists filled up slowly, but chat continued as if that were a client side artefact, and launcher showed stable population numbers.
--   **If using keyboard+mouse:** Note that `Shift`+`Tab` will bring up the steam menu and let you return to game if you end up in the steam browser.
--   Single account performance seems fine.  Didn't test multiple account performance.
--   Didn't test large fleet battles
--   Didn't test steam controller
--   Full 4k resolution dips bellow 60fps in some environments
--   In big picture mode (boot default), `Alt`+`F4` and `Ctrl`+`F4` activate the second and third module rows.  In desktop mode, *they close the game.*
+-   Didn't test using the steam controller at all.
+-   Performance: Good (1080p @ 60hz.  Can also do 4k, but that dips under 60fps in some cloudy environments.  Didn't test large fleet battles or multi-account.)
+-   **Caveat:** ⚠️ A bit crashy!
+    -   Might be EvE Online's fault, I haven't used the windows version in a bit.
+    -   Selecting Direct3D11 in the launcher seems more stable than Direct3D12, but still not perfect.
+-   **Caveat:** ⚠️ Unusable key bindings outside of big picture mode.
+    -   In big picture mode (boot default), `Alt`+`F4` and `Ctrl`+`F4` activate the second and third module rows.
+    -   In desktop mode, *they close the game.*
+    -   Not a problem if you stick to the top row.
 
 
 
