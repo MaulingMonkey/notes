@@ -98,6 +98,23 @@ I avoid this.
 -   Flatpaks run in their own VM, orthogonal to [distrobox], adding friction if you want to run build commands in the context of the host, or in the context of some [distrobox] VM.
 -   It does **not** include <code>[pacman]</code>.  Possibly because the flatpak is based off a non-Arch distro?
 
+## Rough Edges &amp; Annoyances
+-   The Steam Machine boots to Big Screen mode.  Fine for gaming, annoying for dev.
+    -   Configurable, so this might be fine?
+        -   <code>steamos-session-select <span style="opacity: 25%">\[gamescope \| plasma \| plasma-wayland \| plasma-wayland-persistent \| plasma-x11-persistent\]</span></code>
+        -   <code>steamosctl set-default-login-mode <span style="opacity: 25%">\[desktop | game\]</span></code>
+    -   OTOH I was reading posts where people couldn't switch to game mode if they configured things to boot to desktop mode?
+-   Window Tiling
+    -   By holding `Shift` when moving a window, I can snap it to preconfigured tile positions.
+    -   `Meta`+`T` allows configuring said tile positions.  Annoyingly, these are separately configured per virtual desktop.
+    -   I should probably just use [MouseTiler](https://www.youtube.com/watch?v=mhZDxNQiFSQ) ([github](https://github.com/rxappdev/MouseTiler)?), but I'm lazy about auditing third party code.
+-   On Windows I'd drag images from Browser -> Explorer.  On Linux, similar doesn't seem to work.  I also bricked a Chrome window trying to save an image.
+-   On Windows I'd pin recent folders in e.g. VS Code to the taskbar.  On Linux, I can't seem to pin, and shortcuts into distrobox vscode don't even show recent files.
+-   I keep forgetting to check if the preinstalled readonly portion of steamos has enough packages for my needs.  So far I've assumed:
+    -   I would need to install my own package manager or vm without root.  (But <code>[distrobox]</code> was preinstalled!)
+    -   I would need to resort to shenannigans to mount my NAS.  (But `cifs-utils` was preinstalled and `/etc/fstab` is editable via overlay!)
+-   "readonly root" feels slightly silly when I can edit all of `/etc` which seems just as potentially ruinous.
+
 
 
 <!-- References -->
