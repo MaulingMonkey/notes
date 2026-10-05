@@ -17,13 +17,15 @@
 
 ## Developer
 
-### Option 1: `distrobox`
+### Option 1: `distrobox` (My Preference)
 This seems to be the option valve themselves recommend.  <code>[distrobox]</code> comes pre-installed:
 ```text
 (deck@steamdeck ~)$ which distrobox
 /usr/bin/distrobox
 ```
 Here are the commands I start with as a rust-lang developer:
+-   <code>steamosctl set-default-login-mode desktop</code> &mdash; Boot in desktop mode.  Replace `desktop` with `game` to revert to default (boot in big picture mode.)
+
 -   <code>passwd</code> &mdash; Sets the password for the default `deck` user.
 
 -   <code>[distrobox] create dev --image archlinux</code><br>
@@ -99,11 +101,6 @@ I avoid this.
 -   It does **not** include <code>[pacman]</code>.  Possibly because the flatpak is based off a non-Arch distro?
 
 ## Rough Edges &amp; Annoyances
--   The Steam Machine boots to Big Screen mode.  Fine for gaming, annoying for dev.
-    -   Configurable, so this might be fine?
-        -   <code>steamos-session-select <span style="opacity: 25%">\[gamescope \| plasma \| plasma-wayland \| plasma-wayland-persistent \| plasma-x11-persistent\]</span></code>
-        -   <code>steamosctl set-default-login-mode <span style="opacity: 25%">\[desktop | game\]</span></code>
-    -   OTOH I was reading posts where people couldn't switch to game mode if they configured things to boot to desktop mode?
 -   Window Tiling
     -   By holding `Shift` when moving a window, I can snap it to preconfigured tile positions.
     -   `Meta`+`T` allows configuring said tile positions.  Annoyingly, these are separately configured per virtual desktop.
