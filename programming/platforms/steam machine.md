@@ -28,10 +28,11 @@ Here are the commands I start with as a rust-lang developer:
 
 -   <code>passwd</code> &mdash; Sets the password for the default `deck` user.
 
--   <code>[distrobox] create dev --image archlinux</code><br>
+-   <code>[distrobox] create dev --image archlinux --volume /mnt/nas1:/mnt/nas1</code><br>
     Create a VM named `dev`.  SteamOS is based off of Arch, so I choose it to minimize distro churn.
     <code>--image ghcr.io/linuxserver/steamos:latest</code> is an alternative mentioned on the internet,
     but ghcr.io seems like a random third party - at the very least, I haven't vetted them myself.
+    <code>--volume /mnt/nas1:/mnt/nas1</code> lets me share my existing host network mount inside my distrobox container.
 
 -   <code>[distrobox] enter dev</code> &mdash; Switch to running commands inside the VM.
 
