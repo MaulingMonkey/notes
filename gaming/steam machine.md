@@ -8,8 +8,8 @@ See [../../programming/platforms/steam machine.md](../programming/platforms/stea
 -   Might not be Steam OS's fault.  My `Bose QC35 II`s don't always behave right on Windows either.
 
 ## Bindings of Note
--   `(Steam)`+`(X)`: On screen keyboard
--   `Shift`+`Tab` (keyboard) ≈ `(Steam)` button (controller)
+-   <kbd>(Steam)</kbd> + <kbd>(X)</kbd> ➜ On screen keyboard
+-   <kbd>Shift</kbd> + <kbd>Tab</kbd> (keyboard) ≈ <kbd>(Steam)</kbd> button (controller)
 
 ## Steam Controller
 -   Decent as a gamepad.
@@ -24,9 +24,19 @@ See [../../programming/platforms/steam machine.md](../programming/platforms/stea
 -   **Caveat:** ⚠️ A bit crashy!
     -   Might be EvE Online's fault, I haven't used the windows version in a bit.
     -   Selecting Direct3D11 in the launcher seems more stable than Direct3D12, but still not perfect.
--   **Caveat:** ⚠️ Unusable key bindings outside of big picture mode.
-    -   In big picture mode (boot default), they work fine &mdash; `Alt`+`F4` and `Ctrl`+`F4` activate the second and third module rows.
+-   **Caveat:** Awkward key binding defaults outside of big picture mode.
+    -   In big picture mode (boot default), they work fine &mdash; <kbd>Alt</kbd> + <kbd>F4</kbd> and <kbd>Ctrl</kbd> + <kbd>F4</kbd> activate the second and third module rows.
     -   In desktop mode, *they close the game.*  Stick to the top row, I guess?
+    -   One can add `Ignore global shortcuts` `Force     v` `(●) Yes` to the `Window Rules` for `EvE Online`, resulting in:
+        <table>
+            <tr><th>Binding                             <th>Global Shortcut         <th>With EvE Online Focused
+            <tr><td><kbd>Alt</kbd> + <kbd>Tab</kbd>     <td>Switch Windows          <td><b>None</b> (still disabled!)
+            <tr><td><kbd>Alt</kbd> + <kbd>F4</kbd>      <td>Close Window            <td>Use Module (Row 2, Column 4)
+            <tr><td><kbd>Ctrl</kbd> + <kbd>F4</kbd>     <td>Switch to Desktop 1     <td>Use Module (Row 3, Column 4)
+            <tr><td><kbd>Shift</kbd> + <kbd>Tab</kbd>   <td>Steam Overlay           <td><b>Steam Overlay</b> (disable separately!)
+        </table>
+        Annoyingly, one cannot currently enable <kbd>Alt</kbd> + <kbd>Tab</kbd> while disabling the other commands.
+        As an alternative, one *can* unbind <kbd>Ctrl</kbd> + <kbd>F#</kbd> from global shortcuts, although that seems ill-advised to do for <kbd>Alt</kbd> + <kbd>F4</kbd>.
 
 ## 💚 Factorio
 -   Tested my existing game-beating save.
