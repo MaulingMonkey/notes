@@ -13,6 +13,7 @@ I've at least culled some dead links.
 -   [Tabarnouche Interplanetary](https://www.youtube.com/@tabarnoucheinterplanetary)
 -   [chloroken](https://www.youtube.com/@chloroken)
 -   [WINGSPAN TT](https://www.youtube.com/@wingspantt)
+-   [BjornBee](https://www.youtube.com/@BjornBee)
 -   [eveiseasy](https://www.youtube.com/@eveiseasy)
 -   [Zarvox Toral](https://www.youtube.com/@ZarvoxToralEVE)
 -   [EVE Pro Guides - EVE Online PVP and ISK Guides](https://www.youtube.com/@Eveproguides)
