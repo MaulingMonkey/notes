@@ -25,6 +25,7 @@ I've at least culled some dead links.
 -   <https://forums.eveonline.com/>
 -   [reddit.com/r/Eve/](https://www.reddit.com/r/Eve/)
     -   [/u/wingspantt](https://www.reddit.com/user/wingspantt)
+-   [EVE Ref](https://everef.net/)
 
 ## Market
 -   [Fuzzwork Enterprises](https://www.fuzzwork.co.uk/)
