@@ -2,6 +2,27 @@
 
 
 
+## Launcher Categories
+
+| Size  | Category                          | Range     | Damage    | Notes     |
+|:-----:| ----------------------------------| ----------| ----------| ----------|
+|   S   | Rocket Launcher                   | Short     | High      |
+|   S   | Light Missile Launcher            | Long      | Mid       |
+|       |                                   |           |           |
+|   M   | Heavy Assault Missile Launcher    | Short     | High      |
+|   M   | Rapid Light Missile Launcher      | Mid       | Mid       | Frequent reloads, but better application to small targets
+|   M   | Heavy Missile Launcher            | Long      | Mid       |
+|       |                                   |           |           |
+|   L   | Torpedo Launcher                  | Short     | High      |
+|   L   | Rapid Heavy Missile Launcher      | Mid       | Mid       | (Verify:)  Frequent reloads, but better application to small targets
+|   L   | Cruise Missile Launcher           | Long      | Mid       |
+|       |                                   |           |           |
+|  XL   | XL Torpedo Launcher               | Short?    | High?     | (Verify)
+|  XL?  | Rapid Torpedo Launcher            | Mid?      | High?     | (Verify)
+|  XL   | XL Cruise Missile Launcher        | Long      | Mid       | (Verify)
+
+
+
 ## TODO
 
 -   Launchers
@@ -94,6 +115,31 @@ All light missiles have:
 | Auto-Targeting        | Tech I        |      62   |          5.00 s   |                40 m   |                 170 m/s   |
 | Legion Auto-Targeting | Faction       |    **70** |          5.00 s   |                40 m   |                 170 m/s   |
 
+| ISK       | `S` Launcher                          | Tech          |       RoF |        m3 |       CPU |     Power |      Heat | Notes     |
+| ---------:| --------------------------------------| --------------| ---------:| ---------:| ---------:| ---------:| ---------:| ----------|
+|           | TODO
+
+| ISK       | `M` Launcher                                      | Tech          |       RoF |        m3 |       CPU |     Power |      Heat | Notes     |
+| ---------:| ------------------------------------------        | --------------| ---------:| ---------:| ---------:| ---------:| ---------:| ----------|
+|       23k | Rapid Light Missile Launcher I                    | Tech I        |     7.8 s |     0.285 |     35 tf |     73 MW |   1.80 HP |
+|        8k | Experimental SV-2000 Rapid Light Missile Launcher | Meta          |     6.6 s |     0.285 |     33 tf |     73 MW |   1.50 HP |
+|        2k | Limited 'Limos' Rapid Light Missile Launcher      | Meta          |     7.0 s |     0.285 |     32 tf |     73 MW |   1.60 HP |
+|      707k | Prototype 'Arbalest' Rapid Light Missile Launcher | Meta          |     6.2 s |     0.285 |     30 tf |     73 MW |   1.40 HP |
+|        6k | Upgraded 'Malkuth' Rapid Light Missile Launcher   | Meta          |     7.4 s |     0.285 |     28 tf |     73 MW |   1.70 HP |
+|      743k | Rapid Light Missile Launcher II                   | **Tech II**   |     6.2 s |     0.300 |     39 tf |     77 MW |   1.40 HP |
+|    8,084k | 'Pickaxe' Rapid Light Missile Launcher            | Storyline     |     7.7 s |     0.300 |     30 tf |     65 MW |   1.80 HP |
+|  105,305k | Caldari Navy Rapid Light Missile Launcher         | Faction       |     5.5 s |     0.315 |     39 tf |     65 MW |   1.30 HP |
+|   50,489k | Domination Rapid Light Missile Launcher           | Faction       |     6.0 s |     0.315 |     28 tf |     73 MW |   1.40 HP |
+|   70,115k | Dread Guristas Rapid Light Missile Launcher       | Faction       |     5.5 s |     0.315 |     39 tf |     65 MW |   1.30 HP |
+|   96,980k | Republic Fleet Rapid Light Missile Launcher       | Faction       |     6.0 s |     0.315 |     28 tf |     73 MW |   1.40 HP |
+|      N/A  | True Sansha Rapid Light Missile Launcher          | Faction       |     6.0 s |     0.315 |     28 tf |     73 MW |   1.40 HP |
+
+
+
+## Heavy Assault Missiles
+
+TODO
+
 
 
 ## Heavy Missiles
@@ -102,17 +148,32 @@ All heavy missiles have:
 -   A base flight speed of 4,300 m/sec
 -   An additional 150 km range limit for auto-targeting versions
 
-| Variation             | Tech          | Damage    | Flight <br> Time  | Explosion <br> Radius | Explosion <br> Velocity   | Notes     |
-| ----------------------|:-------------:| ---------:|:-----------------:|:---------------------:|:-------------------------:| ----------|
-| Basic                 | Tech I        |     149   |          6.50 s   |               140 m   |                  85 m/s   |
-| Guristas              | Faction       |   **164** |          6.50 s   |               140 m   |                  85 m/s   |
-| Caldari Navy          | Faction       |   **171** |          6.50 s   |               140 m   |                  85 m/s   |
-| Dread Guristas        | Faction       |   **179** |          6.50 s   |               140 m   |                  85 m/s   | obscenely expensive
-| Precision             | **Tech II**   |     149   |        **3.25 s** |             **125 m** |               **102 m/s** |
-| Fury                  | **Tech II**   |   **201** |        **4.88 s** |             **241 m** |                **71 m/s** |
-|                       |               |           |                   |                       |                           |
-| Auto-Targeting        | Tech I        |     107   |          6.50 s   |               140 m   |                **81 m/s** |
-| Legion Auto-Targeting | Faction       |     122   |          6.50 s   |               140 m   |                **81 m/s** |
+| Missile Variation     | Tech          | Damage    |   %   | Flight <br> Time  | Explosion <br> Radius | Explosion <br> Velocity   | Notes     |
+| ----------------------|:-------------:| ---------:| -----:|:-----------------:|:---------------------:|:-------------------------:| ----------|
+| Basic                 | Tech I        |     149   | base  |          6.50 s   |               140 m   |                  85 m/s   |
+| Guristas              | Faction       |   **164** | +10 % |          6.50 s   |               140 m   |                  85 m/s   |
+| Caldari Navy          | Faction       |   **171** | +15 % |          6.50 s   |               140 m   |                  85 m/s   |
+| Dread Guristas        | Faction       |   **179** | +20 % |          6.50 s   |               140 m   |                  85 m/s   | obscenely expensive
+| Precision             | **Tech II**   |     149   |       |        **3.25 s** |             **125 m** |               **102 m/s** |
+| Fury                  | **Tech II**   |   **201** | +35 % |        **4.88 s** |             **241 m** |                **71 m/s** |
+|                       |               |           |       |                   |                       |                           |
+| Auto-Targeting        | Tech I        |     107   | -28 % |          6.50 s   |               140 m   |                **81 m/s** |
+| Legion Auto-Targeting | Faction       |     122   | -18 % |          6.50 s   |               140 m   |                **81 m/s** |
+
+| ISK       | `M` Launcher                          | Tech          |       RoF |        m3 |       CPU |     Power |      Heat | Notes     |
+| ---------:| --------------------------------------| --------------| ---------:| ---------:| ---------:| ---------:| ---------:| ----------|
+|       73k | Heavy Missile Launcher I              | Tech I        |    15.0 s |     0.900 |   50.0 tf |    100 MW |   2.30 HP | **DON'T BUY:** Meta is cheaper and better
+|      560k | 'Arbalest' Heavy Missile Launcher     | Meta          |    12.0 s |     1.080 |   43.0 tf |    100 MW |   1.80 HP | Best meta damage, although maybe a bit pricy for a T1 cruiser
+|       15k | 'Malkuth' Heavy Missile Launcher      | Meta          |    14.3 s |     0.960 |   40.0 tf |    100 MW |   2.10 HP | Small DPS gains over basic T1, but easiest fit
+|       15k | Advanced 'Limos' Heavy Missle Bay I   | Meta          |    13.5 s |     0.990 |   45.0 tf |    100 MW |   2.00 HP | Middle of the road between fitting and dps improvements
+|       35k | XR-3200 Heavy Missle Bay              | Meta          |    12.8 s |     1.050 |   48.0 tf |    100 MW |   1.90 HP | Second best meta damage, cheap
+|    1,079k | Heavy Missile Launcher II             | **Tech II**   |    12.0 s |     1.200 |   55.0 tf |    105 MW |   1.80 HP | Requires skills, but alpha friendly
+|  102,734k | Caldari Navy Heavy Missile Launcher   | Faction       |    10.5 s |     1.350 |   55.0 tf |     90 MW |   1.60 HP |
+|   44,033k | Domination Heavy Missile Launcher     | Faction       |    11.6 s |     1.230 |   40.0 tf |    100 MW |   1.70 HP |
+|  107,660k | Dread Guristas Heavy Missile Launcher | Faction       |    10.5 s |     1.350 |   55.0 tf |     90 MW |   1.60 HP |
+|      N/A  | True Sansha Heavy Missile Launcher    | Faction       |    11.6 s |     1.230 |   40.0 tf |    100 MW |   1.70 HP |
+|   22,563k | Republic Fleet Heavy Missile Launcher | Faction       |    11.6 s |     1.230 |   40.0 tf |    100 MW |   1.70 HP |
+|   36,107k | 'Undertaker' Heavy Missile Launcher   | Storyline     |    13.5 s |     0.900 |   43.0 tf |     90 MW |   2.00 HP |
 
 
 
