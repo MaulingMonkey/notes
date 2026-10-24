@@ -134,6 +134,22 @@ All light missiles have:
 |   96,980k | Republic Fleet Rapid Light Missile Launcher       | Faction       |     6.0 s |     0.315 |     28 tf |     73 MW |   1.40 HP |
 |      N/A  | True Sansha Rapid Light Missile Launcher          | Faction       |     6.0 s |     0.315 |     28 tf |     73 MW |   1.40 HP |
 
+Self manufacture details:
+
+| Missile               | Qty   | Tritanium | Pyerite   | Mexallon  |
+| ----------------------| -----:| ---------:| ---------:| ---------:|
+| Inferno Light Missile |   100 |        58 |        72 |           |
+| Mjolnir Light Missile |   100 |       150 |        18 |        12 |
+| Nova Light Missile    |   100 |        54 |        16 |         6 |
+| Scourge Light Missile |   100 |        69 |        43 |         2 |
+
+| Ore                           | Tritanium | Pyerite   | Mexallon  |
+| ------------------------------| ---------:| ---------:| ---------:|
+| Veldspar                      |      4000 |           |           |
+| Scordite                      |      1000 |       733 |           |
+| Plagioclase                   |       300 |           |       233 |
+| Pyroxeres                     |           |       300 |       100 |
+
 
 
 ## Heavy Assault Missiles
